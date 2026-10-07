@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_inherit_misa" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.misa</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+            <!-- Header buttons -->
+            <xpath expr="//header" position="inside">
+                <button name="action_misa_publish_invoice"
+                        type="object"
+                        string="Phát hành MISA meInvoice"
+                        class="btn-success oe_highlight"
+                        icon="fa-cloud-upload"
+                        invisible="state != 'posted' or move_type not in ('out_invoice', 'out_refund') or misa_einvoice_state == 'signed'"/>
+                <button name="action_misa_view_online"
+                        type="object"
+                        string="Xem HĐ MISA Online"
+                        class="btn-outline-primary"
+                        icon="fa-external-link"
+                        invisible="not misa_view_url"/>
+            </xpath>
+
+            <!-- Notebook Page -->
+            <xpath expr="//notebook" position="inside">
+                <page name="misa_einvoice" string="Hóa Đơn MISA meInvoice" invisible="move_type not in ('out_invoice', 'out_refund')">
+                    <group>
+                        <group string="Trạng thái hóa đơn điện tử">
+                            <field name="misa_einvoice_state" widget="badge"
+                                   decoration-success="misa_einvoice_state == 'signed'"
+                                   decoration-info="misa_einvoice_state == 'sent'"
+                                   decoration-danger="misa_einvoice_state == 'cancelled'"/>
+                            <field name="misa_invoice_no" class="fw-bold fs-5 text-primary"/>
+                            <field name="misa_lookup_code"/>
+                            <field name="misa_transaction_id" groups="base.group_no_one"/>
+                        </group>
+                        <group string="Tra cứu &amp; Nhật ký">
+                            <field name="misa_view_url" widget="url"/>
+                            <field name="misa_error_log"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

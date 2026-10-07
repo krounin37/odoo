@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_misa" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.misa</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority">40</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='invoicing_settings']" position="after">
+                <block title="Hóa Đơn Điện Tử MISA meInvoice" id="misa_einvoice_settings">
+                    <setting id="misa_config" string="Kết Nối MISA meInvoice" help="Cấu hình tài khoản và máy chủ API phát hành hóa đơn điện tử MISA">
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label for="misa_endpoint_url" class="col-lg-3 o_light_label"/>
+                                <field name="misa_endpoint_url" placeholder="https://meinvoiceapi.misa.vn"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_tax_code" class="col-lg-3 o_light_label"/>
+                                <field name="misa_tax_code" placeholder="Mã số thuế bên bán"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_app_id" class="col-lg-3 o_light_label"/>
+                                <field name="misa_app_id" placeholder="App ID kết nối MISA"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_username" class="col-lg-3 o_light_label"/>
+                                <field name="misa_username" placeholder="Tài khoản đăng nhập MISA"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_password" class="col-lg-3 o_light_label"/>
+                                <field name="misa_password" password="True"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_template_code" class="col-lg-3 o_light_label"/>
+                                <field name="misa_template_code" placeholder="1C24TYY"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="misa_series" class="col-lg-3 o_light_label"/>
+                                <field name="misa_series" placeholder="C24TYY"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>
