@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_stock_voucher_vn" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.stock.voucher.vn</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="vn_stock_voucher" string="Chứng Từ Kho (TT 200/BTC)">
+                    <group>
+                        <group string="Thông tin người giao / nhận">
+                            <field name="voucher_contact_person"/>
+                            <field name="voucher_contact_address"/>
+                            <field name="voucher_reason"/>
+                            <field name="voucher_attached"/>
+                        </group>
+                        <group string="Định khoản &amp; Kho hàng">
+                            <field name="voucher_warehouse_name"/>
+                            <field name="voucher_warehouse_address"/>
+                            <field name="voucher_debit_account"/>
+                            <field name="voucher_credit_account"/>
+                            <field name="company_currency_id" invisible="1"/>
+                            <field name="voucher_total_amount"/>
+                            <field name="voucher_total_words_vn"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
