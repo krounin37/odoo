@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_amount_to_text_vn" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@id='total']" position="after">
+            <div t-if="o.amount_total_words_vn" class="row mt-2" style="page-break-inside: avoid;">
+                <div class="col-12 text-end">
+                    <span class="text-muted fst-italic">Số tiền bằng chữ: </span>
+                    <strong class="text-dark fst-italic" t-field="o.amount_total_words_vn"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

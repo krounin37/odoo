@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_inherit_amount_to_text_vn" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.amount.to.text.vn</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_totals']" position="after">
+                <div colspan="2" class="mt-2 text-end" invisible="not amount_total_words_vn">
+                    <span class="text-muted me-1">Số tiền bằng chữ:</span>
+                    <strong class="text-primary fst-italic">
+                        <field name="amount_total_words_vn" readonly="1" class="oe_inline"/>
+                    </strong>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
