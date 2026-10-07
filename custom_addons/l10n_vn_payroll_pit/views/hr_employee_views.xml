@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_employee_form_inherit_payroll_pit_vn" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.payroll.pit.vn</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="vn_payroll_pit" string="Thuế TNCN &amp; Bảo Hiểm VN">
+                    <group>
+                        <group string="Định danh &amp; Giảm trừ gia cảnh">
+                            <field name="vn_citizen_id"/>
+                            <field name="vn_tax_code"/>
+                            <field name="vn_social_insurance_no"/>
+                            <field name="vn_dependent_count"/>
+                            <field name="vn_currency_id" invisible="1"/>
+                            <field name="vn_self_deduction" groups="base.group_no_one"/>
+                            <field name="vn_dependent_deduction" groups="base.group_no_one"/>
+                        </group>
+                        <group string="Lương &amp; Thuế TNCN (Gross → Net)">
+                            <field name="vn_salary_gross" class="fw-bold fs-5"/>
+                            <field name="vn_insurance_salary"/>
+                            <field name="vn_total_deduction" readonly="1"/>
+                            <field name="vn_taxable_income" readonly="1"/>
+                            <field name="vn_pit_tax" readonly="1" class="text-danger fw-bold"/>
+                            <field name="vn_salary_net" readonly="1" class="text-success fw-bold fs-5"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Bảo hiểm Người lao động đóng (10.5%)">
+                            <field name="vn_ee_bhxh" readonly="1"/>
+                            <field name="vn_ee_bhyt" readonly="1"/>
+                            <field name="vn_ee_bhtn" readonly="1"/>
+                            <field name="vn_ee_total_insurance" readonly="1" class="fw-bold"/>
+                        </group>
+                        <group string="Bảo hiểm Doanh nghiệp đóng (23.5%)">
+                            <field name="vn_er_bhxh" readonly="1"/>
+                            <field name="vn_er_bhyt" readonly="1"/>
+                            <field name="vn_er_bhtn" readonly="1"/>
+                            <field name="vn_er_kpcd" readonly="1"/>
+                            <field name="vn_er_total_insurance" readonly="1" class="fw-bold"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
