@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Dịch vụ sản phẩm đại diện cho phí vận chuyển GHTK -->
+    <record id="product_product_delivery_ghtk" model="product.product">
+        <field name="name">Cước phí giao hàng GHTK</field>
+        <field name="default_code">DELIV_GHTK</field>
+        <field name="type">service</field>
+        <field name="categ_id" ref="product.product_category_all"/>
+        <field name="sale_ok" eval="False"/>
+        <field name="purchase_ok" eval="False"/>
+        <field name="list_price">22000.0</field>
+    </record>
+
+    <!-- Phương thức vận chuyển GHTK -->
+    <record id="delivery_carrier_ghtk" model="delivery.carrier">
+        <field name="name">Giao Hàng Tiết Kiệm (GHTK)</field>
+        <field name="delivery_type">ghtk</field>
+        <field name="product_id" ref="product_product_delivery_ghtk"/>
+        <field name="ghtk_environment">staging</field>
+        <field name="ghtk_is_freeship">1</field>
+        <field name="ghtk_pick_address">Số 10, Đường Cầu Giấy</field>
+        <field name="ghtk_pick_district">Quận Cầu Giấy</field>
+        <field name="ghtk_pick_province">Hà Nội</field>
+        <field name="ghtk_pick_tel">0901234567</field>
+    </record>
+</odoo>

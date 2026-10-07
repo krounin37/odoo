@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_delivery_carrier_form_inherit_ghtk" model="ir.ui.view">
+        <field name="name">delivery.carrier.form.inherit.ghtk</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Cấu hình GHTK" name="ghtk_configuration" invisible="delivery_type != 'ghtk'">
+                    <group>
+                        <group string="Kết nối API GHTK">
+                            <field name="ghtk_api_token" password="True" required="delivery_type == 'ghtk'"/>
+                            <field name="ghtk_environment" required="delivery_type == 'ghtk'"/>
+                            <field name="ghtk_is_freeship" required="delivery_type == 'ghtk'"/>
+                        </group>
+                        <group string="Thông tin kho lấy hàng của Shop">
+                            <field name="ghtk_pick_address" required="delivery_type == 'ghtk'"/>
+                            <field name="ghtk_pick_district" required="delivery_type == 'ghtk'"/>
+                            <field name="ghtk_pick_province" required="delivery_type == 'ghtk'"/>
+                            <field name="ghtk_pick_tel" required="delivery_type == 'ghtk'"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
