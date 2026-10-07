@@ -1,37 +1,150 @@
-# Odoo
+# Odoo Project Setup & Deployment Guide
 
-[![Build Status](https://runbot.odoo.com/runbot/badge/flat/1/master.svg)](https://runbot.odoo.com/runbot)
-[![Tech Doc](https://img.shields.io/badge/master-docs-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/documentation/master)
-[![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
-[![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
+<p align="center">
+  <a href="README.md"><b>English</b></a> |
+  <a href="README.vi.md"><b>Tiếng Việt</b></a> |
+  <a href="README.zh.md"><b>简体中文</b></a>
+</p>
 
-Odoo is a suite of web based open source business apps.
+---
 
-The main Odoo Apps include an [Open Source CRM](https://www.odoo.com/page/crm),
-[Website Builder](https://www.odoo.com/app/website),
-[eCommerce](https://www.odoo.com/app/ecommerce),
-[Warehouse Management](https://www.odoo.com/app/inventory),
-[Project Management](https://www.odoo.com/app/project),
-[Billing &amp; Accounting](https://www.odoo.com/app/accounting),
-[Point of Sale](https://www.odoo.com/app/point-of-sale-shop),
-[Human Resources](https://www.odoo.com/app/employees),
-[Marketing](https://www.odoo.com/app/social-marketing),
-[Manufacturing](https://www.odoo.com/app/manufacturing),
-[...](https://www.odoo.com/)
+## 📌 Overview
 
-Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get
-a full-featured [Open Source ERP](https://www.odoo.com) when you install several Apps.
+This repository contains the source code for the **Odoo** ERP platform along with Docker configurations for quick setup and local development.
 
-## Getting started with Odoo
+---
 
-For a standard installation please follow the [Setup instructions](https://www.odoo.com/documentation/master/administration/install/install.html)
-from the documentation.
+## 🚀 Quick Start (Docker - Recommended)
 
-To learn the software, we recommend the [Odoo eLearning](https://www.odoo.com/slides),
-or [Scale-up, the business game](https://www.odoo.com/page/scale-up-business-game).
-Developers can start with [the developer tutorials](https://www.odoo.com/documentation/master/developer/howtos.html).
+The easiest and fastest way to run Odoo and its PostgreSQL database is using **Docker Compose**.
 
-## Security
+### Prerequisites
+- [Docker](https://docs.docker.com/get-docker/) installed and running
+- [Docker Compose](https://docs.docker.com/compose/install/) (included with Docker Desktop)
 
-If you believe you have found a security issue, check our [Responsible Disclosure page](https://www.odoo.com/security-report)
-for details and get in touch with us via email.
+### 1. Start Services
+Run the following command in the project root directory:
+
+```bash
+docker compose up -d
+```
+
+This starts:
+- **web**: Odoo web service exposed on port `8069`
+- **db**: PostgreSQL 16 database server
+
+### 2. Access Odoo
+Open your browser and navigate to:
+```
+http://localhost:8069
+```
+
+On first access, fill in the database creation form:
+- **Master Password**: Keep safe (used to manage/drop databases)
+- **Database Name**: e.g., `odoo_db`
+- **Email / Password**: Your administrator login credentials
+- **Language / Country**: Select according to your needs
+- **Demo data**: Check if you want sample data
+
+### 3. Common Docker Commands
+
+- **View web service logs**:
+  ```bash
+  docker compose logs -f web
+  ```
+- **Stop containers**:
+  ```bash
+  docker compose down
+  ```
+- **Stop containers and remove volumes (reset database)**:
+  ```bash
+  docker compose down -v
+  ```
+- **Restart containers**:
+  ```bash
+  docker compose restart
+  ```
+
+---
+
+## 🛠️ Local Python Setup (Bare Metal / Development)
+
+If you prefer to run Odoo directly with Python without Docker:
+
+### Prerequisites
+- Python 3.10, 3.11, or 3.12
+- PostgreSQL 14+ installed and running
+- `wkhtmltopdf` (recommended for generating PDF reports)
+
+### 1. Create and Activate Virtual Environment
+
+```bash
+# Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt
+```
+
+### 3. Configure Database User
+Create a PostgreSQL user for Odoo:
+
+```bash
+createuser -s odoo
+createdb -O odoo odoo_db
+```
+
+### 4. Create Configuration File (`odoo.conf`)
+Create an `odoo.conf` file in the root directory:
+
+```ini
+[options]
+addons_path = addons
+admin_passwd = admin_secret_password
+db_host = localhost
+db_port = 5432
+db_user = odoo
+db_password = odoo
+http_port = 8069
+```
+
+### 5. Run Odoo Server
+
+```bash
+# Using configuration file
+python odoo-bin -c odoo.conf
+
+# Or via command line flags
+python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odoo
+```
+
+---
+
+## 💡 Developer Commands
+
+- **Enable Developer Mode flags (auto-reload python & assets)**:
+  ```bash
+  python odoo-bin -c odoo.conf --dev=all
+  ```
+- **Install a module**:
+  ```bash
+  python odoo-bin -c odoo.conf -d odoo_db -i <module_name>
+  ```
+- **Upgrade a module**:
+  ```bash
+  python odoo-bin -c odoo.conf -d odoo_db -u <module_name>
+  ```
+
+---
+
+## 📄 License
+Odoo is published under LGPLv3 / Odoo Enterprise License. See `LICENSE` for details.
