@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_l10n_vn_address" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.l10n.vn.address</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='state_id']" position="before">
+                <field name="district_id" placeholder="Quận / Huyện" options="{'no_open': True, 'no_create_edit': True}"/>
+                <field name="ward_id" placeholder="Phường / Xã" options="{'no_open': True, 'no_create_edit': True}"/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_address_format')]" position="after">
+                <div class="d-flex align-items-center mt-1" invisible="not (district_id or ward_id)">
+                    <button name="action_standardize_vn_address"
+                            type="object"
+                            string="Chuẩn hóa chuỗi địa chỉ"
+                            icon="fa-map-marker"
+                            class="btn btn-sm btn-link p-0 text-primary"
+                            help="Tự động nối Tên đường + Phường/Xã + Quận/Huyện + Tỉnh/Thành vào trường địa chỉ"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

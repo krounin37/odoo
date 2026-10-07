@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_res_district_tree" model="ir.ui.view">
+        <field name="name">res.district.list</field>
+        <field name="model">res.district</field>
+        <field name="arch" type="xml">
+            <list string="Quận / Huyện">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="state_id"/>
+                <field name="country_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_res_district_form" model="ir.ui.view">
+        <field name="name">res.district.form</field>
+        <field name="model">res.district</field>
+        <field name="arch" type="xml">
+            <form string="Quận / Huyện">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="state_id" options="{'no_create': True}"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Danh sách Phường / Xã" name="wards">
+                            <field name="ward_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_res_district_search" model="ir.ui.view">
+        <field name="name">res.district.search</field>
+        <field name="model">res.district</field>
+        <field name="arch" type="xml">
+            <search string="Tìm kiếm Quận / Huyện">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="state_id"/>
+                <group expand="0" string="Nhóm theo">
+                    <filter string="Tỉnh / Thành phố" name="group_by_state" domain="[]" context="{'group_by': 'state_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_res_district" model="ir.actions.act_window">
+        <field name="name">Quận / Huyện</field>
+        <field name="res_model">res.district</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_res_district_search"/>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_res_district"
+              name="Quận / Huyện"
+              action="action_res_district"
+              parent="contacts.menu_localisation"
+              sequence="3"/>
+</odoo>

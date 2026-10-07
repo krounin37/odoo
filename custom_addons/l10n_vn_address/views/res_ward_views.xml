@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_res_ward_tree" model="ir.ui.view">
+        <field name="name">res.ward.list</field>
+        <field name="model">res.ward</field>
+        <field name="arch" type="xml">
+            <list string="Phường / Xã">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="district_id"/>
+                <field name="state_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_res_ward_form" model="ir.ui.view">
+        <field name="name">res.ward.form</field>
+        <field name="model">res.ward</field>
+        <field name="arch" type="xml">
+            <form string="Phường / Xã">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="district_id" options="{'no_create': True}"/>
+                            <field name="state_id"/>
+                            <field name="country_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_res_ward_search" model="ir.ui.view">
+        <field name="name">res.ward.search</field>
+        <field name="model">res.ward</field>
+        <field name="arch" type="xml">
+            <search string="Tìm kiếm Phường / Xã">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="district_id"/>
+                <field name="state_id"/>
+                <group expand="0" string="Nhóm theo">
+                    <filter string="Quận / Huyện" name="group_by_district" domain="[]" context="{'group_by': 'district_id'}"/>
+                    <filter string="Tỉnh / Thành phố" name="group_by_state" domain="[]" context="{'group_by': 'state_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_res_ward" model="ir.actions.act_window">
+        <field name="name">Phường / Xã</field>
+        <field name="res_model">res.ward</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_res_ward_search"/>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_res_ward"
+              name="Phường / Xã"
+              action="action_res_ward"
+              parent="contacts.menu_localisation"
+              sequence="4"/>
+</odoo>

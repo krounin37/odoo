@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Hà Nội -->
+    <record id="district_hn_ba_dinh" model="res.district">
+        <field name="name">Quận Ba Đình</field>
+        <field name="code">001</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_hoan_kiem" model="res.district">
+        <field name="name">Quận Hoàn Kiếm</field>
+        <field name="code">002</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_dong_da" model="res.district">
+        <field name="name">Quận Đống Đa</field>
+        <field name="code">006</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_cau_giay" model="res.district">
+        <field name="name">Quận Cầu Giấy</field>
+        <field name="code">005</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_hai_ba_trung" model="res.district">
+        <field name="name">Quận Hai Bà Trưng</field>
+        <field name="code">004</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_thanh_xuan" model="res.district">
+        <field name="name">Quận Thanh Xuân</field>
+        <field name="code">009</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_tay_ho" model="res.district">
+        <field name="name">Quận Tây Hồ</field>
+        <field name="code">003</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_hn_nam_tu_liem" model="res.district">
+        <field name="name">Quận Nam Từ Liêm</field>
+        <field name="code">019</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+
+    <!-- TP. Hồ Chí Minh -->
+    <record id="district_hcm_quan_1" model="res.district">
+        <field name="name">Quận 1</field>
+        <field name="code">760</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_quan_3" model="res.district">
+        <field name="name">Quận 3</field>
+        <field name="code">770</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_quan_7" model="res.district">
+        <field name="name">Quận 7</field>
+        <field name="code">778</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_binh_thanh" model="res.district">
+        <field name="name">Quận Bình Thạnh</field>
+        <field name="code">765</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_phu_nhuan" model="res.district">
+        <field name="name">Quận Phú Nhuận</field>
+        <field name="code">768</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_tan_binh" model="res.district">
+        <field name="name">Quận Tân Bình</field>
+        <field name="code">766</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_hcm_tp_thu_duc" model="res.district">
+        <field name="name">Thành phố Thủ Đức</field>
+        <field name="code">769</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+
+    <!-- TP. Đà Nẵng -->
+    <record id="district_dn_hai_chau" model="res.district">
+        <field name="name">Quận Hải Châu</field>
+        <field name="code">490</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_dn_thanh_khe" model="res.district">
+        <field name="name">Quận Thanh Khê</field>
+        <field name="code">491</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_dn_son_tra" model="res.district">
+        <field name="name">Quận Sơn Trà</field>
+        <field name="code">492</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+</odoo>
