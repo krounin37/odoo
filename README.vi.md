@@ -155,6 +155,7 @@ Repository này đã được xây dựng và tích hợp sẵn bộ 3 module ch
 | **`l10n_vn_tax_lookup`** | **Tự động tra cứu Mã Số Thuế**: Tra cứu trực tiếp từ Tổng cục Thuế để tự động điền Tên công ty pháp nhân, địa chỉ kinh doanh và kiểm tra trạng thái hoạt động của doanh nghiệp khi nhập MST. | ✅ Sẵn sàng |
 | **`l10n_vn_vietqr_sale`** | **Mã VietQR trên Báo giá & Đơn bán hàng**: Tự động sinh mã VietQR NAPAS 247 kèm số tiền chính xác và nội dung đơn hàng, hiển thị trên giao diện và in ra file PDF báo giá để khách hàng chuyển khoản tức thì. | ✅ Sẵn sàng |
 | **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã Việt Nam với cơ chế lọc liên hoàn thông minh và nút tự động chuẩn hóa địa chỉ phục vụ giao vận (GHN, GHTK, Viettel Post) & xuất hóa đơn VAT. | ✅ Sẵn sàng |
+| **`l10n_vn_amount_to_text`** | **Đọc số tiền thành chữ Tiếng Việt**: Tự động chuyển đổi tổng tiền thành chữ Tiếng Việt chuẩn ngữ pháp và quy định chứng từ kế toán BTC trên Hóa đơn, Báo giá và Phiếu thu chi. | ✅ Sẵn sàng |
 
 ### Cách kích hoạt các module trên trong Odoo:
 1. Vào menu **Apps (Ứng dụng)**.

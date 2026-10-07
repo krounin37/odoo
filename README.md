@@ -155,6 +155,7 @@ This repository includes custom modules tailored for Vietnamese business operati
 | **`l10n_vn_tax_lookup`** | **Tự động tra cứu Mã số thuế**: Tra cứu tức thì tên doanh nghiệp, địa chỉ và trạng thái hoạt động từ dữ liệu Tổng cục Thuế khi nhập MST. | ✅ Sẵn sàng |
 | **`l10n_vn_vietqr_sale`** | **VietQR trên Báo giá & Đơn hàng**: Tự động sinh mã VietQR NAPAS 247 kèm số tiền và nội dung đơn hàng trên Form view và file PDF in ra. | ✅ Sẵn sàng |
 | **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã với bộ lọc liên hoàn và nút tự động chuẩn hóa chuỗi địa chỉ giao hàng / xuất hóa đơn. | ✅ Sẵn sàng |
+| **`l10n_vn_amount_to_text`** | **Đọc số tiền thành chữ Tiếng Việt**: Tự động chuyển đổi tổng tiền thành chữ Tiếng Việt chuẩn ngữ pháp và quy định kế toán BTC trên Hóa đơn, Báo giá và Phiếu thu chi. | ✅ Sẵn sàng |
 
 ### How to Activate Custom Modules in Odoo:
 1. Go to **Apps** (Ứng dụng).
