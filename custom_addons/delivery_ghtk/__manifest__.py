@@ -18,7 +18,7 @@ Tích hợp Đơn Vị Giao Hàng Tiết Kiệm (GHTK) với Odoo:
     'author': 'krounin37',
     'website': 'https://github.com/krounin37/odoo',
     'license': 'LGPL-3',
-    'depends': ['delivery', 'stock', 'sale', 'l10n_vn_address'],
+    'depends': ['stock_delivery', 'l10n_vn_address'],
     'data': [
         'views/delivery_carrier_views.xml',
         'views/stock_picking_views.xml',

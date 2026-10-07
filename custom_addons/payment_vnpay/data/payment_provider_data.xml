@@ -7,6 +7,5 @@
         <field name="is_published">True</field>
         <field name="vnpay_tmn_code">DEMOVNPAY</field>
         <field name="vnpay_hash_secret">RAOCTPQRZDYJKAWRAKWDVQAAUPZTANEC</field>
-        <field name="redirect_form_view_id" ref="payment.generic_redirect_form"/>
     </record>
 </odoo>

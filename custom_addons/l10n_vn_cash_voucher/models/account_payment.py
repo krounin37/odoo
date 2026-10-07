@@ -54,11 +54,11 @@ class AccountPayment(models.Model):
                 address_parts = [p for p in [pay.partner_id.street, pay.partner_id.city] if p]
                 pay.voucher_address = ', '.join(address_parts) if address_parts else ''
 
-    @api.depends('memo', 'ref', 'name')
+    @api.depends('memo', 'payment_reference', 'name')
     def _compute_voucher_reason(self):
         for pay in self:
             if not pay.voucher_reason:
-                pay.voucher_reason = pay.memo or pay.ref or f"Thanh toán {pay.name}"
+                pay.voucher_reason = pay.memo or pay.payment_reference or f"Thanh toán {pay.name}"
 
     @api.depends('move_id', 'move_id.line_ids')
     def _compute_voucher_accounts(self):

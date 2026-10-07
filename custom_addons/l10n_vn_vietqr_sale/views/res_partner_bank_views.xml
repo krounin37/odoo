@@ -5,7 +5,7 @@
         <field name="model">res.partner.bank</field>
         <field name="inherit_id" ref="base.view_partner_bank_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='bank_bic']" position="after">
+            <xpath expr="//field[@name='bank_id']" position="after">
                 <field name="vietqr_bank_code" placeholder="VD: VCB, MB, TCB, CTG, ACB, VPB hoặc mã BIN..."/>
             </xpath>
         </field>

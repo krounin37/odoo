@@ -3,8 +3,8 @@ from datetime import datetime
 import logging
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+from urllib.parse import urljoin
 from odoo.http import request
-from odoo.tools import urls
 from .. import const
 
 _logger = logging.getLogger(__name__)
@@ -36,7 +36,7 @@ class PaymentTransaction(models.Model):
             'vnp_Locale': 'vn',
             'vnp_OrderInfo': f"Thanh toan don hang {self.reference}",
             'vnp_OrderType': 'other',
-            'vnp_ReturnUrl': urls.url_join(base_url, '/payment/vnpay/return'),
+            'vnp_ReturnUrl': urljoin(base_url, '/payment/vnpay/return'),
             'vnp_TxnRef': self.reference,
         }
 
