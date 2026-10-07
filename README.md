@@ -146,5 +146,23 @@ python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odo
 
 ---
 
+## 🇻🇳 Vietnam Localization Addons (`custom_addons/`)
+
+This repository includes custom modules tailored for Vietnamese business operations:
+
+| Module | Name & Function | Status |
+| :--- | :--- | :---: |
+| **`l10n_vn_tax_lookup`** | **Tự động tra cứu Mã số thuế**: Tra cứu tức thì tên doanh nghiệp, địa chỉ và trạng thái hoạt động từ dữ liệu Tổng cục Thuế khi nhập MST. | ✅ Sẵn sàng |
+| **`l10n_vn_vietqr_sale`** | **VietQR trên Báo giá & Đơn hàng**: Tự động sinh mã VietQR NAPAS 247 kèm số tiền và nội dung đơn hàng trên Form view và file PDF in ra. | ✅ Sẵn sàng |
+| **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã với bộ lọc liên hoàn và nút tự động chuẩn hóa chuỗi địa chỉ giao hàng / xuất hóa đơn. | ✅ Sẵn sàng |
+
+### How to Activate Custom Modules in Odoo:
+1. Go to **Apps** (Ứng dụng).
+2. Activate **Developer Mode** (Chế độ nhà phát triển trong Settings).
+3. Click **Update Apps List** (Cập nhật danh sách ứng dụng).
+4. Search for the module name (`l10n_vn_tax_lookup`, `l10n_vn_vietqr_sale`, or `l10n_vn_address`) and click **Activate (Cài đặt)**.
+
+---
+
 ## 📄 License
 Odoo is published under LGPLv3 / Odoo Enterprise License. See `LICENSE` for details.

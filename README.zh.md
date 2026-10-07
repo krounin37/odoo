@@ -145,5 +145,23 @@ python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odo
 
 ---
 
+## 🇻🇳 越南本地化扩展模块 (`custom_addons/`)
+
+本项目已内置开发并集成针对越南企业实际业务场景的核心扩展模块：
+
+| 模块名称 | 功能说明 | 状态 |
+| :--- | :--- | :---: |
+| **`l10n_vn_tax_lookup`** | **税号自动查询企业信息**：输入企业税号（MST）时，自动调用官方数据接口，快速填充企业法定全称、注册地址及纳税人正常经营状态。 | ✅ 已就绪 |
+| **`l10n_vn_vietqr_sale`** | **报价单/销售订单动态 VietQR**：自动生成 NAPAS 247 动态银行转账二维码（含精准金额与订单备注），支持界面显示与 PDF 打印。 | ✅ 已就绪 |
+| **`l10n_vn_address`** | **越南三级行政区划**：省/直辖市 → 县/区/市 → 坊/镇/社 级联筛选与地址自动标准化，适配电子发票与越南主流物流对接。 | ✅ 已就绪 |
+
+### 如何在 Odoo 中启用扩展模块：
+1. 进入 **Apps (应用中心)**。
+2. 在设置中开启开发者模式 (**Developer Mode**)。
+3. 点击顶部 **Update Apps List (更新应用列表)**。
+4. 搜索模块名 (`l10n_vn_tax_lookup`、`l10n_vn_vietqr_sale` 或 `l10n_vn_address`)，点击 **Activate (安装)** 即可。
+
+---
+
 ## 📄 开源许可
 Odoo 遵循 LGPLv3 / Odoo Enterprise License 开源协议，详情请参见 `LICENSE` 文件。

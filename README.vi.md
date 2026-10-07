@@ -146,5 +146,23 @@ python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odo
 
 ---
 
+## 🇻🇳 Bộ Module Bản Địa Hóa Việt Nam (`custom_addons/`)
+
+Repository này đã được xây dựng và tích hợp sẵn bộ 3 module chuyên dụng cho thị trường và doanh nghiệp Việt Nam:
+
+| Module | Tên & Tính Năng | Trạng Thái |
+| :--- | :--- | :---: |
+| **`l10n_vn_tax_lookup`** | **Tự động tra cứu Mã Số Thuế**: Tra cứu trực tiếp từ Tổng cục Thuế để tự động điền Tên công ty pháp nhân, địa chỉ kinh doanh và kiểm tra trạng thái hoạt động của doanh nghiệp khi nhập MST. | ✅ Sẵn sàng |
+| **`l10n_vn_vietqr_sale`** | **Mã VietQR trên Báo giá & Đơn bán hàng**: Tự động sinh mã VietQR NAPAS 247 kèm số tiền chính xác và nội dung đơn hàng, hiển thị trên giao diện và in ra file PDF báo giá để khách hàng chuyển khoản tức thì. | ✅ Sẵn sàng |
+| **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã Việt Nam với cơ chế lọc liên hoàn thông minh và nút tự động chuẩn hóa địa chỉ phục vụ giao vận (GHN, GHTK, Viettel Post) & xuất hóa đơn VAT. | ✅ Sẵn sàng |
+
+### Cách kích hoạt các module trên trong Odoo:
+1. Vào menu **Apps (Ứng dụng)**.
+2. Bật chế độ Nhà phát triển (**Developer Mode** trong Cài đặt).
+3. Bấm nút **Update Apps List (Cập nhật danh sách ứng dụng)**.
+4. Tìm kiếm tên module (`l10n_vn_tax_lookup`, `l10n_vn_vietqr_sale` hoặc `l10n_vn_address`) và bấm **Activate (Cài đặt)**.
+
+---
+
 ## 📄 Bản quyền
 Odoo được phát hành theo giấy phép LGPLv3 / Odoo Enterprise License. Xem chi tiết tại `LICENSE`.
