@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_inherit_vietqr" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@id='total']" position="after">
+            <div t-if="doc.vietqr_qr_image" class="row mt-4 mb-3 pt-3 border-top" style="page-break-inside: avoid;">
+                <div class="col-8">
+                    <h5 class="fw-bold text-primary mb-2">Thông tin thanh toán chuyển khoản (VietQR)</h5>
+                    <table class="table table-sm table-borderless" style="width: 100%;">
+                        <tr>
+                            <td style="width: 35%; color: #6c757d;">Ngân hàng thụ hưởng:</td>
+                            <td><strong t-esc="doc.company_partner_bank_id.bank_id.name or doc.company_partner_bank_id.get_vietqr_bank_code()"/></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #6c757d;">Số tài khoản:</td>
+                            <td><strong class="text-danger fs-5" t-esc="getattr(doc.company_partner_bank_id, 'account_number', '') or getattr(doc.company_partner_bank_id, 'acc_number', '')"/></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #6c757d;">Chủ tài khoản:</td>
+                            <td><strong t-esc="getattr(doc.company_partner_bank_id, 'holder_name', '') or getattr(doc.company_partner_bank_id, 'acc_holder_name', '') or doc.company_id.name"/></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #6c757d;">Số tiền cần thanh toán:</td>
+                            <td><strong t-field="doc.amount_total"/></td>
+                        </tr>
+                        <tr>
+                            <td style="color: #6c757d;">Nội dung chuyển khoản:</td>
+                            <td><span class="badge bg-light text-dark border p-1" t-field="doc.vietqr_memo"/></td>
+                        </tr>
+                    </table>
+                    <small class="text-muted fst-italic">* Mở ứng dụng ngân hàng bất kỳ để quét mã QR và tự động điền đầy đủ thông tin thanh toán.</small>
+                </div>
+                <div class="col-4 text-center d-flex flex-column align-items-center justify-content-center">
+                    <img t-att-src="image_data_uri(doc.vietqr_qr_image)" style="max-height: 190px; max-width: 190px; border: 1px solid #dee2e6; padding: 4px; border-radius: 8px;"/>
+                    <span class="small text-muted mt-1">Quét mã bằng App Ngân Hàng</span>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

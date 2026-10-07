@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_vietqr" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.vietqr</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="vietqr_payment" string="Thanh Toán VietQR">
+                    <group>
+                        <group string="Cấu hình nhận thanh toán">
+                            <field name="company_partner_id" invisible="1"/>
+                            <field name="company_partner_bank_id" options="{'no_create': True}"/>
+                            <field name="vietqr_memo"/>
+                            <div>
+                                <button name="action_refresh_vietqr"
+                                        type="object"
+                                        string="Làm mới mã QR"
+                                        icon="fa-refresh"
+                                        class="btn-secondary mt-2"/>
+                            </div>
+                        </group>
+                        <group string="Quét mã thanh toán (VietQR)">
+                            <div invisible="not vietqr_qr_image">
+                                <field name="vietqr_qr_image" widget="image" options="{'size': [220, 220]}"/>
+                            </div>
+                            <div class="text-muted" invisible="vietqr_qr_image">
+                                <span>Chưa tạo được mã QR. Vui lòng thiết lập tài khoản ngân hàng của công ty (kèm mã ngân hàng/BIC).</span>
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
