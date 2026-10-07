@@ -157,6 +157,7 @@ This repository includes custom modules tailored for Vietnamese business operati
 | **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã với bộ lọc liên hoàn và nút tự động chuẩn hóa chuỗi địa chỉ giao hàng / xuất hóa đơn. | ✅ Sẵn sàng |
 | **`l10n_vn_amount_to_text`** | **Đọc số tiền thành chữ Tiếng Việt**: Tự động chuyển đổi tổng tiền thành chữ Tiếng Việt chuẩn ngữ pháp và quy định kế toán BTC trên Hóa đơn, Báo giá và Phiếu thu chi. | ✅ Sẵn sàng |
 | **`l10n_vn_cash_voucher`** | **Phiếu Thu (01-TT) & Phiếu Chi (02-TT)**: In phiếu thu và phiếu chi chuẩn Thông tư 200/2014/TT-BTC của Bộ Tài chính với đầy đủ định khoản Nợ/Có và 5 chữ ký pháp lý. | ✅ Sẵn sàng |
+| **`l10n_vn_stock_voucher`** | **Phiếu Nhập (01-VT) & Phiếu Xuất (02-VT)**: In phiếu nhập kho và xuất kho chuẩn Thông tư 200/2014/TT-BTC với bảng kê chi tiết vật tư, số lượng thực tế và 5 chữ ký kế toán kho. | ✅ Sẵn sàng |
 
 ### How to Activate Custom Modules in Odoo:
 1. Go to **Apps** (Ứng dụng).

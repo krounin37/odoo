@@ -157,6 +157,7 @@ Repository này đã được xây dựng và tích hợp sẵn bộ 3 module ch
 | **`l10n_vn_address`** | **Địa giới hành chính 3 cấp**: Quản lý Quận/Huyện và Phường/Xã Việt Nam với cơ chế lọc liên hoàn thông minh và nút tự động chuẩn hóa địa chỉ phục vụ giao vận (GHN, GHTK, Viettel Post) & xuất hóa đơn VAT. | ✅ Sẵn sàng |
 | **`l10n_vn_amount_to_text`** | **Đọc số tiền thành chữ Tiếng Việt**: Tự động chuyển đổi tổng tiền thành chữ Tiếng Việt chuẩn ngữ pháp và quy định chứng từ kế toán BTC trên Hóa đơn, Báo giá và Phiếu thu chi. | ✅ Sẵn sàng |
 | **`l10n_vn_cash_voucher`** | **Phiếu Thu (01-TT) & Phiếu Chi (02-TT)**: In phiếu thu và phiếu chi chuẩn Thông tư 200/2014/TT-BTC của Bộ Tài chính với đầy đủ định khoản Nợ/Có và 5 chữ ký pháp lý. | ✅ Sẵn sàng |
+| **`l10n_vn_stock_voucher`** | **Phiếu Nhập (01-VT) & Phiếu Xuất (02-VT)**: In phiếu nhập kho và xuất kho chuẩn Thông tư 200/2014/TT-BTC với bảng kê chi tiết vật tư, số lượng thực tế và 5 chữ ký kế toán kho. | ✅ Sẵn sàng |
 
 ### Cách kích hoạt các module trên trong Odoo:
 1. Vào menu **Apps (Ứng dụng)**.
