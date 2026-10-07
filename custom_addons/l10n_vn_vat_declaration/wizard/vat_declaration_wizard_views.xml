@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View Wizard -->
+    <record id="view_vn_vat_declaration_wizard_form" model="ir.ui.view">
+        <field name="name">vn.vat.declaration.wizard.form</field>
+        <field name="model">vn.vat.declaration.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Bảng Kê Hóa Đơn Thuế GTGT (01-1/GTGT &amp; 01-2/GTGT)">
+                <sheet>
+                    <group>
+                        <group string="Kỳ báo cáo &amp; Phạm vi">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="company_id" options="{'no_create': True}"/>
+                        </group>
+                        <group string="Tùy chọn lọc dữ liệu">
+                            <field name="report_type"/>
+                            <field name="state_filter"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_print_pdf" string="Xuất PDF Bảng Kê" type="object" class="btn-primary" icon="fa-print"/>
+                    <button name="action_view_invoices" string="Xem Hóa Đơn Trên Màn Hình" type="object" class="btn-secondary" icon="fa-list"/>
+                    <button string="Đóng" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_vn_vat_declaration_wizard" model="ir.actions.act_window">
+        <field name="name">Bảng Kê Hóa Đơn Thuế GTGT</field>
+        <field name="res_model">vn.vat.declaration.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Menuitem -->
+    <menuitem id="menu_vn_vat_declaration"
+              name="Bảng Kê Thuế GTGT (01-1 &amp; 01-2)"
+              action="action_vn_vat_declaration_wizard"
+              parent="account.menu_finance_reports"
+              sequence="30"/>
+</odoo>

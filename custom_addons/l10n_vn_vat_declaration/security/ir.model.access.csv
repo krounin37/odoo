@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vn_vat_declaration_wizard_user,vn.vat.declaration.wizard.user,model_vn_vat_declaration_wizard,account.group_account_invoice,1,1,1,1
+access_vn_vat_declaration_wizard_manager,vn.vat.declaration.wizard.manager,model_vn_vat_declaration_wizard,account.group_account_manager,1,1,1,1

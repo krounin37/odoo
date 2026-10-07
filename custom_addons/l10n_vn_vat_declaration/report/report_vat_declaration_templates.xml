@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_vat_declaration_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="data" t-value="o.get_vat_data()"/>
+                <div class="article" style="font-family: 'Times New Roman', Times, serif; font-size: 13px; line-height: 1.4;">
+                    <!-- Company Header -->
+                    <div class="row">
+                        <div class="col-8">
+                            <strong t-esc="o.company_id.name.upper()"/><br/>
+                            <span>Địa chỉ: <t t-esc="o.company_id.partner_id.contact_address or o.company_id.street or ''"/></span><br/>
+                            <span t-if="o.company_id.vat">Mã số thuế: <strong t-esc="o.company_id.vat"/></span>
+                        </div>
+                        <div class="col-4 text-end">
+                            <span class="fst-italic" style="font-size: 11px;">Phục vụ kê khai thuế &amp; HTKK</span><br/>
+                            <span style="font-size: 12px;">Từ: <strong t-esc="o.date_from.strftime('%d/%m/%Y')"/> - Đến: <strong t-esc="o.date_to.strftime('%d/%m/%Y')"/></span>
+                        </div>
+                    </div>
+
+                    <!-- BẢNG KÊ BÁN RA (01-1/GTGT) -->
+                    <t t-if="o.report_type in ('outbound', 'all')">
+                        <div class="text-center mt-4 mb-2">
+                            <h4 class="fw-bold mb-1" style="font-size: 18px; text-transform: uppercase;">BẢNG KÊ HÓA ĐƠN HÀNG HÓA, DỊCH VỤ BÁN RA</h4>
+                            <span class="fst-italic" style="font-size: 12px;">(Kèm theo tờ khai thuế GTGT - Mẫu số 01-1/GTGT)</span>
+                        </div>
+
+                        <table class="table table-sm table-bordered mt-2" style="width: 100%; border-color: #333; font-size: 11px;">
+                            <thead class="text-center" style="background-color: #f2f2f2;">
+                                <tr>
+                                    <th style="width: 4%;">STT</th>
+                                    <th style="width: 14%;">Số HĐ / Ký hiệu</th>
+                                    <th style="width: 10%;">Ngày HĐ</th>
+                                    <th style="width: 26%;">Tên người mua</th>
+                                    <th style="width: 12%;">MST người mua</th>
+                                    <th style="width: 16%;">Doanh thu chưa thuế</th>
+                                    <th style="width: 18%;">Thuế GTGT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="idx" t-value="1"/>
+                                <t t-foreach="data['outbound']" t-as="line">
+                                    <tr>
+                                        <td class="text-center"><t t-esc="idx"/></td>
+                                        <td class="text-center"><span t-esc="line['name']"/><t t-if="line['ref']"> (<span t-esc="line['ref']"/>)</t></td>
+                                        <td class="text-center"><span t-esc="line['date'].strftime('%d/%m/%Y') if line['date'] else ''"/></td>
+                                        <td><span t-esc="line['partner_name']"/></td>
+                                        <td class="text-center"><span t-esc="line['partner_vat']"/></td>
+                                        <td class="text-end"><span t-esc="line['untaxed_amount']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                        <td class="text-end"><span t-esc="line['tax_amount']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    </tr>
+                                    <t t-set="idx" t-value="idx + 1"/>
+                                </t>
+                                <tr style="background-color: #f9f9f9;" class="fw-bold">
+                                    <td colspan="5" class="text-center">TỔNG CỘNG BÁN RA</td>
+                                    <td class="text-end"><span t-esc="data['total_out_untaxed']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <td class="text-end"><span t-esc="data['total_out_tax']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </t>
+
+                    <!-- BẢNG KÊ MUA VÀO (01-2/GTGT) -->
+                    <t t-if="o.report_type in ('inbound', 'all')">
+                        <div class="text-center mt-4 mb-2" t-att-style="'page-break-before: always;' if o.report_type == 'all' and len(data['outbound']) > 15 else ''">
+                            <h4 class="fw-bold mb-1" style="font-size: 18px; text-transform: uppercase;">BẢNG KÊ HÓA ĐƠN HÀNG HÓA, DỊCH VỤ MUA VÀO</h4>
+                            <span class="fst-italic" style="font-size: 12px;">(Kèm theo tờ khai thuế GTGT - Mẫu số 01-2/GTGT)</span>
+                        </div>
+
+                        <table class="table table-sm table-bordered mt-2" style="width: 100%; border-color: #333; font-size: 11px;">
+                            <thead class="text-center" style="background-color: #f2f2f2;">
+                                <tr>
+                                    <th style="width: 4%;">STT</th>
+                                    <th style="width: 14%;">Số HĐ / Ký hiệu</th>
+                                    <th style="width: 10%;">Ngày HĐ</th>
+                                    <th style="width: 26%;">Tên người bán</th>
+                                    <th style="width: 12%;">MST người bán</th>
+                                    <th style="width: 16%;">Giá trị mua chưa thuế</th>
+                                    <th style="width: 18%;">Thuế GTGT khấu trừ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="idx_in" t-value="1"/>
+                                <t t-foreach="data['inbound']" t-as="line">
+                                    <tr>
+                                        <td class="text-center"><t t-esc="idx_in"/></td>
+                                        <td class="text-center"><span t-esc="line['name']"/><t t-if="line['ref']"> (<span t-esc="line['ref']"/>)</t></td>
+                                        <td class="text-center"><span t-esc="line['date'].strftime('%d/%m/%Y') if line['date'] else ''"/></td>
+                                        <td><span t-esc="line['partner_name']"/></td>
+                                        <td class="text-center"><span t-esc="line['partner_vat']"/></td>
+                                        <td class="text-end"><span t-esc="line['untaxed_amount']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                        <td class="text-end"><span t-esc="line['tax_amount']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    </tr>
+                                    <t t-set="idx_in" t-value="idx_in + 1"/>
+                                </t>
+                                <tr style="background-color: #f9f9f9;" class="fw-bold">
+                                    <td colspan="5" class="text-center">TỔNG CỘNG MUA VÀO</td>
+                                    <td class="text-end"><span t-esc="data['total_in_untaxed']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <td class="text-end"><span t-esc="data['total_in_tax']" t-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </t>
+
+                    <!-- Chữ ký -->
+                    <div class="row text-center mt-4 pt-3" style="page-break-inside: avoid;">
+                        <div class="col-4">
+                            <strong>Người lập biểu</strong><br/>
+                            <span class="fst-italic" style="font-size: 11px;">(Ký, họ tên)</span>
+                        </div>
+                        <div class="col-4">
+                            <strong>Kế toán trưởng</strong><br/>
+                            <span class="fst-italic" style="font-size: 11px;">(Ký, họ tên)</span>
+                        </div>
+                        <div class="col-4">
+                            <strong>Người đại diện theo pháp luật</strong><br/>
+                            <span class="fst-italic" style="font-size: 11px;">(Ký, họ tên, đóng dấu)</span>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
