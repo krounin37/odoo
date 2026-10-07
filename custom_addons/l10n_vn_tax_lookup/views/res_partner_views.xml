@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_l10n_vn_tax_lookup" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.l10n.vn.tax.lookup</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <div id="vat_div" position="inside">
+                <button name="action_lookup_tax_info"
+                        type="object"
+                        string="Tra cứu MST"
+                        icon="fa-search"
+                        class="btn-link ps-2"
+                        invisible="not vat"
+                        help="Tra cứu tên công ty và địa chỉ theo dữ liệu Tổng cục Thuế Việt Nam"/>
+            </div>
+            <xpath expr="//notebook" position="inside">
+                <page name="vn_tax_info" string="Thông tin Thuế VN">
+                    <group>
+                        <group string="Đăng ký Thuế &amp; Doanh nghiệp">
+                            <field name="vn_tax_status"/>
+                            <field name="vn_international_name"/>
+                            <field name="vn_short_name"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
