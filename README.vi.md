@@ -158,6 +158,7 @@ Repository này đã được xây dựng và tích hợp sẵn bộ 3 module ch
 | **`l10n_vn_amount_to_text`** | **Đọc số tiền thành chữ Tiếng Việt**: Tự động chuyển đổi tổng tiền thành chữ Tiếng Việt chuẩn ngữ pháp và quy định chứng từ kế toán BTC trên Hóa đơn, Báo giá và Phiếu thu chi. | ✅ Sẵn sàng |
 | **`l10n_vn_cash_voucher`** | **Phiếu Thu (01-TT) & Phiếu Chi (02-TT)**: In phiếu thu và phiếu chi chuẩn Thông tư 200/2014/TT-BTC của Bộ Tài chính với đầy đủ định khoản Nợ/Có và 5 chữ ký pháp lý. | ✅ Sẵn sàng |
 | **`l10n_vn_stock_voucher`** | **Phiếu Nhập (01-VT) & Phiếu Xuất (02-VT)**: In phiếu nhập kho và xuất kho chuẩn Thông tư 200/2014/TT-BTC với bảng kê chi tiết vật tư, số lượng thực tế và 5 chữ ký kế toán kho. | ✅ Sẵn sàng |
+| **`l10n_vn_vat_declaration`** | **Bảng kê Thuế GTGT (01-1 & 01-2/GTGT)**: Tự động kết xuất bảng kê hóa đơn mua vào và bán ra theo mẫu Tổng cục Thuế, phục vụ đối chiếu và nhập phần mềm HTKK. | ✅ Sẵn sàng |
 
 ### Cách kích hoạt các module trên trong Odoo:
 1. Vào menu **Apps (Ứng dụng)**.
