@@ -160,6 +160,7 @@ python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odo
 | **`l10n_vn_vat_declaration`** | **增值税进销项发票申报汇总表**：自动导出符合越南税务总局 01-1/GTGT（销项）与 01-2/GTGT（进项）格式清单，无缝对接 HTKK 报税系统。 | ✅ 已就绪 |
 | **`l10n_vn_payroll_pit`** | **个人所得税与法定社保测算**：管理身份证号、个人税号、社保编号及抚养人数，内置越南劳动法七级累进个税与税前Gross转税后Net薪资计算器。 | ✅ 已就绪 |
 | **`l10n_vn_edi_misa`** | **MISA meInvoice 电子发票对接**：支持一键将 Odoo 客户发票同步并开具至 MISA meInvoice 平台，获取正式发票号、查询码与电子原件直达链接。 | ✅ 已就绪 |
+| **`payment_vnpay`** | **VNPAY 在线支付网关 (v2.1.0)**：集成 VNPAY-QR 扫码、越南国内 ATM 卡与国际信用卡在线支付，支持 HMAC-SHA512 加密验签与服务端 IPN 异步回调。 | ✅ 已就绪 |
 
 ### 如何在 Odoo 中启用扩展模块：
 1. 进入 **Apps (应用中心)**。

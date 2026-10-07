@@ -161,6 +161,7 @@ Repository này đã được xây dựng và tích hợp sẵn bộ 3 module ch
 | **`l10n_vn_vat_declaration`** | **Bảng kê Thuế GTGT (01-1 & 01-2/GTGT)**: Tự động kết xuất bảng kê hóa đơn mua vào và bán ra theo mẫu Tổng cục Thuế, phục vụ đối chiếu và nhập phần mềm HTKK. | ✅ Sẵn sàng |
 | **`l10n_vn_payroll_pit`** | **Thuế TNCN & Bảo Hiểm Xã Hội**: Quản lý CCCD, MST cá nhân, mã số BHXH, số người phụ thuộc và công cụ tính thuế TNCN lũy tiến 7 bậc / lương Gross → Net theo Luật Lao Động VN. | ✅ Sẵn sàng |
 | **`l10n_vn_edi_misa`** | **Hóa đơn điện tử MISA meInvoice**: Tự động phát hành, ký số và đồng bộ hóa đơn điện tử MISA meInvoice trực tiếp từ Hóa đơn khách hàng Odoo chỉ bằng 1 click. | ✅ Sẵn sàng |
+| **`payment_vnpay`** | **Cổng thanh toán VNPAY (v2.1.0)**: Tích hợp thanh toán VNPAY-QR, thẻ ATM nội địa & thẻ quốc tế cho Website/eCommerce với chữ ký HMAC-SHA512 và Webhook IPN tự động. | ✅ Sẵn sàng |
 
 ### Cách kích hoạt các module trên trong Odoo:
 1. Vào menu **Apps (Ứng dụng)**.
