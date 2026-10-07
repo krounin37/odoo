@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_payment_form_inherit_voucher_vn" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit.voucher.vn</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="priority">25</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='memo']" position="after">
+                <field name="voucher_person_name"/>
+                <field name="voucher_address"/>
+                <field name="voucher_reason"/>
+                <field name="voucher_attached"/>
+            </xpath>
+            <xpath expr="//group[@name='group2']" position="inside">
+                <field name="voucher_debit_account" readonly="1" groups="account.group_account_readonly"/>
+                <field name="voucher_credit_account" readonly="1" groups="account.group_account_readonly"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

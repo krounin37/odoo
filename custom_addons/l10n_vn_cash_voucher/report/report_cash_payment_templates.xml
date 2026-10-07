@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_cash_payment_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="article" style="font-family: 'Times New Roman', Times, serif; font-size: 14px; line-height: 1.4;">
+                    <!-- Header -->
+                    <div class="row">
+                        <div class="col-7">
+                            <strong t-esc="o.company_id.name.upper()"/><br/>
+                            <span>Địa chỉ: <t t-esc="o.company_id.partner_id.contact_address or o.company_id.street or ''"/></span><br/>
+                            <span t-if="o.company_id.vat">Mã số thuế: <strong t-esc="o.company_id.vat"/></span>
+                        </div>
+                        <div class="col-5 text-center">
+                            <strong>Mẫu số 02 - TT</strong><br/>
+                            <span class="fst-italic" style="font-size: 11px;">(Ban hành theo Thông tư số 200/2014/TT-BTC<br/>ngày 22/12/2014 của Bộ Tài chính)</span>
+                            <div class="text-start ps-3 mt-1" style="font-size: 13px;">
+                                <div>Số: <strong t-field="o.name"/></div>
+                                <div>Nợ: <span t-field="o.voucher_debit_account"/></div>
+                                <div>Có: <span t-field="o.voucher_credit_account"/></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Title -->
+                    <div class="text-center mt-3 mb-3">
+                        <h3 class="fw-bold mb-1" style="font-size: 24px; letter-spacing: 1px;">PHIẾU CHI</h3>
+                        <div class="fst-italic" t-if="o.date">
+                            Ngày <span t-esc="o.date.strftime('%d')"/> tháng <span t-esc="o.date.strftime('%m')"/> năm <span t-esc="o.date.strftime('%Y')"/>
+                        </div>
+                    </div>
+
+                    <!-- Body Content -->
+                    <div class="mt-2" style="font-size: 14px;">
+                        <table style="width: 100%; border: none;">
+                            <tr>
+                                <td style="width: 25%; padding: 4px 0;">Họ và tên người nhận tiền:</td>
+                                <td style="padding: 4px 0;"><strong t-esc="o.voucher_person_name or o.partner_id.name or ''"/></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 0;">Địa chỉ:</td>
+                                <td style="padding: 4px 0;"><span t-esc="o.voucher_address or ''"/></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 0;">Lý do chi:</td>
+                                <td style="padding: 4px 0;"><span t-esc="o.voucher_reason or o.memo or ''"/></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 0;">Số tiền:</td>
+                                <td style="padding: 4px 0;"><strong t-field="o.amount"/> <strong t-field="o.currency_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 0;">Bằng chữ:</td>
+                                <td style="padding: 4px 0;"><strong class="fst-italic" t-field="o.amount_words_vn"/></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px 0;">Kèm theo:</td>
+                                <td style="padding: 4px 0;"><span t-esc="o.voucher_attached or '01'"/> chứng từ gốc.</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Signatures -->
+                    <div class="row text-center mt-4 pt-2" style="page-break-inside: avoid;">
+                        <div class="col-12 text-end fst-italic mb-2" t-if="o.date">
+                            Ngày <span t-esc="o.date.strftime('%d')"/> tháng <span t-esc="o.date.strftime('%m')"/> năm <span t-esc="o.date.strftime('%Y')"/>
+                        </div>
+                        <div class="col" style="width: 20%; float: left;">
+                            <strong>Giám đốc</strong><br/>
+                            <span class="fst-italic" style="font-size: 12px;">(Ký, họ tên, đóng dấu)</span>
+                        </div>
+                        <div class="col" style="width: 20%; float: left;">
+                            <strong>Kế toán trưởng</strong><br/>
+                            <span class="fst-italic" style="font-size: 12px;">(Ký, họ tên)</span>
+                        </div>
+                        <div class="col" style="width: 20%; float: left;">
+                            <strong>Người nhận tiền</strong><br/>
+                            <span class="fst-italic" style="font-size: 12px;">(Ký, họ tên)</span>
+                        </div>
+                        <div class="col" style="width: 20%; float: left;">
+                            <strong>Người lập phiếu</strong><br/>
+                            <span class="fst-italic" style="font-size: 12px;">(Ký, họ tên)</span>
+                        </div>
+                        <div class="col" style="width: 20%; float: left;">
+                            <strong>Thủ quỹ</strong><br/>
+                            <span class="fst-italic" style="font-size: 12px;">(Ký, họ tên)</span>
+                        </div>
+                    </div>
+
+                    <div style="clear: both; margin-top: 60px; font-size: 13px; font-style: italic;">
+                        <div>Đã nhận đủ số tiền (viết bằng chữ): ..........................................................................................................................</div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
