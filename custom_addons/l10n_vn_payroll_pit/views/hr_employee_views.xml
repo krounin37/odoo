@@ -32,14 +32,28 @@
                             <field name="vn_ee_bhxh" readonly="1"/>
                             <field name="vn_ee_bhyt" readonly="1"/>
                             <field name="vn_ee_bhtn" readonly="1"/>
+                            <field name="vn_ee_union_fee" readonly="1" invisible="not vn_has_union or not vn_has_union_fee"/>
                             <field name="vn_ee_total_insurance" readonly="1" class="fw-bold"/>
                         </group>
                         <group string="Bảo hiểm Doanh nghiệp đóng (23.5%)">
                             <field name="vn_er_bhxh" readonly="1"/>
                             <field name="vn_er_bhyt" readonly="1"/>
                             <field name="vn_er_bhtn" readonly="1"/>
-                            <field name="vn_er_kpcd" readonly="1"/>
+                            <field name="vn_er_kpcd" readonly="1" invisible="not vn_has_union"/>
                             <field name="vn_er_total_insurance" readonly="1" class="fw-bold"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Cấu hình Công Đoàn">
+                            <field name="vn_has_union" widget="boolean_toggle"/>
+                            <field name="vn_has_union_fee" widget="boolean_toggle" invisible="not vn_has_union"/>
+                        </group>
+                        <group string="Tùy Chọn &amp; Biến Động Thuế TNCN">
+                            <field name="vn_pit_calc_method"/>
+                            <field name="vn_custom_pit_tax" invisible="vn_pit_calc_method != 'custom'"/>
+                            <field name="vn_non_taxable_income"/>
+                            <field name="vn_other_deductions"/>
+                            <field name="vn_tax_adjustment"/>
                         </group>
                     </group>
                 </page>
