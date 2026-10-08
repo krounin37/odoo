@@ -53,12 +53,18 @@ class StockPicking(models.Model):
 
     voucher_debit_account = fields.Char(
         string='Tài khoản Nợ',
-        default='156 / 152'
+        compute='_compute_voucher_accounts',
+        store=True,
+        readonly=False,
+        help='Tài khoản Nợ theo chuẩn kế toán TT 200 (VD: 632 khi xuất bán, 156 khi nhập mua)'
     )
 
     voucher_credit_account = fields.Char(
         string='Tài khoản Có',
-        default='331 / 111 / 632'
+        compute='_compute_voucher_accounts',
+        store=True,
+        readonly=False,
+        help='Tài khoản Có theo chuẩn kế toán TT 200 (VD: 156 khi xuất bán, 331 khi nhập mua)'
     )
 
     company_currency_id = fields.Many2one(
@@ -89,6 +95,25 @@ class StockPicking(models.Model):
             if not picking.voucher_contact_address and picking.partner_id:
                 parts = [p for p in [picking.partner_id.street, picking.partner_id.city] if p]
                 picking.voucher_contact_address = ', '.join(parts) if parts else ''
+
+    @api.depends('picking_type_id', 'picking_type_id.code')
+    def _compute_voucher_accounts(self):
+        for picking in self:
+            code = picking.picking_type_id.code if picking.picking_type_id else ''
+            if not picking.voucher_debit_account:
+                if code == 'incoming':
+                    picking.voucher_debit_account = '156'
+                elif code == 'outgoing':
+                    picking.voucher_debit_account = '632'
+                else:
+                    picking.voucher_debit_account = '156'
+            if not picking.voucher_credit_account:
+                if code == 'incoming':
+                    picking.voucher_credit_account = '331'
+                elif code == 'outgoing':
+                    picking.voucher_credit_account = '156'
+                else:
+                    picking.voucher_credit_account = '156'
 
     @api.depends('origin', 'picking_type_id', 'name')
     def _compute_voucher_reason(self):
