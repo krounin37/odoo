@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- 1. Server Action: Xuất hiện trực tiếp trong menu bánh răng ⚙️ (Tác vụ / Hành động) trên cả List view và Form view -->
+    <record id="action_server_change_password" model="ir.actions.server">
+        <field name="name">Đặt / Đổi Mật Khẩu</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="binding_model_id" ref="base.model_res_users"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+action = records.action_open_change_password_wizard()
+        </field>
+    </record>
+
+    <!-- 2. Nút bấm trực tiếp trên Header của Form View -->
     <record id="view_users_form_inherit_set_password" model="ir.ui.view">
         <field name="name">res.users.form.inherit.set.password</field>
         <field name="model">res.users</field>
@@ -7,8 +20,8 @@
         <field name="priority">20</field>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
-                <button name="%(base.change_password_wizard_action)d"
-                        type="action"
+                <button name="action_open_change_password_wizard"
+                        type="object"
                         string="Đặt / Đổi Mật Khẩu"
                         class="btn btn-primary"
                         icon="fa-key"
