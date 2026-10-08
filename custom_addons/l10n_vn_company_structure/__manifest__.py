@@ -30,6 +30,7 @@ Cơ Cấu Tổ Chức & Quy Trình Vận Hành Doanh Nghiệp Chuẩn Việt Nam
     'license': 'LGPL-3',
     'depends': ['hr', 'base'],
     'data': [
+        'data/enterprise_security_data.xml',
         'data/hr_department_data.xml',
         'views/res_users_views.xml',
     ],

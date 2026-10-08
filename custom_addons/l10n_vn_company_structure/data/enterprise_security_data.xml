@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- 1. Khóa cứng chế độ đăng ký B2B (On invitation only) - Triệt tiêu tự do đăng ký trên toàn hệ thống -->
+    <function model="ir.config_parameter" name="set_param">
+        <value>auth_signup.invitation_scope</value>
+        <value>b2b</value>
+    </function>
+
+    <!-- 2. Khóa quyền người dùng mẫu (base.default_user) để nhân viên mới không kế thừa quyền Administrator -->
+    <record id="base.default_user" model="res.users">
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]"/>
+    </record>
+</odoo>
