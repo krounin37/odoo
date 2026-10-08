@@ -30,6 +30,8 @@ class ResPartner(models.Model):
             self.state_id = self.district_id.state_id
             if self.district_id.country_id:
                 self.country_id = self.district_id.country_id
+            # Đồng bộ vào city để tương thích với các phân hệ Odoo chuẩn (eCommerce, Invoicing, Delivery)
+            self.city = self.district_id.name
             if self.ward_id and self.ward_id.district_id != self.district_id:
                 self.ward_id = False
 
@@ -40,18 +42,28 @@ class ResPartner(models.Model):
             self.state_id = self.ward_id.state_id
             if self.ward_id.country_id:
                 self.country_id = self.ward_id.country_id
+            if self.district_id:
+                self.city = self.district_id.name
+
+    def _prepare_display_address(self, without_company=False):
+        """Kế thừa định dạng hiển thị địa chỉ của Odoo để đưa Quận/Huyện vào trường city và mẫu địa chỉ Việt Nam"""
+        if self.district_id and not self.city:
+            self.city = self.district_id.name
+        address_format, args = super()._prepare_display_address(without_company=without_company)
+        return address_format, args
 
     def action_standardize_vn_address(self):
         """Tự động chuẩn hóa chuỗi địa chỉ đầy đủ bao gồm Phường/Xã, Quận/Huyện, Tỉnh/Thành"""
         for partner in self:
             parts = []
             if partner.street:
-                parts.append(partner.street.strip().rstrip(','))
-            if partner.ward_id:
+                clean_street = partner.street.strip().rstrip(',')
+                parts.append(clean_street)
+            if partner.ward_id and partner.ward_id.name not in (partner.street or ''):
                 parts.append(partner.ward_id.name)
-            if partner.district_id:
+            if partner.district_id and partner.district_id.name not in (partner.street or ''):
                 parts.append(partner.district_id.name)
-            if partner.state_id:
+            if partner.state_id and partner.state_id.name not in (partner.street or ''):
                 parts.append(partner.state_id.name)
 
             if parts:

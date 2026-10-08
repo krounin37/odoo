@@ -6,18 +6,42 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="priority">25</field>
         <field name="arch" type="xml">
-            <xpath expr="//div[hasclass('o_address_format')]//field[@name='state_id']" position="before">
-                <field name="district_id" placeholder="Quận / Huyện" options="{'no_open': True, 'no_create_edit': True}"/>
-                <field name="ward_id" placeholder="Phường / Xã" options="{'no_open': True, 'no_create_edit': True}"/>
+            <!-- Tùy biến trường street với placeholder rõ ràng -->
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='street']" position="attributes">
+                <attribute name="placeholder">Số nhà, ngõ/ngách, tên đường, tòa nhà...</attribute>
             </xpath>
+
+            <!-- Ẩn street2 và zip khi quốc gia là Việt Nam để giữ form gọn gàng chuẩn hành chính VN -->
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='street2']" position="attributes">
+                <attribute name="invisible">country_code == 'VN'</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='zip']" position="attributes">
+                <attribute name="invisible">country_code == 'VN'</attribute>
+            </xpath>
+
+            <!-- Chèn Phường/Xã và Quận/Huyện trước Tỉnh/Thành phố -->
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='city']" position="attributes">
+                <attribute name="invisible">country_code == 'VN'</attribute>
+            </xpath>
+
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='state_id']" position="before">
+                <field name="ward_id" placeholder="Phường / Xã / Thị trấn" options="{'no_open': True, 'no_create_edit': True}"/>
+                <field name="district_id" placeholder="Quận / Huyện / Thị xã" options="{'no_open': True, 'no_create_edit': True}"/>
+            </xpath>
+
+            <xpath expr="//div[hasclass('o_address_format')]//field[@name='state_id']" position="attributes">
+                <attribute name="placeholder">Tỉnh / Thành phố</attribute>
+            </xpath>
+
+            <!-- Nút chuẩn hóa và tự ghép chuỗi địa chỉ -->
             <xpath expr="//div[hasclass('o_address_format')]" position="after">
-                <div class="d-flex align-items-center mt-1" invisible="not (district_id or ward_id)">
+                <div class="d-flex align-items-center mt-1" invisible="not (district_id or ward_id or state_id)">
                     <button name="action_standardize_vn_address"
                             type="object"
                             string="Chuẩn hóa chuỗi địa chỉ"
                             icon="fa-map-marker"
                             class="btn btn-sm btn-link p-0 text-primary"
-                            help="Tự động nối Tên đường + Phường/Xã + Quận/Huyện + Tỉnh/Thành vào trường địa chỉ"/>
+                            help="Tự động nối Số nhà/Đường + Phường/Xã + Quận/Huyện + Tỉnh/Thành vào trường địa chỉ để xuất hóa đơn và giao hàng"/>
                 </div>
             </xpath>
         </field>

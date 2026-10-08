@@ -1,98 +1,3546 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
-    <!-- Hà Nội -->
-    <record id="district_hn_ba_dinh" model="res.district">
+    <!-- Thành phố Hà Nội -->
+    <record id="district_vn_001" model="res.district">
         <field name="name">Quận Ba Đình</field>
         <field name="code">001</field>
         <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hn_hoan_kiem" model="res.district">
+    <record id="district_vn_002" model="res.district">
         <field name="name">Quận Hoàn Kiếm</field>
         <field name="code">002</field>
         <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hn_dong_da" model="res.district">
-        <field name="name">Quận Đống Đa</field>
-        <field name="code">006</field>
-        <field name="state_id" ref="base.state_vn_VN-HN"/>
-    </record>
-    <record id="district_hn_cau_giay" model="res.district">
-        <field name="name">Quận Cầu Giấy</field>
-        <field name="code">005</field>
-        <field name="state_id" ref="base.state_vn_VN-HN"/>
-    </record>
-    <record id="district_hn_hai_ba_trung" model="res.district">
-        <field name="name">Quận Hai Bà Trưng</field>
-        <field name="code">004</field>
-        <field name="state_id" ref="base.state_vn_VN-HN"/>
-    </record>
-    <record id="district_hn_thanh_xuan" model="res.district">
-        <field name="name">Quận Thanh Xuân</field>
-        <field name="code">009</field>
-        <field name="state_id" ref="base.state_vn_VN-HN"/>
-    </record>
-    <record id="district_hn_tay_ho" model="res.district">
+    <record id="district_vn_003" model="res.district">
         <field name="name">Quận Tây Hồ</field>
         <field name="code">003</field>
         <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hn_nam_tu_liem" model="res.district">
+    <record id="district_vn_004" model="res.district">
+        <field name="name">Quận Long Biên</field>
+        <field name="code">004</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_005" model="res.district">
+        <field name="name">Quận Cầu Giấy</field>
+        <field name="code">005</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_006" model="res.district">
+        <field name="name">Quận Đống Đa</field>
+        <field name="code">006</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_007" model="res.district">
+        <field name="name">Quận Hai Bà Trưng</field>
+        <field name="code">007</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_008" model="res.district">
+        <field name="name">Quận Hoàng Mai</field>
+        <field name="code">008</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_009" model="res.district">
+        <field name="name">Quận Thanh Xuân</field>
+        <field name="code">009</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_016" model="res.district">
+        <field name="name">Huyện Sóc Sơn</field>
+        <field name="code">016</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_017" model="res.district">
+        <field name="name">Huyện Đông Anh</field>
+        <field name="code">017</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_018" model="res.district">
+        <field name="name">Huyện Gia Lâm</field>
+        <field name="code">018</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_019" model="res.district">
         <field name="name">Quận Nam Từ Liêm</field>
         <field name="code">019</field>
         <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-
-    <!-- TP. Hồ Chí Minh -->
-    <record id="district_hcm_quan_1" model="res.district">
-        <field name="name">Quận 1</field>
-        <field name="code">760</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_020" model="res.district">
+        <field name="name">Huyện Thanh Trì</field>
+        <field name="code">020</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_quan_3" model="res.district">
-        <field name="name">Quận 3</field>
-        <field name="code">770</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_021" model="res.district">
+        <field name="name">Quận Bắc Từ Liêm</field>
+        <field name="code">021</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_quan_7" model="res.district">
-        <field name="name">Quận 7</field>
-        <field name="code">778</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_250" model="res.district">
+        <field name="name">Huyện Mê Linh</field>
+        <field name="code">250</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_binh_thanh" model="res.district">
-        <field name="name">Quận Bình Thạnh</field>
-        <field name="code">765</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_268" model="res.district">
+        <field name="name">Quận Hà Đông</field>
+        <field name="code">268</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_phu_nhuan" model="res.district">
-        <field name="name">Quận Phú Nhuận</field>
-        <field name="code">768</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_269" model="res.district">
+        <field name="name">Thị xã Sơn Tây</field>
+        <field name="code">269</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_tan_binh" model="res.district">
-        <field name="name">Quận Tân Bình</field>
-        <field name="code">766</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_271" model="res.district">
+        <field name="name">Huyện Ba Vì</field>
+        <field name="code">271</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-    <record id="district_hcm_tp_thu_duc" model="res.district">
-        <field name="name">Thành phố Thủ Đức</field>
-        <field name="code">769</field>
-        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    <record id="district_vn_272" model="res.district">
+        <field name="name">Huyện Phúc Thọ</field>
+        <field name="code">272</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
     </record>
-
-    <!-- TP. Đà Nẵng -->
-    <record id="district_dn_hai_chau" model="res.district">
-        <field name="name">Quận Hải Châu</field>
+    <record id="district_vn_273" model="res.district">
+        <field name="name">Huyện Đan Phượng</field>
+        <field name="code">273</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_274" model="res.district">
+        <field name="name">Huyện Hoài Đức</field>
+        <field name="code">274</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_275" model="res.district">
+        <field name="name">Huyện Quốc Oai</field>
+        <field name="code">275</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_276" model="res.district">
+        <field name="name">Huyện Thạch Thất</field>
+        <field name="code">276</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_277" model="res.district">
+        <field name="name">Huyện Chương Mỹ</field>
+        <field name="code">277</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_278" model="res.district">
+        <field name="name">Huyện Thanh Oai</field>
+        <field name="code">278</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_279" model="res.district">
+        <field name="name">Huyện Thường Tín</field>
+        <field name="code">279</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_280" model="res.district">
+        <field name="name">Huyện Phú Xuyên</field>
+        <field name="code">280</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_281" model="res.district">
+        <field name="name">Huyện Ứng Hòa</field>
+        <field name="code">281</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <record id="district_vn_282" model="res.district">
+        <field name="name">Huyện Mỹ Đức</field>
+        <field name="code">282</field>
+        <field name="state_id" ref="base.state_vn_VN-HN"/>
+    </record>
+    <!-- Tỉnh Hà Giang -->
+    <record id="district_vn_024" model="res.district">
+        <field name="name">Thành phố Hà Giang</field>
+        <field name="code">024</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_026" model="res.district">
+        <field name="name">Huyện Đồng Văn</field>
+        <field name="code">026</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_027" model="res.district">
+        <field name="name">Huyện Mèo Vạc</field>
+        <field name="code">027</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_028" model="res.district">
+        <field name="name">Huyện Yên Minh</field>
+        <field name="code">028</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_029" model="res.district">
+        <field name="name">Huyện Quản Bạ</field>
+        <field name="code">029</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_030" model="res.district">
+        <field name="name">Huyện Vị Xuyên</field>
+        <field name="code">030</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_031" model="res.district">
+        <field name="name">Huyện Bắc Mê</field>
+        <field name="code">031</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_032" model="res.district">
+        <field name="name">Huyện Hoàng Su Phì</field>
+        <field name="code">032</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_033" model="res.district">
+        <field name="name">Huyện Xín Mần</field>
+        <field name="code">033</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_034" model="res.district">
+        <field name="name">Huyện Bắc Quang</field>
+        <field name="code">034</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <record id="district_vn_035" model="res.district">
+        <field name="name">Huyện Quang Bình</field>
+        <field name="code">035</field>
+        <field name="state_id" ref="base.state_vn_VN-03"/>
+    </record>
+    <!-- Tỉnh Cao Bằng -->
+    <record id="district_vn_040" model="res.district">
+        <field name="name">Thành phố Cao Bằng</field>
+        <field name="code">040</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_042" model="res.district">
+        <field name="name">Huyện Bảo Lâm</field>
+        <field name="code">042</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_043" model="res.district">
+        <field name="name">Huyện Bảo Lạc</field>
+        <field name="code">043</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_045" model="res.district">
+        <field name="name">Huyện Hà Quảng</field>
+        <field name="code">045</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_047" model="res.district">
+        <field name="name">Huyện Trùng Khánh</field>
+        <field name="code">047</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_048" model="res.district">
+        <field name="name">Huyện Hạ Lang</field>
+        <field name="code">048</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_049" model="res.district">
+        <field name="name">Huyện Quảng Hòa</field>
+        <field name="code">049</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_051" model="res.district">
+        <field name="name">Huyện Hoà An</field>
+        <field name="code">051</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_052" model="res.district">
+        <field name="name">Huyện Nguyên Bình</field>
+        <field name="code">052</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <record id="district_vn_053" model="res.district">
+        <field name="name">Huyện Thạch An</field>
+        <field name="code">053</field>
+        <field name="state_id" ref="base.state_vn_VN-04"/>
+    </record>
+    <!-- Tỉnh Bắc Kạn -->
+    <record id="district_vn_058" model="res.district">
+        <field name="name">Thành Phố Bắc Kạn</field>
+        <field name="code">058</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_060" model="res.district">
+        <field name="name">Huyện Pác Nặm</field>
+        <field name="code">060</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_061" model="res.district">
+        <field name="name">Huyện Ba Bể</field>
+        <field name="code">061</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_062" model="res.district">
+        <field name="name">Huyện Ngân Sơn</field>
+        <field name="code">062</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_063" model="res.district">
+        <field name="name">Huyện Bạch Thông</field>
+        <field name="code">063</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_064" model="res.district">
+        <field name="name">Huyện Chợ Đồn</field>
+        <field name="code">064</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_065" model="res.district">
+        <field name="name">Huyện Chợ Mới</field>
+        <field name="code">065</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <record id="district_vn_066" model="res.district">
+        <field name="name">Huyện Na Rì</field>
+        <field name="code">066</field>
+        <field name="state_id" ref="base.state_vn_VN-53"/>
+    </record>
+    <!-- Tỉnh Tuyên Quang -->
+    <record id="district_vn_070" model="res.district">
+        <field name="name">Thành phố Tuyên Quang</field>
+        <field name="code">070</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_071" model="res.district">
+        <field name="name">Huyện Lâm Bình</field>
+        <field name="code">071</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_072" model="res.district">
+        <field name="name">Huyện Na Hang</field>
+        <field name="code">072</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_073" model="res.district">
+        <field name="name">Huyện Chiêm Hóa</field>
+        <field name="code">073</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_074" model="res.district">
+        <field name="name">Huyện Hàm Yên</field>
+        <field name="code">074</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_075" model="res.district">
+        <field name="name">Huyện Yên Sơn</field>
+        <field name="code">075</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <record id="district_vn_076" model="res.district">
+        <field name="name">Huyện Sơn Dương</field>
+        <field name="code">076</field>
+        <field name="state_id" ref="base.state_vn_VN-07"/>
+    </record>
+    <!-- Tỉnh Lào Cai -->
+    <record id="district_vn_080" model="res.district">
+        <field name="name">Thành phố Lào Cai</field>
+        <field name="code">080</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_082" model="res.district">
+        <field name="name">Huyện Bát Xát</field>
+        <field name="code">082</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_083" model="res.district">
+        <field name="name">Huyện Mường Khương</field>
+        <field name="code">083</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_084" model="res.district">
+        <field name="name">Huyện Si Ma Cai</field>
+        <field name="code">084</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_085" model="res.district">
+        <field name="name">Huyện Bắc Hà</field>
+        <field name="code">085</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_086" model="res.district">
+        <field name="name">Huyện Bảo Thắng</field>
+        <field name="code">086</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_087" model="res.district">
+        <field name="name">Huyện Bảo Yên</field>
+        <field name="code">087</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_088" model="res.district">
+        <field name="name">Thị xã Sa Pa</field>
+        <field name="code">088</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <record id="district_vn_089" model="res.district">
+        <field name="name">Huyện Văn Bàn</field>
+        <field name="code">089</field>
+        <field name="state_id" ref="base.state_vn_VN-02"/>
+    </record>
+    <!-- Tỉnh Điện Biên -->
+    <record id="district_vn_094" model="res.district">
+        <field name="name">Thành phố Điện Biên Phủ</field>
+        <field name="code">094</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_095" model="res.district">
+        <field name="name">Thị xã Mường Lay</field>
+        <field name="code">095</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_096" model="res.district">
+        <field name="name">Huyện Mường Nhé</field>
+        <field name="code">096</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_097" model="res.district">
+        <field name="name">Huyện Mường Chà</field>
+        <field name="code">097</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_098" model="res.district">
+        <field name="name">Huyện Tủa Chùa</field>
+        <field name="code">098</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_099" model="res.district">
+        <field name="name">Huyện Tuần Giáo</field>
+        <field name="code">099</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_100" model="res.district">
+        <field name="name">Huyện Điện Biên</field>
+        <field name="code">100</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_101" model="res.district">
+        <field name="name">Huyện Điện Biên Đông</field>
+        <field name="code">101</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_102" model="res.district">
+        <field name="name">Huyện Mường Ảng</field>
+        <field name="code">102</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <record id="district_vn_103" model="res.district">
+        <field name="name">Huyện Nậm Pồ</field>
+        <field name="code">103</field>
+        <field name="state_id" ref="base.state_vn_VN-71"/>
+    </record>
+    <!-- Tỉnh Lai Châu -->
+    <record id="district_vn_105" model="res.district">
+        <field name="name">Thành phố Lai Châu</field>
+        <field name="code">105</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_106" model="res.district">
+        <field name="name">Huyện Tam Đường</field>
+        <field name="code">106</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_107" model="res.district">
+        <field name="name">Huyện Mường Tè</field>
+        <field name="code">107</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_108" model="res.district">
+        <field name="name">Huyện Sìn Hồ</field>
+        <field name="code">108</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_109" model="res.district">
+        <field name="name">Huyện Phong Thổ</field>
+        <field name="code">109</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_110" model="res.district">
+        <field name="name">Huyện Than Uyên</field>
+        <field name="code">110</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_111" model="res.district">
+        <field name="name">Huyện Tân Uyên</field>
+        <field name="code">111</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <record id="district_vn_112" model="res.district">
+        <field name="name">Huyện Nậm Nhùn</field>
+        <field name="code">112</field>
+        <field name="state_id" ref="base.state_vn_VN-01"/>
+    </record>
+    <!-- Tỉnh Sơn La -->
+    <record id="district_vn_116" model="res.district">
+        <field name="name">Thành phố Sơn La</field>
+        <field name="code">116</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_118" model="res.district">
+        <field name="name">Huyện Quỳnh Nhai</field>
+        <field name="code">118</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_119" model="res.district">
+        <field name="name">Huyện Thuận Châu</field>
+        <field name="code">119</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_120" model="res.district">
+        <field name="name">Huyện Mường La</field>
+        <field name="code">120</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_121" model="res.district">
+        <field name="name">Huyện Bắc Yên</field>
+        <field name="code">121</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_122" model="res.district">
+        <field name="name">Huyện Phù Yên</field>
+        <field name="code">122</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_123" model="res.district">
+        <field name="name">Huyện Mộc Châu</field>
+        <field name="code">123</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_124" model="res.district">
+        <field name="name">Huyện Yên Châu</field>
+        <field name="code">124</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_125" model="res.district">
+        <field name="name">Huyện Mai Sơn</field>
+        <field name="code">125</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_126" model="res.district">
+        <field name="name">Huyện Sông Mã</field>
+        <field name="code">126</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_127" model="res.district">
+        <field name="name">Huyện Sốp Cộp</field>
+        <field name="code">127</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <record id="district_vn_128" model="res.district">
+        <field name="name">Huyện Vân Hồ</field>
+        <field name="code">128</field>
+        <field name="state_id" ref="base.state_vn_VN-05"/>
+    </record>
+    <!-- Tỉnh Yên Bái -->
+    <record id="district_vn_132" model="res.district">
+        <field name="name">Thành phố Yên Bái</field>
+        <field name="code">132</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_133" model="res.district">
+        <field name="name">Thị xã Nghĩa Lộ</field>
+        <field name="code">133</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_135" model="res.district">
+        <field name="name">Huyện Lục Yên</field>
+        <field name="code">135</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_136" model="res.district">
+        <field name="name">Huyện Văn Yên</field>
+        <field name="code">136</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_137" model="res.district">
+        <field name="name">Huyện Mù Căng Chải</field>
+        <field name="code">137</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_138" model="res.district">
+        <field name="name">Huyện Trấn Yên</field>
+        <field name="code">138</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_139" model="res.district">
+        <field name="name">Huyện Trạm Tấu</field>
+        <field name="code">139</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_140" model="res.district">
+        <field name="name">Huyện Văn Chấn</field>
+        <field name="code">140</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <record id="district_vn_141" model="res.district">
+        <field name="name">Huyện Yên Bình</field>
+        <field name="code">141</field>
+        <field name="state_id" ref="base.state_vn_VN-06"/>
+    </record>
+    <!-- Tỉnh Hoà Bình -->
+    <record id="district_vn_148" model="res.district">
+        <field name="name">Thành phố Hòa Bình</field>
+        <field name="code">148</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_150" model="res.district">
+        <field name="name">Huyện Đà Bắc</field>
+        <field name="code">150</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_152" model="res.district">
+        <field name="name">Huyện Lương Sơn</field>
+        <field name="code">152</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_153" model="res.district">
+        <field name="name">Huyện Kim Bôi</field>
+        <field name="code">153</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_154" model="res.district">
+        <field name="name">Huyện Cao Phong</field>
+        <field name="code">154</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_155" model="res.district">
+        <field name="name">Huyện Tân Lạc</field>
+        <field name="code">155</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_156" model="res.district">
+        <field name="name">Huyện Mai Châu</field>
+        <field name="code">156</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_157" model="res.district">
+        <field name="name">Huyện Lạc Sơn</field>
+        <field name="code">157</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_158" model="res.district">
+        <field name="name">Huyện Yên Thủy</field>
+        <field name="code">158</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <record id="district_vn_159" model="res.district">
+        <field name="name">Huyện Lạc Thủy</field>
+        <field name="code">159</field>
+        <field name="state_id" ref="base.state_vn_VN-14"/>
+    </record>
+    <!-- Tỉnh Thái Nguyên -->
+    <record id="district_vn_164" model="res.district">
+        <field name="name">Thành phố Thái Nguyên</field>
+        <field name="code">164</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_165" model="res.district">
+        <field name="name">Thành phố Sông Công</field>
+        <field name="code">165</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_167" model="res.district">
+        <field name="name">Huyện Định Hóa</field>
+        <field name="code">167</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_168" model="res.district">
+        <field name="name">Huyện Phú Lương</field>
+        <field name="code">168</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_169" model="res.district">
+        <field name="name">Huyện Đồng Hỷ</field>
+        <field name="code">169</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_170" model="res.district">
+        <field name="name">Huyện Võ Nhai</field>
+        <field name="code">170</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_171" model="res.district">
+        <field name="name">Huyện Đại Từ</field>
+        <field name="code">171</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_172" model="res.district">
+        <field name="name">Thành phố Phổ Yên</field>
+        <field name="code">172</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <record id="district_vn_173" model="res.district">
+        <field name="name">Huyện Phú Bình</field>
+        <field name="code">173</field>
+        <field name="state_id" ref="base.state_vn_VN-69"/>
+    </record>
+    <!-- Tỉnh Lạng Sơn -->
+    <record id="district_vn_178" model="res.district">
+        <field name="name">Thành phố Lạng Sơn</field>
+        <field name="code">178</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_180" model="res.district">
+        <field name="name">Huyện Tràng Định</field>
+        <field name="code">180</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_181" model="res.district">
+        <field name="name">Huyện Bình Gia</field>
+        <field name="code">181</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_182" model="res.district">
+        <field name="name">Huyện Văn Lãng</field>
+        <field name="code">182</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_183" model="res.district">
+        <field name="name">Huyện Cao Lộc</field>
+        <field name="code">183</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_184" model="res.district">
+        <field name="name">Huyện Văn Quan</field>
+        <field name="code">184</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_185" model="res.district">
+        <field name="name">Huyện Bắc Sơn</field>
+        <field name="code">185</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_186" model="res.district">
+        <field name="name">Huyện Hữu Lũng</field>
+        <field name="code">186</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_187" model="res.district">
+        <field name="name">Huyện Chi Lăng</field>
+        <field name="code">187</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_188" model="res.district">
+        <field name="name">Huyện Lộc Bình</field>
+        <field name="code">188</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <record id="district_vn_189" model="res.district">
+        <field name="name">Huyện Đình Lập</field>
+        <field name="code">189</field>
+        <field name="state_id" ref="base.state_vn_VN-09"/>
+    </record>
+    <!-- Tỉnh Quảng Ninh -->
+    <record id="district_vn_193" model="res.district">
+        <field name="name">Thành phố Hạ Long</field>
+        <field name="code">193</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_194" model="res.district">
+        <field name="name">Thành phố Móng Cái</field>
+        <field name="code">194</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_195" model="res.district">
+        <field name="name">Thành phố Cẩm Phả</field>
+        <field name="code">195</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_196" model="res.district">
+        <field name="name">Thành phố Uông Bí</field>
+        <field name="code">196</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_198" model="res.district">
+        <field name="name">Huyện Bình Liêu</field>
+        <field name="code">198</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_199" model="res.district">
+        <field name="name">Huyện Tiên Yên</field>
+        <field name="code">199</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_200" model="res.district">
+        <field name="name">Huyện Đầm Hà</field>
+        <field name="code">200</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_201" model="res.district">
+        <field name="name">Huyện Hải Hà</field>
+        <field name="code">201</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_202" model="res.district">
+        <field name="name">Huyện Ba Chẽ</field>
+        <field name="code">202</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_203" model="res.district">
+        <field name="name">Huyện Vân Đồn</field>
+        <field name="code">203</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_205" model="res.district">
+        <field name="name">Thành phố Đông Triều</field>
+        <field name="code">205</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_206" model="res.district">
+        <field name="name">Thị xã Quảng Yên</field>
+        <field name="code">206</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <record id="district_vn_207" model="res.district">
+        <field name="name">Huyện Cô Tô</field>
+        <field name="code">207</field>
+        <field name="state_id" ref="base.state_vn_VN-13"/>
+    </record>
+    <!-- Tỉnh Bắc Giang -->
+    <record id="district_vn_213" model="res.district">
+        <field name="name">Thành phố Bắc Giang</field>
+        <field name="code">213</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_215" model="res.district">
+        <field name="name">Huyện Yên Thế</field>
+        <field name="code">215</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_216" model="res.district">
+        <field name="name">Huyện Tân Yên</field>
+        <field name="code">216</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_217" model="res.district">
+        <field name="name">Huyện Lạng Giang</field>
+        <field name="code">217</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_218" model="res.district">
+        <field name="name">Huyện Lục Nam</field>
+        <field name="code">218</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_219" model="res.district">
+        <field name="name">Huyện Lục Ngạn</field>
+        <field name="code">219</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_220" model="res.district">
+        <field name="name">Huyện Sơn Động</field>
+        <field name="code">220</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_222" model="res.district">
+        <field name="name">Thị xã Việt Yên</field>
+        <field name="code">222</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_223" model="res.district">
+        <field name="name">Huyện Hiệp Hòa</field>
+        <field name="code">223</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <record id="district_vn_224" model="res.district">
+        <field name="name">Thị xã Chũ</field>
+        <field name="code">224</field>
+        <field name="state_id" ref="base.state_vn_VN-54"/>
+    </record>
+    <!-- Tỉnh Phú Thọ -->
+    <record id="district_vn_227" model="res.district">
+        <field name="name">Thành phố Việt Trì</field>
+        <field name="code">227</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_228" model="res.district">
+        <field name="name">Thị xã Phú Thọ</field>
+        <field name="code">228</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_230" model="res.district">
+        <field name="name">Huyện Đoan Hùng</field>
+        <field name="code">230</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_231" model="res.district">
+        <field name="name">Huyện Hạ Hoà</field>
+        <field name="code">231</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_232" model="res.district">
+        <field name="name">Huyện Thanh Ba</field>
+        <field name="code">232</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_233" model="res.district">
+        <field name="name">Huyện Phù Ninh</field>
+        <field name="code">233</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_234" model="res.district">
+        <field name="name">Huyện Yên Lập</field>
+        <field name="code">234</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_235" model="res.district">
+        <field name="name">Huyện Cẩm Khê</field>
+        <field name="code">235</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_236" model="res.district">
+        <field name="name">Huyện Tam Nông</field>
+        <field name="code">236</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_237" model="res.district">
+        <field name="name">Huyện Lâm Thao</field>
+        <field name="code">237</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_238" model="res.district">
+        <field name="name">Huyện Thanh Sơn</field>
+        <field name="code">238</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_239" model="res.district">
+        <field name="name">Huyện Thanh Thuỷ</field>
+        <field name="code">239</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <record id="district_vn_240" model="res.district">
+        <field name="name">Huyện Tân Sơn</field>
+        <field name="code">240</field>
+        <field name="state_id" ref="base.state_vn_VN-68"/>
+    </record>
+    <!-- Tỉnh Vĩnh Phúc -->
+    <record id="district_vn_243" model="res.district">
+        <field name="name">Thành phố Vĩnh Yên</field>
+        <field name="code">243</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_244" model="res.district">
+        <field name="name">Thành phố Phúc Yên</field>
+        <field name="code">244</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_246" model="res.district">
+        <field name="name">Huyện Lập Thạch</field>
+        <field name="code">246</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_247" model="res.district">
+        <field name="name">Huyện Tam Dương</field>
+        <field name="code">247</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_248" model="res.district">
+        <field name="name">Huyện Tam Đảo</field>
+        <field name="code">248</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_249" model="res.district">
+        <field name="name">Huyện Bình Xuyên</field>
+        <field name="code">249</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_251" model="res.district">
+        <field name="name">Huyện Yên Lạc</field>
+        <field name="code">251</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_252" model="res.district">
+        <field name="name">Huyện Vĩnh Tường</field>
+        <field name="code">252</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <record id="district_vn_253" model="res.district">
+        <field name="name">Huyện Sông Lô</field>
+        <field name="code">253</field>
+        <field name="state_id" ref="base.state_vn_VN-70"/>
+    </record>
+    <!-- Tỉnh Bắc Ninh -->
+    <record id="district_vn_256" model="res.district">
+        <field name="name">Thành phố Bắc Ninh</field>
+        <field name="code">256</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_258" model="res.district">
+        <field name="name">Huyện Yên Phong</field>
+        <field name="code">258</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_259" model="res.district">
+        <field name="name">Thị xã Quế Võ</field>
+        <field name="code">259</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_260" model="res.district">
+        <field name="name">Huyện Tiên Du</field>
+        <field name="code">260</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_261" model="res.district">
+        <field name="name">Thành phố Từ Sơn</field>
+        <field name="code">261</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_262" model="res.district">
+        <field name="name">Thị xã Thuận Thành</field>
+        <field name="code">262</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_263" model="res.district">
+        <field name="name">Huyện Gia Bình</field>
+        <field name="code">263</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <record id="district_vn_264" model="res.district">
+        <field name="name">Huyện Lương Tài</field>
+        <field name="code">264</field>
+        <field name="state_id" ref="base.state_vn_VN-56"/>
+    </record>
+    <!-- Tỉnh Hải Dương -->
+    <record id="district_vn_288" model="res.district">
+        <field name="name">Thành phố Hải Dương</field>
+        <field name="code">288</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_290" model="res.district">
+        <field name="name">Thành phố Chí Linh</field>
+        <field name="code">290</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_291" model="res.district">
+        <field name="name">Huyện Nam Sách</field>
+        <field name="code">291</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_292" model="res.district">
+        <field name="name">Thị xã Kinh Môn</field>
+        <field name="code">292</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_293" model="res.district">
+        <field name="name">Huyện Kim Thành</field>
+        <field name="code">293</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_294" model="res.district">
+        <field name="name">Huyện Thanh Hà</field>
+        <field name="code">294</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_295" model="res.district">
+        <field name="name">Huyện Cẩm Giàng</field>
+        <field name="code">295</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_296" model="res.district">
+        <field name="name">Huyện Bình Giang</field>
+        <field name="code">296</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_297" model="res.district">
+        <field name="name">Huyện Gia Lộc</field>
+        <field name="code">297</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_298" model="res.district">
+        <field name="name">Huyện Tứ Kỳ</field>
+        <field name="code">298</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_299" model="res.district">
+        <field name="name">Huyện Ninh Giang</field>
+        <field name="code">299</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <record id="district_vn_300" model="res.district">
+        <field name="name">Huyện Thanh Miện</field>
+        <field name="code">300</field>
+        <field name="state_id" ref="base.state_vn_VN-61"/>
+    </record>
+    <!-- Thành phố Hải Phòng -->
+    <record id="district_vn_303" model="res.district">
+        <field name="name">Quận Hồng Bàng</field>
+        <field name="code">303</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_304" model="res.district">
+        <field name="name">Quận Ngô Quyền</field>
+        <field name="code">304</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_305" model="res.district">
+        <field name="name">Quận Lê Chân</field>
+        <field name="code">305</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_306" model="res.district">
+        <field name="name">Quận Hải An</field>
+        <field name="code">306</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_307" model="res.district">
+        <field name="name">Quận Kiến An</field>
+        <field name="code">307</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_308" model="res.district">
+        <field name="name">Quận Đồ Sơn</field>
+        <field name="code">308</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_309" model="res.district">
+        <field name="name">Quận Dương Kinh</field>
+        <field name="code">309</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_311" model="res.district">
+        <field name="name">Thành phố Thuỷ Nguyên</field>
+        <field name="code">311</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_312" model="res.district">
+        <field name="name">Quận An Dương</field>
+        <field name="code">312</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_313" model="res.district">
+        <field name="name">Huyện An Lão</field>
+        <field name="code">313</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_314" model="res.district">
+        <field name="name">Huyện Kiến Thuỵ</field>
+        <field name="code">314</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_315" model="res.district">
+        <field name="name">Huyện Tiên Lãng</field>
+        <field name="code">315</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_316" model="res.district">
+        <field name="name">Huyện Vĩnh Bảo</field>
+        <field name="code">316</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_317" model="res.district">
+        <field name="name">Huyện Cát Hải</field>
+        <field name="code">317</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <record id="district_vn_318" model="res.district">
+        <field name="name">Huyện Bạch Long Vĩ</field>
+        <field name="code">318</field>
+        <field name="state_id" ref="base.state_vn_VN-HP"/>
+    </record>
+    <!-- Tỉnh Hưng Yên -->
+    <record id="district_vn_323" model="res.district">
+        <field name="name">Thành phố Hưng Yên</field>
+        <field name="code">323</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_325" model="res.district">
+        <field name="name">Huyện Văn Lâm</field>
+        <field name="code">325</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_326" model="res.district">
+        <field name="name">Huyện Văn Giang</field>
+        <field name="code">326</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_327" model="res.district">
+        <field name="name">Huyện Yên Mỹ</field>
+        <field name="code">327</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_328" model="res.district">
+        <field name="name">Thị xã Mỹ Hào</field>
+        <field name="code">328</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_329" model="res.district">
+        <field name="name">Huyện Ân Thi</field>
+        <field name="code">329</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_330" model="res.district">
+        <field name="name">Huyện Khoái Châu</field>
+        <field name="code">330</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_331" model="res.district">
+        <field name="name">Huyện Kim Động</field>
+        <field name="code">331</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_332" model="res.district">
+        <field name="name">Huyện Tiên Lữ</field>
+        <field name="code">332</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <record id="district_vn_333" model="res.district">
+        <field name="name">Huyện Phù Cừ</field>
+        <field name="code">333</field>
+        <field name="state_id" ref="base.state_vn_VN-66"/>
+    </record>
+    <!-- Tỉnh Thái Bình -->
+    <record id="district_vn_336" model="res.district">
+        <field name="name">Thành phố Thái Bình</field>
+        <field name="code">336</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_338" model="res.district">
+        <field name="name">Huyện Quỳnh Phụ</field>
+        <field name="code">338</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_339" model="res.district">
+        <field name="name">Huyện Hưng Hà</field>
+        <field name="code">339</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_340" model="res.district">
+        <field name="name">Huyện Đông Hưng</field>
+        <field name="code">340</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_341" model="res.district">
+        <field name="name">Huyện Thái Thụy</field>
+        <field name="code">341</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_342" model="res.district">
+        <field name="name">Huyện Tiền Hải</field>
+        <field name="code">342</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_343" model="res.district">
+        <field name="name">Huyện Kiến Xương</field>
+        <field name="code">343</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <record id="district_vn_344" model="res.district">
+        <field name="name">Huyện Vũ Thư</field>
+        <field name="code">344</field>
+        <field name="state_id" ref="base.state_vn_VN-20"/>
+    </record>
+    <!-- Tỉnh Hà Nam -->
+    <record id="district_vn_347" model="res.district">
+        <field name="name">Thành phố Phủ Lý</field>
+        <field name="code">347</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <record id="district_vn_349" model="res.district">
+        <field name="name">Thị xã Duy Tiên</field>
+        <field name="code">349</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <record id="district_vn_350" model="res.district">
+        <field name="name">Thị xã Kim Bảng</field>
+        <field name="code">350</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <record id="district_vn_351" model="res.district">
+        <field name="name">Huyện Thanh Liêm</field>
+        <field name="code">351</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <record id="district_vn_352" model="res.district">
+        <field name="name">Huyện Bình Lục</field>
+        <field name="code">352</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <record id="district_vn_353" model="res.district">
+        <field name="name">Huyện Lý Nhân</field>
+        <field name="code">353</field>
+        <field name="state_id" ref="base.state_vn_VN-63"/>
+    </record>
+    <!-- Tỉnh Nam Định -->
+    <record id="district_vn_356" model="res.district">
+        <field name="name">Thành phố Nam Định</field>
+        <field name="code">356</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_359" model="res.district">
+        <field name="name">Huyện Vụ Bản</field>
+        <field name="code">359</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_360" model="res.district">
+        <field name="name">Huyện Ý Yên</field>
+        <field name="code">360</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_361" model="res.district">
+        <field name="name">Huyện Nghĩa Hưng</field>
+        <field name="code">361</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_362" model="res.district">
+        <field name="name">Huyện Nam Trực</field>
+        <field name="code">362</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_363" model="res.district">
+        <field name="name">Huyện Trực Ninh</field>
+        <field name="code">363</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_364" model="res.district">
+        <field name="name">Huyện Xuân Trường</field>
+        <field name="code">364</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_365" model="res.district">
+        <field name="name">Huyện Giao Thủy</field>
+        <field name="code">365</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <record id="district_vn_366" model="res.district">
+        <field name="name">Huyện Hải Hậu</field>
+        <field name="code">366</field>
+        <field name="state_id" ref="base.state_vn_VN-67"/>
+    </record>
+    <!-- Tỉnh Ninh Bình -->
+    <record id="district_vn_370" model="res.district">
+        <field name="name">Thành phố Tam Điệp</field>
+        <field name="code">370</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_372" model="res.district">
+        <field name="name">Huyện Nho Quan</field>
+        <field name="code">372</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_373" model="res.district">
+        <field name="name">Huyện Gia Viễn</field>
+        <field name="code">373</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_374" model="res.district">
+        <field name="name">Thành phố Hoa Lư</field>
+        <field name="code">374</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_375" model="res.district">
+        <field name="name">Huyện Yên Khánh</field>
+        <field name="code">375</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_376" model="res.district">
+        <field name="name">Huyện Kim Sơn</field>
+        <field name="code">376</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <record id="district_vn_377" model="res.district">
+        <field name="name">Huyện Yên Mô</field>
+        <field name="code">377</field>
+        <field name="state_id" ref="base.state_vn_VN-18"/>
+    </record>
+    <!-- Tỉnh Thanh Hóa -->
+    <record id="district_vn_380" model="res.district">
+        <field name="name">Thành phố Thanh Hóa</field>
+        <field name="code">380</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_381" model="res.district">
+        <field name="name">Thị xã Bỉm Sơn</field>
+        <field name="code">381</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_382" model="res.district">
+        <field name="name">Thành phố Sầm Sơn</field>
+        <field name="code">382</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_384" model="res.district">
+        <field name="name">Huyện Mường Lát</field>
+        <field name="code">384</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_385" model="res.district">
+        <field name="name">Huyện Quan Hóa</field>
+        <field name="code">385</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_386" model="res.district">
+        <field name="name">Huyện Bá Thước</field>
+        <field name="code">386</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_387" model="res.district">
+        <field name="name">Huyện Quan Sơn</field>
+        <field name="code">387</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_388" model="res.district">
+        <field name="name">Huyện Lang Chánh</field>
+        <field name="code">388</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_389" model="res.district">
+        <field name="name">Huyện Ngọc Lặc</field>
+        <field name="code">389</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_390" model="res.district">
+        <field name="name">Huyện Cẩm Thủy</field>
+        <field name="code">390</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_391" model="res.district">
+        <field name="name">Huyện Thạch Thành</field>
+        <field name="code">391</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_392" model="res.district">
+        <field name="name">Huyện Hà Trung</field>
+        <field name="code">392</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_393" model="res.district">
+        <field name="name">Huyện Vĩnh Lộc</field>
+        <field name="code">393</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_394" model="res.district">
+        <field name="name">Huyện Yên Định</field>
+        <field name="code">394</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_395" model="res.district">
+        <field name="name">Huyện Thọ Xuân</field>
+        <field name="code">395</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_396" model="res.district">
+        <field name="name">Huyện Thường Xuân</field>
+        <field name="code">396</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_397" model="res.district">
+        <field name="name">Huyện Triệu Sơn</field>
+        <field name="code">397</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_398" model="res.district">
+        <field name="name">Huyện Thiệu Hóa</field>
+        <field name="code">398</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_399" model="res.district">
+        <field name="name">Huyện Hoằng Hóa</field>
+        <field name="code">399</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_400" model="res.district">
+        <field name="name">Huyện Hậu Lộc</field>
+        <field name="code">400</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_401" model="res.district">
+        <field name="name">Huyện Nga Sơn</field>
+        <field name="code">401</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_402" model="res.district">
+        <field name="name">Huyện Như Xuân</field>
+        <field name="code">402</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_403" model="res.district">
+        <field name="name">Huyện Như Thanh</field>
+        <field name="code">403</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_404" model="res.district">
+        <field name="name">Huyện Nông Cống</field>
+        <field name="code">404</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_406" model="res.district">
+        <field name="name">Huyện Quảng Xương</field>
+        <field name="code">406</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <record id="district_vn_407" model="res.district">
+        <field name="name">Thị xã Nghi Sơn</field>
+        <field name="code">407</field>
+        <field name="state_id" ref="base.state_vn_VN-21"/>
+    </record>
+    <!-- Tỉnh Nghệ An -->
+    <record id="district_vn_412" model="res.district">
+        <field name="name">Thành phố Vinh</field>
+        <field name="code">412</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_414" model="res.district">
+        <field name="name">Thị xã Thái Hoà</field>
+        <field name="code">414</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_415" model="res.district">
+        <field name="name">Huyện Quế Phong</field>
+        <field name="code">415</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_416" model="res.district">
+        <field name="name">Huyện Quỳ Châu</field>
+        <field name="code">416</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_417" model="res.district">
+        <field name="name">Huyện Kỳ Sơn</field>
+        <field name="code">417</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_418" model="res.district">
+        <field name="name">Huyện Tương Dương</field>
+        <field name="code">418</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_419" model="res.district">
+        <field name="name">Huyện Nghĩa Đàn</field>
+        <field name="code">419</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_420" model="res.district">
+        <field name="name">Huyện Quỳ Hợp</field>
+        <field name="code">420</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_421" model="res.district">
+        <field name="name">Huyện Quỳnh Lưu</field>
+        <field name="code">421</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_422" model="res.district">
+        <field name="name">Huyện Con Cuông</field>
+        <field name="code">422</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_423" model="res.district">
+        <field name="name">Huyện Tân Kỳ</field>
+        <field name="code">423</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_424" model="res.district">
+        <field name="name">Huyện Anh Sơn</field>
+        <field name="code">424</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_425" model="res.district">
+        <field name="name">Huyện Diễn Châu</field>
+        <field name="code">425</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_426" model="res.district">
+        <field name="name">Huyện Yên Thành</field>
+        <field name="code">426</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_427" model="res.district">
+        <field name="name">Huyện Đô Lương</field>
+        <field name="code">427</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_428" model="res.district">
+        <field name="name">Huyện Thanh Chương</field>
+        <field name="code">428</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_429" model="res.district">
+        <field name="name">Huyện Nghi Lộc</field>
+        <field name="code">429</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_430" model="res.district">
+        <field name="name">Huyện Nam Đàn</field>
+        <field name="code">430</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_431" model="res.district">
+        <field name="name">Huyện Hưng Nguyên</field>
+        <field name="code">431</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <record id="district_vn_432" model="res.district">
+        <field name="name">Thị xã Hoàng Mai</field>
+        <field name="code">432</field>
+        <field name="state_id" ref="base.state_vn_VN-22"/>
+    </record>
+    <!-- Tỉnh Hà Tĩnh -->
+    <record id="district_vn_436" model="res.district">
+        <field name="name">Thành phố Hà Tĩnh</field>
+        <field name="code">436</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_437" model="res.district">
+        <field name="name">Thị xã Hồng Lĩnh</field>
+        <field name="code">437</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_439" model="res.district">
+        <field name="name">Huyện Hương Sơn</field>
+        <field name="code">439</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_440" model="res.district">
+        <field name="name">Huyện Đức Thọ</field>
+        <field name="code">440</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_441" model="res.district">
+        <field name="name">Huyện Vũ Quang</field>
+        <field name="code">441</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_442" model="res.district">
+        <field name="name">Huyện Nghi Xuân</field>
+        <field name="code">442</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_443" model="res.district">
+        <field name="name">Huyện Can Lộc</field>
+        <field name="code">443</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_444" model="res.district">
+        <field name="name">Huyện Hương Khê</field>
+        <field name="code">444</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_445" model="res.district">
+        <field name="name">Huyện Thạch Hà</field>
+        <field name="code">445</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_446" model="res.district">
+        <field name="name">Huyện Cẩm Xuyên</field>
+        <field name="code">446</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_447" model="res.district">
+        <field name="name">Huyện Kỳ Anh</field>
+        <field name="code">447</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <record id="district_vn_449" model="res.district">
+        <field name="name">Thị xã Kỳ Anh</field>
+        <field name="code">449</field>
+        <field name="state_id" ref="base.state_vn_VN-23"/>
+    </record>
+    <!-- Tỉnh Quảng Bình -->
+    <record id="district_vn_450" model="res.district">
+        <field name="name">Thành Phố Đồng Hới</field>
+        <field name="code">450</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_452" model="res.district">
+        <field name="name">Huyện Minh Hóa</field>
+        <field name="code">452</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_453" model="res.district">
+        <field name="name">Huyện Tuyên Hóa</field>
+        <field name="code">453</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_454" model="res.district">
+        <field name="name">Huyện Quảng Trạch</field>
+        <field name="code">454</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_455" model="res.district">
+        <field name="name">Huyện Bố Trạch</field>
+        <field name="code">455</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_456" model="res.district">
+        <field name="name">Huyện Quảng Ninh</field>
+        <field name="code">456</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_457" model="res.district">
+        <field name="name">Huyện Lệ Thủy</field>
+        <field name="code">457</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <record id="district_vn_458" model="res.district">
+        <field name="name">Thị xã Ba Đồn</field>
+        <field name="code">458</field>
+        <field name="state_id" ref="base.state_vn_VN-24"/>
+    </record>
+    <!-- Tỉnh Quảng Trị -->
+    <record id="district_vn_461" model="res.district">
+        <field name="name">Thành phố Đông Hà</field>
+        <field name="code">461</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_462" model="res.district">
+        <field name="name">Thị xã Quảng Trị</field>
+        <field name="code">462</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_464" model="res.district">
+        <field name="name">Huyện Vĩnh Linh</field>
+        <field name="code">464</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_465" model="res.district">
+        <field name="name">Huyện Hướng Hóa</field>
+        <field name="code">465</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_466" model="res.district">
+        <field name="name">Huyện Gio Linh</field>
+        <field name="code">466</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_467" model="res.district">
+        <field name="name">Huyện Đa Krông</field>
+        <field name="code">467</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_468" model="res.district">
+        <field name="name">Huyện Cam Lộ</field>
+        <field name="code">468</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_469" model="res.district">
+        <field name="name">Huyện Triệu Phong</field>
+        <field name="code">469</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_470" model="res.district">
+        <field name="name">Huyện Hải Lăng</field>
+        <field name="code">470</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <record id="district_vn_471" model="res.district">
+        <field name="name">Huyện Cồn Cỏ</field>
+        <field name="code">471</field>
+        <field name="state_id" ref="base.state_vn_VN-25"/>
+    </record>
+    <!-- Thành phố Huế -->
+    <record id="district_vn_474" model="res.district">
+        <field name="name">Quận Thuận Hóa</field>
+        <field name="code">474</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_475" model="res.district">
+        <field name="name">Quận Phú Xuân</field>
+        <field name="code">475</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_476" model="res.district">
+        <field name="name">Thị xã Phong Điền</field>
+        <field name="code">476</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_477" model="res.district">
+        <field name="name">Huyện Quảng Điền</field>
+        <field name="code">477</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_478" model="res.district">
+        <field name="name">Huyện Phú Vang</field>
+        <field name="code">478</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_479" model="res.district">
+        <field name="name">Thị xã Hương Thủy</field>
+        <field name="code">479</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_480" model="res.district">
+        <field name="name">Thị xã Hương Trà</field>
+        <field name="code">480</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_481" model="res.district">
+        <field name="name">Huyện A Lưới</field>
+        <field name="code">481</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <record id="district_vn_482" model="res.district">
+        <field name="name">Huyện Phú Lộc</field>
+        <field name="code">482</field>
+        <field name="state_id" ref="base.state_vn_VN-26"/>
+    </record>
+    <!-- Thành phố Đà Nẵng -->
+    <record id="district_vn_490" model="res.district">
+        <field name="name">Quận Liên Chiểu</field>
         <field name="code">490</field>
         <field name="state_id" ref="base.state_vn_VN-DN"/>
     </record>
-    <record id="district_dn_thanh_khe" model="res.district">
+    <record id="district_vn_491" model="res.district">
         <field name="name">Quận Thanh Khê</field>
         <field name="code">491</field>
         <field name="state_id" ref="base.state_vn_VN-DN"/>
     </record>
-    <record id="district_dn_son_tra" model="res.district">
-        <field name="name">Quận Sơn Trà</field>
+    <record id="district_vn_492" model="res.district">
+        <field name="name">Quận Hải Châu</field>
         <field name="code">492</field>
         <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_vn_493" model="res.district">
+        <field name="name">Quận Sơn Trà</field>
+        <field name="code">493</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_vn_494" model="res.district">
+        <field name="name">Quận Ngũ Hành Sơn</field>
+        <field name="code">494</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_vn_495" model="res.district">
+        <field name="name">Quận Cẩm Lệ</field>
+        <field name="code">495</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_vn_497" model="res.district">
+        <field name="name">Huyện Hòa Vang</field>
+        <field name="code">497</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <record id="district_vn_498" model="res.district">
+        <field name="name">Huyện Hoàng Sa</field>
+        <field name="code">498</field>
+        <field name="state_id" ref="base.state_vn_VN-DN"/>
+    </record>
+    <!-- Tỉnh Quảng Nam -->
+    <record id="district_vn_502" model="res.district">
+        <field name="name">Thành phố Tam Kỳ</field>
+        <field name="code">502</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_503" model="res.district">
+        <field name="name">Thành phố Hội An</field>
+        <field name="code">503</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_504" model="res.district">
+        <field name="name">Huyện Tây Giang</field>
+        <field name="code">504</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_505" model="res.district">
+        <field name="name">Huyện Đông Giang</field>
+        <field name="code">505</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_506" model="res.district">
+        <field name="name">Huyện Đại Lộc</field>
+        <field name="code">506</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_507" model="res.district">
+        <field name="name">Thị xã Điện Bàn</field>
+        <field name="code">507</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_508" model="res.district">
+        <field name="name">Huyện Duy Xuyên</field>
+        <field name="code">508</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_509" model="res.district">
+        <field name="name">Huyện Quế Sơn</field>
+        <field name="code">509</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_510" model="res.district">
+        <field name="name">Huyện Nam Giang</field>
+        <field name="code">510</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_511" model="res.district">
+        <field name="name">Huyện Phước Sơn</field>
+        <field name="code">511</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_512" model="res.district">
+        <field name="name">Huyện Hiệp Đức</field>
+        <field name="code">512</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_513" model="res.district">
+        <field name="name">Huyện Thăng Bình</field>
+        <field name="code">513</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_514" model="res.district">
+        <field name="name">Huyện Tiên Phước</field>
+        <field name="code">514</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_515" model="res.district">
+        <field name="name">Huyện Bắc Trà My</field>
+        <field name="code">515</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_516" model="res.district">
+        <field name="name">Huyện Nam Trà My</field>
+        <field name="code">516</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_517" model="res.district">
+        <field name="name">Huyện Núi Thành</field>
+        <field name="code">517</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <record id="district_vn_518" model="res.district">
+        <field name="name">Huyện Phú Ninh</field>
+        <field name="code">518</field>
+        <field name="state_id" ref="base.state_vn_VN-27"/>
+    </record>
+    <!-- Tỉnh Quảng Ngãi -->
+    <record id="district_vn_522" model="res.district">
+        <field name="name">Thành phố Quảng Ngãi</field>
+        <field name="code">522</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_524" model="res.district">
+        <field name="name">Huyện Bình Sơn</field>
+        <field name="code">524</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_525" model="res.district">
+        <field name="name">Huyện Trà Bồng</field>
+        <field name="code">525</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_527" model="res.district">
+        <field name="name">Huyện Sơn Tịnh</field>
+        <field name="code">527</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_528" model="res.district">
+        <field name="name">Huyện Tư Nghĩa</field>
+        <field name="code">528</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_529" model="res.district">
+        <field name="name">Huyện Sơn Hà</field>
+        <field name="code">529</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_530" model="res.district">
+        <field name="name">Huyện Sơn Tây</field>
+        <field name="code">530</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_531" model="res.district">
+        <field name="name">Huyện Minh Long</field>
+        <field name="code">531</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_532" model="res.district">
+        <field name="name">Huyện Nghĩa Hành</field>
+        <field name="code">532</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_533" model="res.district">
+        <field name="name">Huyện Mộ Đức</field>
+        <field name="code">533</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_534" model="res.district">
+        <field name="name">Thị xã Đức Phổ</field>
+        <field name="code">534</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_535" model="res.district">
+        <field name="name">Huyện Ba Tơ</field>
+        <field name="code">535</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <record id="district_vn_536" model="res.district">
+        <field name="name">Huyện Lý Sơn</field>
+        <field name="code">536</field>
+        <field name="state_id" ref="base.state_vn_VN-29"/>
+    </record>
+    <!-- Tỉnh Bình Định -->
+    <record id="district_vn_540" model="res.district">
+        <field name="name">Thành phố Quy Nhơn</field>
+        <field name="code">540</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_542" model="res.district">
+        <field name="name">Huyện An Lão</field>
+        <field name="code">542</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_543" model="res.district">
+        <field name="name">Thị xã Hoài Nhơn</field>
+        <field name="code">543</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_544" model="res.district">
+        <field name="name">Huyện Hoài Ân</field>
+        <field name="code">544</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_545" model="res.district">
+        <field name="name">Huyện Phù Mỹ</field>
+        <field name="code">545</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_546" model="res.district">
+        <field name="name">Huyện Vĩnh Thạnh</field>
+        <field name="code">546</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_547" model="res.district">
+        <field name="name">Huyện Tây Sơn</field>
+        <field name="code">547</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_548" model="res.district">
+        <field name="name">Huyện Phù Cát</field>
+        <field name="code">548</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_549" model="res.district">
+        <field name="name">Thị xã An Nhơn</field>
+        <field name="code">549</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_550" model="res.district">
+        <field name="name">Huyện Tuy Phước</field>
+        <field name="code">550</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <record id="district_vn_551" model="res.district">
+        <field name="name">Huyện Vân Canh</field>
+        <field name="code">551</field>
+        <field name="state_id" ref="base.state_vn_VN-31"/>
+    </record>
+    <!-- Tỉnh Phú Yên -->
+    <record id="district_vn_555" model="res.district">
+        <field name="name">Thành phố Tuy Hoà</field>
+        <field name="code">555</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_557" model="res.district">
+        <field name="name">Thị xã Sông Cầu</field>
+        <field name="code">557</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_558" model="res.district">
+        <field name="name">Huyện Đồng Xuân</field>
+        <field name="code">558</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_559" model="res.district">
+        <field name="name">Huyện Tuy An</field>
+        <field name="code">559</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_560" model="res.district">
+        <field name="name">Huyện Sơn Hòa</field>
+        <field name="code">560</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_561" model="res.district">
+        <field name="name">Huyện Sông Hinh</field>
+        <field name="code">561</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_562" model="res.district">
+        <field name="name">Huyện Tây Hoà</field>
+        <field name="code">562</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_563" model="res.district">
+        <field name="name">Huyện Phú Hoà</field>
+        <field name="code">563</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <record id="district_vn_564" model="res.district">
+        <field name="name">Thị xã Đông Hòa</field>
+        <field name="code">564</field>
+        <field name="state_id" ref="base.state_vn_VN-32"/>
+    </record>
+    <!-- Tỉnh Khánh Hòa -->
+    <record id="district_vn_568" model="res.district">
+        <field name="name">Thành phố Nha Trang</field>
+        <field name="code">568</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_569" model="res.district">
+        <field name="name">Thành phố Cam Ranh</field>
+        <field name="code">569</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_570" model="res.district">
+        <field name="name">Huyện Cam Lâm</field>
+        <field name="code">570</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_571" model="res.district">
+        <field name="name">Huyện Vạn Ninh</field>
+        <field name="code">571</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_572" model="res.district">
+        <field name="name">Thị xã Ninh Hòa</field>
+        <field name="code">572</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_573" model="res.district">
+        <field name="name">Huyện Khánh Vĩnh</field>
+        <field name="code">573</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_574" model="res.district">
+        <field name="name">Huyện Diên Khánh</field>
+        <field name="code">574</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_575" model="res.district">
+        <field name="name">Huyện Khánh Sơn</field>
+        <field name="code">575</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <record id="district_vn_576" model="res.district">
+        <field name="name">Huyện Trường Sa</field>
+        <field name="code">576</field>
+        <field name="state_id" ref="base.state_vn_VN-34"/>
+    </record>
+    <!-- Tỉnh Ninh Thuận -->
+    <record id="district_vn_582" model="res.district">
+        <field name="name">Thành phố Phan Rang - Tháp Chàm</field>
+        <field name="code">582</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_584" model="res.district">
+        <field name="name">Huyện Bác Ái</field>
+        <field name="code">584</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_585" model="res.district">
+        <field name="name">Huyện Ninh Sơn</field>
+        <field name="code">585</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_586" model="res.district">
+        <field name="name">Huyện Ninh Hải</field>
+        <field name="code">586</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_587" model="res.district">
+        <field name="name">Huyện Ninh Phước</field>
+        <field name="code">587</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_588" model="res.district">
+        <field name="name">Huyện Thuận Bắc</field>
+        <field name="code">588</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <record id="district_vn_589" model="res.district">
+        <field name="name">Huyện Thuận Nam</field>
+        <field name="code">589</field>
+        <field name="state_id" ref="base.state_vn_VN-36"/>
+    </record>
+    <!-- Tỉnh Bình Thuận -->
+    <record id="district_vn_593" model="res.district">
+        <field name="name">Thành phố Phan Thiết</field>
+        <field name="code">593</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_594" model="res.district">
+        <field name="name">Thị xã La Gi</field>
+        <field name="code">594</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_595" model="res.district">
+        <field name="name">Huyện Tuy Phong</field>
+        <field name="code">595</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_596" model="res.district">
+        <field name="name">Huyện Bắc Bình</field>
+        <field name="code">596</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_597" model="res.district">
+        <field name="name">Huyện Hàm Thuận Bắc</field>
+        <field name="code">597</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_598" model="res.district">
+        <field name="name">Huyện Hàm Thuận Nam</field>
+        <field name="code">598</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_599" model="res.district">
+        <field name="name">Huyện Tánh Linh</field>
+        <field name="code">599</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_600" model="res.district">
+        <field name="name">Huyện Đức Linh</field>
+        <field name="code">600</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_601" model="res.district">
+        <field name="name">Huyện Hàm Tân</field>
+        <field name="code">601</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <record id="district_vn_602" model="res.district">
+        <field name="name">Huyện Phú Quí</field>
+        <field name="code">602</field>
+        <field name="state_id" ref="base.state_vn_VN-40"/>
+    </record>
+    <!-- Tỉnh Kon Tum -->
+    <record id="district_vn_608" model="res.district">
+        <field name="name">Thành phố Kon Tum</field>
+        <field name="code">608</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_610" model="res.district">
+        <field name="name">Huyện Đắk Glei</field>
+        <field name="code">610</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_611" model="res.district">
+        <field name="name">Huyện Ngọc Hồi</field>
+        <field name="code">611</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_612" model="res.district">
+        <field name="name">Huyện Đắk Tô</field>
+        <field name="code">612</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_613" model="res.district">
+        <field name="name">Huyện Kon Plông</field>
+        <field name="code">613</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_614" model="res.district">
+        <field name="name">Huyện Kon Rẫy</field>
+        <field name="code">614</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_615" model="res.district">
+        <field name="name">Huyện Đắk Hà</field>
+        <field name="code">615</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_616" model="res.district">
+        <field name="name">Huyện Sa Thầy</field>
+        <field name="code">616</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_617" model="res.district">
+        <field name="name">Huyện Tu Mơ Rông</field>
+        <field name="code">617</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <record id="district_vn_618" model="res.district">
+        <field name="name">Huyện Ia H' Drai</field>
+        <field name="code">618</field>
+        <field name="state_id" ref="base.state_vn_VN-28"/>
+    </record>
+    <!-- Tỉnh Gia Lai -->
+    <record id="district_vn_622" model="res.district">
+        <field name="name">Thành phố Pleiku</field>
+        <field name="code">622</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_623" model="res.district">
+        <field name="name">Thị xã An Khê</field>
+        <field name="code">623</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_624" model="res.district">
+        <field name="name">Thị xã Ayun Pa</field>
+        <field name="code">624</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_625" model="res.district">
+        <field name="name">Huyện KBang</field>
+        <field name="code">625</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_626" model="res.district">
+        <field name="name">Huyện Đăk Đoa</field>
+        <field name="code">626</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_627" model="res.district">
+        <field name="name">Huyện Chư Păh</field>
+        <field name="code">627</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_628" model="res.district">
+        <field name="name">Huyện Ia Grai</field>
+        <field name="code">628</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_629" model="res.district">
+        <field name="name">Huyện Mang Yang</field>
+        <field name="code">629</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_630" model="res.district">
+        <field name="name">Huyện Kông Chro</field>
+        <field name="code">630</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_631" model="res.district">
+        <field name="name">Huyện Đức Cơ</field>
+        <field name="code">631</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_632" model="res.district">
+        <field name="name">Huyện Chư Prông</field>
+        <field name="code">632</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_633" model="res.district">
+        <field name="name">Huyện Chư Sê</field>
+        <field name="code">633</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_634" model="res.district">
+        <field name="name">Huyện Đăk Pơ</field>
+        <field name="code">634</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_635" model="res.district">
+        <field name="name">Huyện Ia Pa</field>
+        <field name="code">635</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_637" model="res.district">
+        <field name="name">Huyện Krông Pa</field>
+        <field name="code">637</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_638" model="res.district">
+        <field name="name">Huyện Phú Thiện</field>
+        <field name="code">638</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <record id="district_vn_639" model="res.district">
+        <field name="name">Huyện Chư Pưh</field>
+        <field name="code">639</field>
+        <field name="state_id" ref="base.state_vn_VN-30"/>
+    </record>
+    <!-- Tỉnh Đắk Lắk -->
+    <record id="district_vn_643" model="res.district">
+        <field name="name">Thành phố Buôn Ma Thuột</field>
+        <field name="code">643</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_644" model="res.district">
+        <field name="name">Thị xã Buôn Hồ</field>
+        <field name="code">644</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_645" model="res.district">
+        <field name="name">Huyện Ea H'leo</field>
+        <field name="code">645</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_646" model="res.district">
+        <field name="name">Huyện Ea Súp</field>
+        <field name="code">646</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_647" model="res.district">
+        <field name="name">Huyện Buôn Đôn</field>
+        <field name="code">647</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_648" model="res.district">
+        <field name="name">Huyện Cư M'gar</field>
+        <field name="code">648</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_649" model="res.district">
+        <field name="name">Huyện Krông Búk</field>
+        <field name="code">649</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_650" model="res.district">
+        <field name="name">Huyện Krông Năng</field>
+        <field name="code">650</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_651" model="res.district">
+        <field name="name">Huyện Ea Kar</field>
+        <field name="code">651</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_652" model="res.district">
+        <field name="name">Huyện M'Đrắk</field>
+        <field name="code">652</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_653" model="res.district">
+        <field name="name">Huyện Krông Bông</field>
+        <field name="code">653</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_654" model="res.district">
+        <field name="name">Huyện Krông Pắc</field>
+        <field name="code">654</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_655" model="res.district">
+        <field name="name">Huyện Krông A Na</field>
+        <field name="code">655</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_656" model="res.district">
+        <field name="name">Huyện Lắk</field>
+        <field name="code">656</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <record id="district_vn_657" model="res.district">
+        <field name="name">Huyện Cư Kuin</field>
+        <field name="code">657</field>
+        <field name="state_id" ref="base.state_vn_VN-33"/>
+    </record>
+    <!-- Tỉnh Đắk Nông -->
+    <record id="district_vn_660" model="res.district">
+        <field name="name">Thành phố Gia Nghĩa</field>
+        <field name="code">660</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_661" model="res.district">
+        <field name="name">Huyện Đăk Glong</field>
+        <field name="code">661</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_662" model="res.district">
+        <field name="name">Huyện Cư Jút</field>
+        <field name="code">662</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_663" model="res.district">
+        <field name="name">Huyện Đắk Mil</field>
+        <field name="code">663</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_664" model="res.district">
+        <field name="name">Huyện Krông Nô</field>
+        <field name="code">664</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_665" model="res.district">
+        <field name="name">Huyện Đắk Song</field>
+        <field name="code">665</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_666" model="res.district">
+        <field name="name">Huyện Đắk R'Lấp</field>
+        <field name="code">666</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <record id="district_vn_667" model="res.district">
+        <field name="name">Huyện Tuy Đức</field>
+        <field name="code">667</field>
+        <field name="state_id" ref="base.state_vn_VN-72"/>
+    </record>
+    <!-- Tỉnh Lâm Đồng -->
+    <record id="district_vn_672" model="res.district">
+        <field name="name">Thành phố Đà Lạt</field>
+        <field name="code">672</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_673" model="res.district">
+        <field name="name">Thành phố Bảo Lộc</field>
+        <field name="code">673</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_674" model="res.district">
+        <field name="name">Huyện Đam Rông</field>
+        <field name="code">674</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_675" model="res.district">
+        <field name="name">Huyện Lạc Dương</field>
+        <field name="code">675</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_676" model="res.district">
+        <field name="name">Huyện Lâm Hà</field>
+        <field name="code">676</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_677" model="res.district">
+        <field name="name">Huyện Đơn Dương</field>
+        <field name="code">677</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_678" model="res.district">
+        <field name="name">Huyện Đức Trọng</field>
+        <field name="code">678</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_679" model="res.district">
+        <field name="name">Huyện Di Linh</field>
+        <field name="code">679</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_680" model="res.district">
+        <field name="name">Huyện Bảo Lâm</field>
+        <field name="code">680</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <record id="district_vn_682" model="res.district">
+        <field name="name">Huyện Đạ Huoai</field>
+        <field name="code">682</field>
+        <field name="state_id" ref="base.state_vn_VN-35"/>
+    </record>
+    <!-- Tỉnh Bình Phước -->
+    <record id="district_vn_688" model="res.district">
+        <field name="name">Thị xã Phước Long</field>
+        <field name="code">688</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_689" model="res.district">
+        <field name="name">Thành phố Đồng Xoài</field>
+        <field name="code">689</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_690" model="res.district">
+        <field name="name">Thị xã Bình Long</field>
+        <field name="code">690</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_691" model="res.district">
+        <field name="name">Huyện Bù Gia Mập</field>
+        <field name="code">691</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_692" model="res.district">
+        <field name="name">Huyện Lộc Ninh</field>
+        <field name="code">692</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_693" model="res.district">
+        <field name="name">Huyện Bù Đốp</field>
+        <field name="code">693</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_694" model="res.district">
+        <field name="name">Huyện Hớn Quản</field>
+        <field name="code">694</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_695" model="res.district">
+        <field name="name">Huyện Đồng Phú</field>
+        <field name="code">695</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_696" model="res.district">
+        <field name="name">Huyện Bù Đăng</field>
+        <field name="code">696</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_697" model="res.district">
+        <field name="name">Thị xã Chơn Thành</field>
+        <field name="code">697</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <record id="district_vn_698" model="res.district">
+        <field name="name">Huyện Phú Riềng</field>
+        <field name="code">698</field>
+        <field name="state_id" ref="base.state_vn_VN-58"/>
+    </record>
+    <!-- Tỉnh Tây Ninh -->
+    <record id="district_vn_703" model="res.district">
+        <field name="name">Thành phố Tây Ninh</field>
+        <field name="code">703</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_705" model="res.district">
+        <field name="name">Huyện Tân Biên</field>
+        <field name="code">705</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_706" model="res.district">
+        <field name="name">Huyện Tân Châu</field>
+        <field name="code">706</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_707" model="res.district">
+        <field name="name">Huyện Dương Minh Châu</field>
+        <field name="code">707</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_708" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">708</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_709" model="res.district">
+        <field name="name">Thị xã Hòa Thành</field>
+        <field name="code">709</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_710" model="res.district">
+        <field name="name">Huyện Gò Dầu</field>
+        <field name="code">710</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_711" model="res.district">
+        <field name="name">Huyện Bến Cầu</field>
+        <field name="code">711</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <record id="district_vn_712" model="res.district">
+        <field name="name">Thị xã Trảng Bàng</field>
+        <field name="code">712</field>
+        <field name="state_id" ref="base.state_vn_VN-37"/>
+    </record>
+    <!-- Tỉnh Bình Dương -->
+    <record id="district_vn_718" model="res.district">
+        <field name="name">Thành phố Thủ Dầu Một</field>
+        <field name="code">718</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_719" model="res.district">
+        <field name="name">Huyện Bàu Bàng</field>
+        <field name="code">719</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_720" model="res.district">
+        <field name="name">Huyện Dầu Tiếng</field>
+        <field name="code">720</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_721" model="res.district">
+        <field name="name">Thành phố Bến Cát</field>
+        <field name="code">721</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_722" model="res.district">
+        <field name="name">Huyện Phú Giáo</field>
+        <field name="code">722</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_723" model="res.district">
+        <field name="name">Thành phố Tân Uyên</field>
+        <field name="code">723</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_724" model="res.district">
+        <field name="name">Thành phố Dĩ An</field>
+        <field name="code">724</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_725" model="res.district">
+        <field name="name">Thành phố Thuận An</field>
+        <field name="code">725</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <record id="district_vn_726" model="res.district">
+        <field name="name">Huyện Bắc Tân Uyên</field>
+        <field name="code">726</field>
+        <field name="state_id" ref="base.state_vn_VN-57"/>
+    </record>
+    <!-- Tỉnh Đồng Nai -->
+    <record id="district_vn_731" model="res.district">
+        <field name="name">Thành phố Biên Hòa</field>
+        <field name="code">731</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_732" model="res.district">
+        <field name="name">Thành phố Long Khánh</field>
+        <field name="code">732</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_734" model="res.district">
+        <field name="name">Huyện Tân Phú</field>
+        <field name="code">734</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_735" model="res.district">
+        <field name="name">Huyện Vĩnh Cửu</field>
+        <field name="code">735</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_736" model="res.district">
+        <field name="name">Huyện Định Quán</field>
+        <field name="code">736</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_737" model="res.district">
+        <field name="name">Huyện Trảng Bom</field>
+        <field name="code">737</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_738" model="res.district">
+        <field name="name">Huyện Thống Nhất</field>
+        <field name="code">738</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_739" model="res.district">
+        <field name="name">Huyện Cẩm Mỹ</field>
+        <field name="code">739</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_740" model="res.district">
+        <field name="name">Huyện Long Thành</field>
+        <field name="code">740</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_741" model="res.district">
+        <field name="name">Huyện Xuân Lộc</field>
+        <field name="code">741</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <record id="district_vn_742" model="res.district">
+        <field name="name">Huyện Nhơn Trạch</field>
+        <field name="code">742</field>
+        <field name="state_id" ref="base.state_vn_VN-39"/>
+    </record>
+    <!-- Tỉnh Bà Rịa - Vũng Tàu -->
+    <record id="district_vn_747" model="res.district">
+        <field name="name">Thành phố Vũng Tàu</field>
+        <field name="code">747</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_748" model="res.district">
+        <field name="name">Thành phố Bà Rịa</field>
+        <field name="code">748</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_750" model="res.district">
+        <field name="name">Huyện Châu Đức</field>
+        <field name="code">750</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_751" model="res.district">
+        <field name="name">Huyện Xuyên Mộc</field>
+        <field name="code">751</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_753" model="res.district">
+        <field name="name">Huyện Long Đất</field>
+        <field name="code">753</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_754" model="res.district">
+        <field name="name">Thị xã Phú Mỹ</field>
+        <field name="code">754</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <record id="district_vn_755" model="res.district">
+        <field name="name">Huyện Côn Đảo</field>
+        <field name="code">755</field>
+        <field name="state_id" ref="base.state_vn_VN-43"/>
+    </record>
+    <!-- Thành phố Hồ Chí Minh -->
+    <record id="district_vn_760" model="res.district">
+        <field name="name">Quận 1</field>
+        <field name="code">760</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_761" model="res.district">
+        <field name="name">Quận 12</field>
+        <field name="code">761</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_764" model="res.district">
+        <field name="name">Quận Gò Vấp</field>
+        <field name="code">764</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_765" model="res.district">
+        <field name="name">Quận Bình Thạnh</field>
+        <field name="code">765</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_766" model="res.district">
+        <field name="name">Quận Tân Bình</field>
+        <field name="code">766</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_767" model="res.district">
+        <field name="name">Quận Tân Phú</field>
+        <field name="code">767</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_768" model="res.district">
+        <field name="name">Quận Phú Nhuận</field>
+        <field name="code">768</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_769" model="res.district">
+        <field name="name">Thành phố Thủ Đức</field>
+        <field name="code">769</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_770" model="res.district">
+        <field name="name">Quận 3</field>
+        <field name="code">770</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_771" model="res.district">
+        <field name="name">Quận 10</field>
+        <field name="code">771</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_772" model="res.district">
+        <field name="name">Quận 11</field>
+        <field name="code">772</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_773" model="res.district">
+        <field name="name">Quận 4</field>
+        <field name="code">773</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_774" model="res.district">
+        <field name="name">Quận 5</field>
+        <field name="code">774</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_775" model="res.district">
+        <field name="name">Quận 6</field>
+        <field name="code">775</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_776" model="res.district">
+        <field name="name">Quận 8</field>
+        <field name="code">776</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_777" model="res.district">
+        <field name="name">Quận Bình Tân</field>
+        <field name="code">777</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_778" model="res.district">
+        <field name="name">Quận 7</field>
+        <field name="code">778</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_783" model="res.district">
+        <field name="name">Huyện Củ Chi</field>
+        <field name="code">783</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_784" model="res.district">
+        <field name="name">Huyện Hóc Môn</field>
+        <field name="code">784</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_785" model="res.district">
+        <field name="name">Huyện Bình Chánh</field>
+        <field name="code">785</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_786" model="res.district">
+        <field name="name">Huyện Nhà Bè</field>
+        <field name="code">786</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <record id="district_vn_787" model="res.district">
+        <field name="name">Huyện Cần Giờ</field>
+        <field name="code">787</field>
+        <field name="state_id" ref="base.state_vn_VN-SG"/>
+    </record>
+    <!-- Tỉnh Long An -->
+    <record id="district_vn_794" model="res.district">
+        <field name="name">Thành phố Tân An</field>
+        <field name="code">794</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_795" model="res.district">
+        <field name="name">Thị xã Kiến Tường</field>
+        <field name="code">795</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_796" model="res.district">
+        <field name="name">Huyện Tân Hưng</field>
+        <field name="code">796</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_797" model="res.district">
+        <field name="name">Huyện Vĩnh Hưng</field>
+        <field name="code">797</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_798" model="res.district">
+        <field name="name">Huyện Mộc Hóa</field>
+        <field name="code">798</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_799" model="res.district">
+        <field name="name">Huyện Tân Thạnh</field>
+        <field name="code">799</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_800" model="res.district">
+        <field name="name">Huyện Thạnh Hóa</field>
+        <field name="code">800</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_801" model="res.district">
+        <field name="name">Huyện Đức Huệ</field>
+        <field name="code">801</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_802" model="res.district">
+        <field name="name">Huyện Đức Hòa</field>
+        <field name="code">802</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_803" model="res.district">
+        <field name="name">Huyện Bến Lức</field>
+        <field name="code">803</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_804" model="res.district">
+        <field name="name">Huyện Thủ Thừa</field>
+        <field name="code">804</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_805" model="res.district">
+        <field name="name">Huyện Tân Trụ</field>
+        <field name="code">805</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_806" model="res.district">
+        <field name="name">Huyện Cần Đước</field>
+        <field name="code">806</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_807" model="res.district">
+        <field name="name">Huyện Cần Giuộc</field>
+        <field name="code">807</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <record id="district_vn_808" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">808</field>
+        <field name="state_id" ref="base.state_vn_VN-41"/>
+    </record>
+    <!-- Tỉnh Tiền Giang -->
+    <record id="district_vn_815" model="res.district">
+        <field name="name">Thành phố Mỹ Tho</field>
+        <field name="code">815</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_816" model="res.district">
+        <field name="name">Thành phố Gò Công</field>
+        <field name="code">816</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_817" model="res.district">
+        <field name="name">Thị xã Cai Lậy</field>
+        <field name="code">817</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_818" model="res.district">
+        <field name="name">Huyện Tân Phước</field>
+        <field name="code">818</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_819" model="res.district">
+        <field name="name">Huyện Cái Bè</field>
+        <field name="code">819</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_820" model="res.district">
+        <field name="name">Huyện Cai Lậy</field>
+        <field name="code">820</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_821" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">821</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_822" model="res.district">
+        <field name="name">Huyện Chợ Gạo</field>
+        <field name="code">822</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_823" model="res.district">
+        <field name="name">Huyện Gò Công Tây</field>
+        <field name="code">823</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_824" model="res.district">
+        <field name="name">Huyện Gò Công Đông</field>
+        <field name="code">824</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <record id="district_vn_825" model="res.district">
+        <field name="name">Huyện Tân Phú Đông</field>
+        <field name="code">825</field>
+        <field name="state_id" ref="base.state_vn_VN-46"/>
+    </record>
+    <!-- Tỉnh Bến Tre -->
+    <record id="district_vn_829" model="res.district">
+        <field name="name">Thành phố Bến Tre</field>
+        <field name="code">829</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_831" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">831</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_832" model="res.district">
+        <field name="name">Huyện Chợ Lách</field>
+        <field name="code">832</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_833" model="res.district">
+        <field name="name">Huyện Mỏ Cày Nam</field>
+        <field name="code">833</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_834" model="res.district">
+        <field name="name">Huyện Giồng Trôm</field>
+        <field name="code">834</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_835" model="res.district">
+        <field name="name">Huyện Bình Đại</field>
+        <field name="code">835</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_836" model="res.district">
+        <field name="name">Huyện Ba Tri</field>
+        <field name="code">836</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_837" model="res.district">
+        <field name="name">Huyện Thạnh Phú</field>
+        <field name="code">837</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <record id="district_vn_838" model="res.district">
+        <field name="name">Huyện Mỏ Cày Bắc</field>
+        <field name="code">838</field>
+        <field name="state_id" ref="base.state_vn_VN-50"/>
+    </record>
+    <!-- Tỉnh Trà Vinh -->
+    <record id="district_vn_842" model="res.district">
+        <field name="name">Thành phố Trà Vinh</field>
+        <field name="code">842</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_844" model="res.district">
+        <field name="name">Huyện Càng Long</field>
+        <field name="code">844</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_845" model="res.district">
+        <field name="name">Huyện Cầu Kè</field>
+        <field name="code">845</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_846" model="res.district">
+        <field name="name">Huyện Tiểu Cần</field>
+        <field name="code">846</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_847" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">847</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_848" model="res.district">
+        <field name="name">Huyện Cầu Ngang</field>
+        <field name="code">848</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_849" model="res.district">
+        <field name="name">Huyện Trà Cú</field>
+        <field name="code">849</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_850" model="res.district">
+        <field name="name">Huyện Duyên Hải</field>
+        <field name="code">850</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <record id="district_vn_851" model="res.district">
+        <field name="name">Thị xã Duyên Hải</field>
+        <field name="code">851</field>
+        <field name="state_id" ref="base.state_vn_VN-51"/>
+    </record>
+    <!-- Tỉnh Vĩnh Long -->
+    <record id="district_vn_855" model="res.district">
+        <field name="name">Thành phố Vĩnh Long</field>
+        <field name="code">855</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_857" model="res.district">
+        <field name="name">Huyện Long Hồ</field>
+        <field name="code">857</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_858" model="res.district">
+        <field name="name">Huyện Mang Thít</field>
+        <field name="code">858</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_859" model="res.district">
+        <field name="name">Huyện Vũng Liêm</field>
+        <field name="code">859</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_860" model="res.district">
+        <field name="name">Huyện Tam Bình</field>
+        <field name="code">860</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_861" model="res.district">
+        <field name="name">Thị xã Bình Minh</field>
+        <field name="code">861</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_862" model="res.district">
+        <field name="name">Huyện Trà Ôn</field>
+        <field name="code">862</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <record id="district_vn_863" model="res.district">
+        <field name="name">Huyện Bình Tân</field>
+        <field name="code">863</field>
+        <field name="state_id" ref="base.state_vn_VN-49"/>
+    </record>
+    <!-- Tỉnh Đồng Tháp -->
+    <record id="district_vn_866" model="res.district">
+        <field name="name">Thành phố Cao Lãnh</field>
+        <field name="code">866</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_867" model="res.district">
+        <field name="name">Thành phố Sa Đéc</field>
+        <field name="code">867</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_868" model="res.district">
+        <field name="name">Thành phố Hồng Ngự</field>
+        <field name="code">868</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_869" model="res.district">
+        <field name="name">Huyện Tân Hồng</field>
+        <field name="code">869</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_870" model="res.district">
+        <field name="name">Huyện Hồng Ngự</field>
+        <field name="code">870</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_871" model="res.district">
+        <field name="name">Huyện Tam Nông</field>
+        <field name="code">871</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_872" model="res.district">
+        <field name="name">Huyện Tháp Mười</field>
+        <field name="code">872</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_873" model="res.district">
+        <field name="name">Huyện Cao Lãnh</field>
+        <field name="code">873</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_874" model="res.district">
+        <field name="name">Huyện Thanh Bình</field>
+        <field name="code">874</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_875" model="res.district">
+        <field name="name">Huyện Lấp Vò</field>
+        <field name="code">875</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_876" model="res.district">
+        <field name="name">Huyện Lai Vung</field>
+        <field name="code">876</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <record id="district_vn_877" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">877</field>
+        <field name="state_id" ref="base.state_vn_VN-45"/>
+    </record>
+    <!-- Tỉnh An Giang -->
+    <record id="district_vn_883" model="res.district">
+        <field name="name">Thành phố Long Xuyên</field>
+        <field name="code">883</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_884" model="res.district">
+        <field name="name">Thành phố Châu Đốc</field>
+        <field name="code">884</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_886" model="res.district">
+        <field name="name">Huyện An Phú</field>
+        <field name="code">886</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_887" model="res.district">
+        <field name="name">Thị xã Tân Châu</field>
+        <field name="code">887</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_888" model="res.district">
+        <field name="name">Huyện Phú Tân</field>
+        <field name="code">888</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_889" model="res.district">
+        <field name="name">Huyện Châu Phú</field>
+        <field name="code">889</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_890" model="res.district">
+        <field name="name">Thị xã Tịnh Biên</field>
+        <field name="code">890</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_891" model="res.district">
+        <field name="name">Huyện Tri Tôn</field>
+        <field name="code">891</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_892" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">892</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_893" model="res.district">
+        <field name="name">Huyện Chợ Mới</field>
+        <field name="code">893</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <record id="district_vn_894" model="res.district">
+        <field name="name">Huyện Thoại Sơn</field>
+        <field name="code">894</field>
+        <field name="state_id" ref="base.state_vn_VN-44"/>
+    </record>
+    <!-- Tỉnh Kiên Giang -->
+    <record id="district_vn_899" model="res.district">
+        <field name="name">Thành phố Rạch Giá</field>
+        <field name="code">899</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_900" model="res.district">
+        <field name="name">Thành phố Hà Tiên</field>
+        <field name="code">900</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_902" model="res.district">
+        <field name="name">Huyện Kiên Lương</field>
+        <field name="code">902</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_903" model="res.district">
+        <field name="name">Huyện Hòn Đất</field>
+        <field name="code">903</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_904" model="res.district">
+        <field name="name">Huyện Tân Hiệp</field>
+        <field name="code">904</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_905" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">905</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_906" model="res.district">
+        <field name="name">Huyện Giồng Riềng</field>
+        <field name="code">906</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_907" model="res.district">
+        <field name="name">Huyện Gò Quao</field>
+        <field name="code">907</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_908" model="res.district">
+        <field name="name">Huyện An Biên</field>
+        <field name="code">908</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_909" model="res.district">
+        <field name="name">Huyện An Minh</field>
+        <field name="code">909</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_910" model="res.district">
+        <field name="name">Huyện Vĩnh Thuận</field>
+        <field name="code">910</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_911" model="res.district">
+        <field name="name">Thành phố Phú Quốc</field>
+        <field name="code">911</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_912" model="res.district">
+        <field name="name">Huyện Kiên Hải</field>
+        <field name="code">912</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_913" model="res.district">
+        <field name="name">Huyện U Minh Thượng</field>
+        <field name="code">913</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <record id="district_vn_914" model="res.district">
+        <field name="name">Huyện Giang Thành</field>
+        <field name="code">914</field>
+        <field name="state_id" ref="base.state_vn_VN-47"/>
+    </record>
+    <!-- Thành phố Cần Thơ -->
+    <record id="district_vn_916" model="res.district">
+        <field name="name">Quận Ninh Kiều</field>
+        <field name="code">916</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_917" model="res.district">
+        <field name="name">Quận Ô Môn</field>
+        <field name="code">917</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_918" model="res.district">
+        <field name="name">Quận Bình Thuỷ</field>
+        <field name="code">918</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_919" model="res.district">
+        <field name="name">Quận Cái Răng</field>
+        <field name="code">919</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_923" model="res.district">
+        <field name="name">Quận Thốt Nốt</field>
+        <field name="code">923</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_924" model="res.district">
+        <field name="name">Huyện Vĩnh Thạnh</field>
+        <field name="code">924</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_925" model="res.district">
+        <field name="name">Huyện Cờ Đỏ</field>
+        <field name="code">925</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_926" model="res.district">
+        <field name="name">Huyện Phong Điền</field>
+        <field name="code">926</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <record id="district_vn_927" model="res.district">
+        <field name="name">Huyện Thới Lai</field>
+        <field name="code">927</field>
+        <field name="state_id" ref="base.state_vn_VN-CT"/>
+    </record>
+    <!-- Tỉnh Hậu Giang -->
+    <record id="district_vn_930" model="res.district">
+        <field name="name">Thành phố Vị Thanh</field>
+        <field name="code">930</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_931" model="res.district">
+        <field name="name">Thành phố Ngã Bảy</field>
+        <field name="code">931</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_932" model="res.district">
+        <field name="name">Huyện Châu Thành A</field>
+        <field name="code">932</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_933" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">933</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_934" model="res.district">
+        <field name="name">Huyện Phụng Hiệp</field>
+        <field name="code">934</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_935" model="res.district">
+        <field name="name">Huyện Vị Thuỷ</field>
+        <field name="code">935</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_936" model="res.district">
+        <field name="name">Huyện Long Mỹ</field>
+        <field name="code">936</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <record id="district_vn_937" model="res.district">
+        <field name="name">Thị xã Long Mỹ</field>
+        <field name="code">937</field>
+        <field name="state_id" ref="base.state_vn_VN-73"/>
+    </record>
+    <!-- Tỉnh Sóc Trăng -->
+    <record id="district_vn_941" model="res.district">
+        <field name="name">Thành phố Sóc Trăng</field>
+        <field name="code">941</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_942" model="res.district">
+        <field name="name">Huyện Châu Thành</field>
+        <field name="code">942</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_943" model="res.district">
+        <field name="name">Huyện Kế Sách</field>
+        <field name="code">943</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_944" model="res.district">
+        <field name="name">Huyện Mỹ Tú</field>
+        <field name="code">944</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_945" model="res.district">
+        <field name="name">Huyện Cù Lao Dung</field>
+        <field name="code">945</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_946" model="res.district">
+        <field name="name">Huyện Long Phú</field>
+        <field name="code">946</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_947" model="res.district">
+        <field name="name">Huyện Mỹ Xuyên</field>
+        <field name="code">947</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_948" model="res.district">
+        <field name="name">Thị xã Ngã Năm</field>
+        <field name="code">948</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_949" model="res.district">
+        <field name="name">Huyện Thạnh Trị</field>
+        <field name="code">949</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_950" model="res.district">
+        <field name="name">Thị xã Vĩnh Châu</field>
+        <field name="code">950</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <record id="district_vn_951" model="res.district">
+        <field name="name">Huyện Trần Đề</field>
+        <field name="code">951</field>
+        <field name="state_id" ref="base.state_vn_VN-52"/>
+    </record>
+    <!-- Tỉnh Bạc Liêu -->
+    <record id="district_vn_954" model="res.district">
+        <field name="name">Thành phố Bạc Liêu</field>
+        <field name="code">954</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_956" model="res.district">
+        <field name="name">Huyện Hồng Dân</field>
+        <field name="code">956</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_957" model="res.district">
+        <field name="name">Huyện Phước Long</field>
+        <field name="code">957</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_958" model="res.district">
+        <field name="name">Huyện Vĩnh Lợi</field>
+        <field name="code">958</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_959" model="res.district">
+        <field name="name">Thị xã Giá Rai</field>
+        <field name="code">959</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_960" model="res.district">
+        <field name="name">Huyện Đông Hải</field>
+        <field name="code">960</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <record id="district_vn_961" model="res.district">
+        <field name="name">Huyện Hoà Bình</field>
+        <field name="code">961</field>
+        <field name="state_id" ref="base.state_vn_VN-55"/>
+    </record>
+    <!-- Tỉnh Cà Mau -->
+    <record id="district_vn_964" model="res.district">
+        <field name="name">Thành phố Cà Mau</field>
+        <field name="code">964</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_966" model="res.district">
+        <field name="name">Huyện U Minh</field>
+        <field name="code">966</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_967" model="res.district">
+        <field name="name">Huyện Thới Bình</field>
+        <field name="code">967</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_968" model="res.district">
+        <field name="name">Huyện Trần Văn Thời</field>
+        <field name="code">968</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_969" model="res.district">
+        <field name="name">Huyện Cái Nước</field>
+        <field name="code">969</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_970" model="res.district">
+        <field name="name">Huyện Đầm Dơi</field>
+        <field name="code">970</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_971" model="res.district">
+        <field name="name">Huyện Năm Căn</field>
+        <field name="code">971</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_972" model="res.district">
+        <field name="name">Huyện Phú Tân</field>
+        <field name="code">972</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
+    </record>
+    <record id="district_vn_973" model="res.district">
+        <field name="name">Huyện Ngọc Hiển</field>
+        <field name="code">973</field>
+        <field name="state_id" ref="base.state_vn_VN-59"/>
     </record>
 </odoo>
