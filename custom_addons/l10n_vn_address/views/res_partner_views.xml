@@ -33,15 +33,21 @@
                 <attribute name="placeholder">Tỉnh / Thành phố</attribute>
             </xpath>
 
-            <!-- Nút chuẩn hóa và tự ghép chuỗi địa chỉ -->
+            <!-- Nút chuẩn hóa và chuyển đổi địa chỉ mô hình mới -->
             <xpath expr="//div[hasclass('o_address_format')]" position="after">
-                <div class="d-flex align-items-center mt-1" invisible="not (district_id or ward_id or state_id)">
+                <div class="d-flex align-items-center gap-2 mt-1" invisible="not (district_id or ward_id or state_id)">
                     <button name="action_standardize_vn_address"
                             type="object"
                             string="Chuẩn hóa chuỗi địa chỉ"
                             icon="fa-map-marker"
                             class="btn btn-sm btn-link p-0 text-primary"
-                            help="Tự động nối Số nhà/Đường + Phường/Xã + Quận/Huyện + Tỉnh/Thành vào trường địa chỉ để xuất hóa đơn và giao hàng"/>
+                            help="Tự động nối Số nhà/Đường + Phường/Xã + Tỉnh/Thành vào trường địa chỉ để xuất hóa đơn và giao hàng"/>
+                    <button name="action_convert_legacy_to_new_address"
+                            type="object"
+                            string="Chuyển sang ĐVHC mới (2 cấp)"
+                            icon="fa-refresh"
+                            class="btn btn-sm btn-link p-0 text-success"
+                            help="Tự động chuyển đổi địa chỉ cũ sang Phường/Xã &amp; Tỉnh/Thành mới theo Nghị quyết 202/2025/QH15 (dvhcvn)"/>
                 </div>
             </xpath>
         </field>
