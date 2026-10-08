@@ -30,4 +30,9 @@ action = records.action_open_change_password_wizard()
             </xpath>
         </field>
     </record>
+
+    <!-- 3. Khóa menu Apps: Chỉ có Quản trị viên (Settings) mới nhìn thấy menu Ứng dụng -->
+    <record id="base.menu_management" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
+    </record>
 </odoo>
