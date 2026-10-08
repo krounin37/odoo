@@ -3,84 +3,107 @@
     <template id="report_stock_receipt_template">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <div class="article" style="font-family: 'Times New Roman', Times, serif; font-size: 12px; line-height: 1.25;">
-                    <!-- Header -->
-                    <table style="width: 100%; border: none;">
+                <div class="article voucher-container" style="font-family: 'Times New Roman', Times, serif; font-size: 12px; line-height: 1.35; color: #000;">
+                    <style>
+                        .voucher-container table {
+                            border: 0 !important;
+                            border-collapse: collapse !important;
+                        }
+                        .voucher-container table tr,
+                        .voucher-container table td,
+                        .voucher-container table th {
+                            border: 0 !important;
+                            box-shadow: none !important;
+                        }
+                        .voucher-container table.voucher-table-grid {
+                            border: 1px solid #000 !important;
+                            border-collapse: collapse !important;
+                            width: 100% !important;
+                        }
+                        .voucher-container table.voucher-table-grid th,
+                        .voucher-container table.voucher-table-grid td {
+                            border: 1px solid #000 !important;
+                            padding: 2.5px 4px !important;
+                        }
+                    </style>
+
+                    <!-- Header chuẩn TT 200 -->
+                    <table style="width: 100%; border: 0 !important; margin-bottom: 8px;">
                         <tr>
-                            <td style="width: 58%; vertical-align: top;">
-                                <strong style="font-size: 13px;" t-esc="o.company_id.name.upper()"/><br/>
-                                <span>Địa chỉ: <t t-esc="o.company_id.partner_id.contact_address or o.company_id.street or ''"/></span><br/>
-                                <span t-if="o.company_id.vat">Mã số thuế: <strong t-esc="o.company_id.vat"/></span>
+                            <td style="width: 58%; vertical-align: top; border: 0 !important; line-height: 1.35;">
+                                <div><strong>Đơn vị: </strong><span style="font-size: 13px; font-weight: bold;" t-esc="o.company_id.name.upper()"/></div>
+                                <div><strong>Địa chỉ: </strong><span t-esc="o.company_id.street or o.company_id.partner_id.contact_address or ''"/></div>
+                                <div t-if="o.company_id.vat"><strong>Mã số thuế: </strong><span t-esc="o.company_id.vat"/></div>
                             </td>
-                            <td style="width: 42%; text-align: center; vertical-align: top;">
-                                <strong>Mẫu số 01 - VT</strong><br/>
-                                <span class="fst-italic" style="font-size: 11px;">(Ban hành theo Thông tư số 200/2014/TT-BTC<br/>ngày 22/12/2014 của Bộ Tài chính)</span>
-                                <div class="text-start ps-3 mt-1" style="font-size: 12px;">
-                                    <div>Số: <strong t-field="o.name"/></div>
-                                    <div>Nợ: <span t-field="o.voucher_debit_account"/></div>
-                                    <div>Có: <span t-field="o.voucher_credit_account"/></div>
-                                </div>
+                            <td style="width: 42%; text-align: center; vertical-align: top; border: 0 !important;">
+                                <strong style="font-size: 13px;">Mẫu số 01 - VT</strong><br/>
+                                <span class="fst-italic" style="font-size: 10.5px;">(Ban hành theo Thông tư số 200/2014/TT-BTC<br/>ngày 22/12/2014 của Bộ Tài chính)</span>
+                                <table style="width: 100%; margin-top: 4px; font-size: 11.5px; border: 0 !important; text-align: left;">
+                                    <tr>
+                                        <td style="width: 25%; padding-left: 20px; border: 0 !important;">Số:</td>
+                                        <td style="border: 0 !important;"><strong t-field="o.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 20px; border: 0 !important;">Nợ:</td>
+                                        <td style="border: 0 !important;"><span t-field="o.voucher_debit_account"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 20px; border: 0 !important;">Có:</td>
+                                        <td style="border: 0 !important;"><span t-field="o.voucher_credit_account"/></td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     </table>
 
                     <!-- Title -->
-                    <div class="text-center mt-2 mb-1">
-                        <h3 class="fw-bold mb-1" style="font-size: 20px; letter-spacing: 1px;">PHIẾU NHẬP KHO</h3>
-                        <div class="fst-italic" t-if="o.date_done or o.scheduled_date">
+                    <div class="text-center mt-1 mb-2">
+                        <h3 class="fw-bold mb-1" style="font-size: 20px; letter-spacing: 1.5px;">PHIẾU NHẬP KHO</h3>
+                        <div class="fst-italic" style="font-size: 12px;" t-if="o.date_done or o.scheduled_date">
                             <t t-set="doc_date" t-value="o.date_done or o.scheduled_date"/>
                             Ngày <span t-esc="doc_date.strftime('%d')"/> tháng <span t-esc="doc_date.strftime('%m')"/> năm <span t-esc="doc_date.strftime('%Y')"/>
                         </div>
                     </div>
 
-                    <!-- Meta info -->
-                    <div class="mt-1" style="font-size: 12px;">
-                        <table style="width: 100%; border: none;">
-                            <tr>
-                                <td style="width: 25%; padding: 3px 0;">Họ và tên người giao:</td>
-                                <td style="padding: 3px 0;"><strong t-esc="o.voucher_contact_person or o.partner_id.name or ''"/></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 3px 0;">Theo chứng từ số:</td>
-                                <td style="padding: 3px 0;"><span t-esc="o.origin or o.name or ''"/></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 3px 0;">Nhập tại kho:</td>
-                                <td style="padding: 3px 0;"><span t-esc="o.voucher_warehouse_name or o.location_dest_id.name or ''"/> (Địa điểm: <span t-esc="o.voucher_warehouse_address or o.location_dest_id.complete_name or ''"/>)</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 3px 0;">Lý do nhập kho:</td>
-                                <td style="padding: 3px 0;"><span t-esc="o.voucher_reason or ''"/></td>
-                            </tr>
-                        </table>
+                    <!-- Meta info (Không viền kẻ chuẩn TT200) -->
+                    <div style="font-size: 12px; line-height: 1.45; margin-bottom: 8px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="width: 60%;">- Họ và tên người giao: <strong t-esc="o.voucher_contact_person or o.partner_id.name or ''"/></div>
+                            <div style="width: 40%;">Theo chứng từ số: <span t-esc="o.origin or o.name or ''"/></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div style="width: 60%;">- Nhập tại kho: <strong t-esc="o.voucher_warehouse_name or o.location_dest_id.name or ''"/></div>
+                            <div style="width: 40%;">Địa điểm: <span t-esc="o.voucher_warehouse_address or o.location_dest_id.complete_name or ''"/></div>
+                        </div>
+                        <div>- Lý do nhập kho: <span t-esc="o.voucher_reason or 'Nhập kho mua hàng hóa'"/></div>
                     </div>
 
-                    <!-- Items Table -->
-                    <table class="table table-sm table-bordered mt-2 mb-1" style="width: 100%; border-color: #333; font-size: 11.5px;">
+                    <!-- Items Table (CHỈ BẢNG NÀY ĐƯỢC KẺ KHUNG Ô LƯỚI) -->
+                    <table class="voucher-table-grid mt-2 mb-1" style="font-size: 11px;">
                         <thead class="text-center" style="background-color: #f8f9fa;">
                             <tr>
-                                <th rowspan="2" style="vertical-align: middle; width: 5%; border: 1px solid #000; padding: 3px;">STT</th>
-                                <th rowspan="2" style="vertical-align: middle; width: 34%; border: 1px solid #000; padding: 3px;">Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ, sản phẩm, hàng hoá</th>
-                                <th rowspan="2" style="vertical-align: middle; width: 13%; border: 1px solid #000; padding: 3px;">Mã số</th>
-                                <th rowspan="2" style="vertical-align: middle; width: 8%; border: 1px solid #000; padding: 3px;">Đơn vị tính</th>
-                                <th colspan="2" style="width: 16%; border: 1px solid #000; padding: 2px;">Số lượng</th>
-                                <th rowspan="2" style="vertical-align: middle; width: 12%; border: 1px solid #000; padding: 3px;">Đơn giá</th>
-                                <th rowspan="2" style="vertical-align: middle; width: 12%; border: 1px solid #000; padding: 3px;">Thành tiền</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 5%;">STT</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 34%;">Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ, sản phẩm, hàng hoá</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 13%;">Mã số</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 8%;">Đơn vị tính</th>
+                                <th colspan="2" style="width: 16%;">Số lượng</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 12%;">Đơn giá</th>
+                                <th rowspan="2" style="vertical-align: middle; width: 12%;">Thành tiền</th>
                             </tr>
                             <tr>
-                                <th style="border: 1px solid #000; font-size: 10px; padding: 1.5px;">Chứng từ</th>
-                                <th style="border: 1px solid #000; font-size: 10px; padding: 1.5px;">Thực nhập</th>
+                                <th style="font-size: 10px;">Chứng từ</th>
+                                <th style="font-size: 10px;">Thực nhập</th>
                             </tr>
                             <!-- Dòng A, B, C, D, 1, 2, 3, 4 bắt buộc theo chuẩn TT 200/2014/TT-BTC -->
                             <tr style="background-color: #f1f3f5; font-weight: bold; font-size: 10px;">
-                                <td style="border: 1px solid #000; padding: 1px;">A</td>
-                                <td style="border: 1px solid #000; padding: 1px;">B</td>
-                                <td style="border: 1px solid #000; padding: 1px;">C</td>
-                                <td style="border: 1px solid #000; padding: 1px;">D</td>
-                                <td style="border: 1px solid #000; padding: 1px;">1</td>
-                                <td style="border: 1px solid #000; padding: 1px;">2</td>
-                                <td style="border: 1px solid #000; padding: 1px;">3</td>
-                                <td style="border: 1px solid #000; padding: 1px;">4 = 2 x 3</td>
+                                <td>A</td>
+                                <td>B</td>
+                                <td>C</td>
+                                <td>D</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4 = 2 x 3</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,59 +115,66 @@
                                 <t t-set="subtotal" t-value="qty_done * price"/>
                                 <t t-set="grand_total" t-value="grand_total + subtotal"/>
                                 <tr>
-                                    <td class="text-center" style="padding: 3px;"><t t-esc="idx"/></td>
-                                    <td style="padding: 3px;"><span t-field="move.product_id.display_name"/></td>
-                                    <td class="text-center" style="padding: 3px;"><span t-field="move.product_id.default_code"/></td>
-                                    <td class="text-center" style="padding: 3px;"><span t-field="move.product_uom.name"/></td>
-                                    <td class="text-end" style="padding: 3px;"><span t-field="move.product_uom_qty"/></td>
-                                    <td class="text-end" style="padding: 3px;"><strong t-esc="qty_done"/></td>
-                                    <td class="text-end" style="padding: 3px;"><span t-esc="price" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
-                                    <td class="text-end" style="padding: 3px;"><strong t-esc="subtotal" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
+                                    <td class="text-center"><t t-esc="idx"/></td>
+                                    <td><span t-field="move.product_id.display_name"/></td>
+                                    <td class="text-center"><span t-field="move.product_id.default_code"/></td>
+                                    <td class="text-center"><span t-field="move.product_uom.name"/></td>
+                                    <td class="text-end"><span t-field="move.product_uom_qty"/></td>
+                                    <td class="text-end"><strong t-esc="qty_done"/></td>
+                                    <td class="text-end"><span t-esc="price" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
+                                    <td class="text-end"><strong t-esc="subtotal" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
                                 </tr>
                                 <t t-set="idx" t-value="idx + 1"/>
                             </t>
-                            <tr>
-                                <td colspan="4" class="text-center fw-bold" style="padding: 3px;">Cộng</td>
-                                <td class="text-end fw-bold" style="padding: 3px;">x</td>
-                                <td class="text-end fw-bold" style="padding: 3px;">x</td>
-                                <td class="text-end fw-bold" style="padding: 3px;">x</td>
-                                <td class="text-end fw-bold" style="padding: 3px;"><strong t-esc="grand_total" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
+                            <tr style="font-weight: bold; background-color: #f8f9fa;">
+                                <td colspan="4" class="text-center">Cộng</td>
+                                <td class="text-end">x</td>
+                                <td class="text-end">x</td>
+                                <td class="text-end">x</td>
+                                <td class="text-end"><strong t-esc="grand_total" t-options='{"widget": "monetary", "display_currency": o.company_currency_id}'/></td>
                             </tr>
                         </tbody>
                     </table>
 
-                    <div class="mt-1" style="font-size: 12px;">
+                    <div class="mt-2" style="font-size: 12px; line-height: 1.4;">
                         <div>- Tổng số tiền (viết bằng chữ): <strong class="fst-italic" t-field="o.voucher_total_words_vn"/></div>
                         <div>- Số chứng từ gốc kèm theo: <span t-esc="o.voucher_attached or '01'"/> chứng từ.</div>
                     </div>
 
-                    <!-- Signatures -->
+                    <!-- Signatures (KHÔNG CÓ ĐƯỜNG KẺ VIỀN) -->
                     <div class="mt-2" style="page-break-inside: avoid;">
-                        <div class="text-end fst-italic" style="font-size: 11.5px; margin-bottom: 4px;" t-if="o.date_done or o.scheduled_date">
-                            <t t-set="doc_date" t-value="o.date_done or o.scheduled_date"/>
-                            Ngày <span t-esc="doc_date.strftime('%d')"/> tháng <span t-esc="doc_date.strftime('%m')"/> năm <span t-esc="doc_date.strftime('%Y')"/>
-                        </div>
-                        <table style="width: 100%; text-align: center; border: none; font-size: 11.5px;">
+                        <table style="width: 100%; border: 0 !important;">
                             <tr>
-                                <td style="width: 20%; vertical-align: top;">
+                                <td style="width: 80%; border: 0 !important;"></td>
+                                <td style="width: 20%; text-align: center; font-style: italic; font-size: 11px; white-space: nowrap; border: 0 !important;">
+                                    <t t-if="o.date_done or o.scheduled_date">
+                                        <t t-set="doc_date" t-value="o.date_done or o.scheduled_date"/>
+                                        Ngày <span t-esc="doc_date.strftime('%d')"/> tháng <span t-esc="doc_date.strftime('%m')"/> năm <span t-esc="doc_date.strftime('%Y')"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                        <table style="width: 100%; text-align: center; border: 0 !important; font-size: 11.5px; margin-top: 2px;">
+                            <tr style="font-weight: bold;">
+                                <td style="width: 20%; vertical-align: top; border: 0 !important;">
                                     <strong>Người lập phiếu</strong><br/>
-                                    <span class="fst-italic" style="font-size: 10.5px;">(Ký, họ tên)</span>
+                                    <span class="fst-italic" style="font-weight: normal; font-size: 10.5px;">(Ký, họ tên)</span>
                                 </td>
-                                <td style="width: 20%; vertical-align: top;">
+                                <td style="width: 20%; vertical-align: top; border: 0 !important;">
                                     <strong>Người giao hàng</strong><br/>
-                                    <span class="fst-italic" style="font-size: 10.5px;">(Ký, họ tên)</span>
+                                    <span class="fst-italic" style="font-weight: normal; font-size: 10.5px;">(Ký, họ tên)</span>
                                 </td>
-                                <td style="width: 20%; vertical-align: top;">
+                                <td style="width: 20%; vertical-align: top; border: 0 !important;">
                                     <strong>Thủ kho</strong><br/>
-                                    <span class="fst-italic" style="font-size: 10.5px;">(Ký, họ tên)</span>
+                                    <span class="fst-italic" style="font-weight: normal; font-size: 10.5px;">(Ký, họ tên)</span>
                                 </td>
-                                <td style="width: 20%; vertical-align: top;">
+                                <td style="width: 20%; vertical-align: top; border: 0 !important;">
                                     <strong>Kế toán trưởng</strong><br/>
-                                    <span class="fst-italic" style="font-size: 10.5px;">(Ký, họ tên)</span>
+                                    <span class="fst-italic" style="font-weight: normal; font-size: 10.5px;">(Ký, họ tên)</span>
                                 </td>
-                                <td style="width: 20%; vertical-align: top;">
+                                <td style="width: 20%; vertical-align: top; border: 0 !important;">
                                     <strong>Giám đốc</strong><br/>
-                                    <span class="fst-italic" style="font-size: 10.5px;">(Ký, họ tên, đóng dấu)</span>
+                                    <span class="fst-italic" style="font-weight: normal; font-size: 10.5px;">(Ký, họ tên, đóng dấu)</span>
                                 </td>
                             </tr>
                         </table>
