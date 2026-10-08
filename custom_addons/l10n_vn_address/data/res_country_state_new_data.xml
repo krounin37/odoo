@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="base.state_vn_VN-HN" model="res.country.state">
+        <field name="name">Thành phố Hà Nội</field>
+    </record>
+    <record id="base.state_vn_VN-HP" model="res.country.state">
+        <field name="name">Thành phố Hải Phòng</field>
+    </record>
+    <record id="base.state_vn_VN-26" model="res.country.state">
+        <field name="name">Thành phố Huế</field>
+    </record>
+    <record id="base.state_vn_VN-DN" model="res.country.state">
+        <field name="name">Thành phố Đà Nẵng</field>
+    </record>
+    <record id="base.state_vn_VN-SG" model="res.country.state">
+        <field name="name">Thành phố Hồ Chí Minh</field>
+    </record>
+    <record id="base.state_vn_VN-CT" model="res.country.state">
+        <field name="name">Thành phố Cần Thơ</field>
+    </record>
+    <record id="base.state_vn_VN-04" model="res.country.state">
+        <field name="name">Cao Bằng</field>
+    </record>
+    <record id="base.state_vn_VN-07" model="res.country.state">
+        <field name="name">Tuyên Quang</field>
+    </record>
+    <record id="base.state_vn_VN-71" model="res.country.state">
+        <field name="name">Điện Biên</field>
+    </record>
+    <record id="base.state_vn_VN-01" model="res.country.state">
+        <field name="name">Lai Châu</field>
+    </record>
+    <record id="base.state_vn_VN-05" model="res.country.state">
+        <field name="name">Sơn La</field>
+    </record>
+    <record id="base.state_vn_VN-02" model="res.country.state">
+        <field name="name">Lào Cai</field>
+    </record>
+    <record id="base.state_vn_VN-69" model="res.country.state">
+        <field name="name">Thái Nguyên</field>
+    </record>
+    <record id="base.state_vn_VN-09" model="res.country.state">
+        <field name="name">Lạng Sơn</field>
+    </record>
+    <record id="base.state_vn_VN-13" model="res.country.state">
+        <field name="name">Quảng Ninh</field>
+    </record>
+    <record id="base.state_vn_VN-56" model="res.country.state">
+        <field name="name">Bắc Ninh</field>
+    </record>
+    <record id="base.state_vn_VN-68" model="res.country.state">
+        <field name="name">Phú Thọ</field>
+    </record>
+    <record id="base.state_vn_VN-66" model="res.country.state">
+        <field name="name">Hưng Yên</field>
+    </record>
+    <record id="base.state_vn_VN-18" model="res.country.state">
+        <field name="name">Ninh Bình</field>
+    </record>
+    <record id="base.state_vn_VN-21" model="res.country.state">
+        <field name="name">Thanh Hóa</field>
+    </record>
+    <record id="base.state_vn_VN-22" model="res.country.state">
+        <field name="name">Nghệ An</field>
+    </record>
+    <record id="base.state_vn_VN-23" model="res.country.state">
+        <field name="name">Hà Tĩnh</field>
+    </record>
+    <record id="base.state_vn_VN-25" model="res.country.state">
+        <field name="name">Quảng Trị</field>
+    </record>
+    <record id="base.state_vn_VN-29" model="res.country.state">
+        <field name="name">Quảng Ngãi</field>
+    </record>
+    <record id="base.state_vn_VN-30" model="res.country.state">
+        <field name="name">Gia Lai</field>
+    </record>
+    <record id="base.state_vn_VN-34" model="res.country.state">
+        <field name="name">Khánh Hòa</field>
+    </record>
+    <record id="base.state_vn_VN-33" model="res.country.state">
+        <field name="name">Đắk Lắk</field>
+    </record>
+    <record id="base.state_vn_VN-35" model="res.country.state">
+        <field name="name">Lâm Đồng</field>
+    </record>
+    <record id="base.state_vn_VN-39" model="res.country.state">
+        <field name="name">Đồng Nai</field>
+    </record>
+    <record id="base.state_vn_VN-37" model="res.country.state">
+        <field name="name">Tây Ninh</field>
+    </record>
+    <record id="base.state_vn_VN-45" model="res.country.state">
+        <field name="name">Đồng Tháp</field>
+    </record>
+    <record id="base.state_vn_VN-49" model="res.country.state">
+        <field name="name">Vĩnh Long</field>
+    </record>
+    <record id="base.state_vn_VN-44" model="res.country.state">
+        <field name="name">An Giang</field>
+    </record>
+    <record id="base.state_vn_VN-59" model="res.country.state">
+        <field name="name">Cà Mau</field>
+    </record>
+</odoo>

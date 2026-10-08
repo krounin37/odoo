@@ -23,6 +23,7 @@ Quản lý địa giới hành chính Việt Nam 3 cấp:
     'data': [
         'security/ir.model.access.csv',
         'data/res_country_data.xml',
+        'data/res_country_state_new_data.xml',
         'data/res_district_data.xml',
         'views/res_district_views.xml',
         'views/res_ward_views.xml',

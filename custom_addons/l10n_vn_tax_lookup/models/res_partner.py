@@ -21,6 +21,46 @@ SKIP_DOMAINS = [
 ]
 
 
+LEGACY_TO_NEW_PROVINCE_MAP = {
+    # 6 Thành phố trực thuộc Trung ương
+    'hai duong': 'hai phong',
+    'thua thien hue': 'hue',
+    'thua thien - hue': 'hue',
+    'quang nam': 'da nang',
+    'binh duong': 'ho chi minh',
+    'ba ria - vung tau': 'ho chi minh',
+    'ba ria vung tau': 'ho chi minh',
+    'soc trang': 'can tho',
+    'hau giang': 'can tho',
+
+    # 28 Tỉnh mới hình thành sau sắp xếp
+    'ha giang': 'tuyen quang',
+    'yen bai': 'lao cai',
+    'bac kan': 'thai nguyen',
+    'bac can': 'thai nguyen',
+    'bac giang': 'bac ninh',
+    'vinh phuc': 'phu tho',
+    'hoa binh': 'phu tho',
+    'thai binh': 'hung yen',
+    'ha nam': 'ninh binh',
+    'nam dinh': 'ninh binh',
+    'quang binh': 'quang tri',
+    'kon tum': 'quang ngai',
+    'binh dinh': 'gia lai',
+    'ninh thuan': 'khanh hoa',
+    'dak nong': 'dak lak',
+    'phu yen': 'dak lak',
+    'binh thuan': 'lam dong',
+    'binh phuoc': 'dong nai',
+    'long an': 'tay ninh',
+    'tien giang': 'dong thap',
+    'ben tre': 'vinh long',
+    'tra vinh': 'vinh long',
+    'kien giang': 'an giang',
+    'bac lieu': 'ca mau',
+}
+
+
 def _remove_accents(input_str):
     if not input_str:
         return ''
@@ -173,16 +213,31 @@ class ResPartner(models.Model):
 
         norm_addr = _remove_accents(full_address)
 
-        # 1. Khớp Tỉnh / Thành phố (res.country.state)
+        # 1. Khớp Tỉnh / Thành phố (res.country.state) theo Đề án 34 tỉnh/thành mới
         matched_state = None
         if vn_country:
             states = self.env['res.country.state'].search([('country_id', '=', vn_country.id)])
-            for s in states:
-                norm_state = _remove_accents(s.name)
-                clean_state = re.sub(r'^(tp|tinh)\s+', '', norm_state).strip()
-                if clean_state and clean_state in norm_addr:
-                    matched_state = s
-                    break
+
+            # Ưu tiên kiểm tra mapping sáp nhập tỉnh cũ sang tỉnh mới
+            for leg_p, new_p in LEGACY_TO_NEW_PROVINCE_MAP.items():
+                if leg_p in norm_addr:
+                    for s in states:
+                        norm_s = _remove_accents(s.name)
+                        clean_s = re.sub(r'^(tp|tinh|thanh pho)\s+', '', norm_s).strip()
+                        if clean_s == new_p:
+                            matched_state = s
+                            break
+                    if matched_state:
+                        break
+
+            # Nếu không nằm trong danh mục sáp nhập, khớp trực tiếp tên tỉnh/thành
+            if not matched_state:
+                for s in states:
+                    norm_s = _remove_accents(s.name)
+                    clean_s = re.sub(r'^(tp|tinh|thanh pho)\s+', '', norm_s).strip()
+                    if clean_s and clean_s in norm_addr:
+                        matched_state = s
+                        break
 
         if matched_state:
             vals['state_id'] = matched_state.id
