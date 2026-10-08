@@ -28,9 +28,10 @@ Cơ Cấu Tổ Chức & Quy Trình Vận Hành Doanh Nghiệp Chuẩn Việt Nam
     'author': 'krounin37',
     'website': 'https://github.com/krounin37/odoo',
     'license': 'LGPL-3',
-    'depends': ['hr'],
+    'depends': ['hr', 'base'],
     'data': [
         'data/hr_department_data.xml',
+        'views/res_users_views.xml',
     ],
     'installable': True,
     'application': False,

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_users_form_inherit_set_password" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.set.password</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="%(base.change_password_wizard_action)d"
+                        type="action"
+                        string="Đặt / Đổi Mật Khẩu"
+                        class="btn btn-primary"
+                        icon="fa-key"
+                        invisible="not id"
+                        help="Đặt hoặc thay đổi mật khẩu đăng nhập trực tiếp cho người dùng này"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
