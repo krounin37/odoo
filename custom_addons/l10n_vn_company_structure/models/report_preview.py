@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import time
 from odoo import models, api, _
 
 
@@ -10,9 +11,10 @@ class SaleOrder(models.Model):
         self.ensure_one()
         report = self.env.ref('sale.action_report_saleorder', raise_if_not_found=False)
         report_name = report.report_name if report else 'sale.report_saleorder'
+        timestamp = int(time.time())
         return {
             'type': 'ir.actions.act_url',
-            'url': f'/report/pdf/{report_name}/{self.id}',
+            'url': f'/report/pdf/{report_name}/{self.id}?t={timestamp}',
             'target': 'new',
         }
 
@@ -25,9 +27,10 @@ class PurchaseOrder(models.Model):
         self.ensure_one()
         report = self.env.ref('purchase.action_report_purchase_order', raise_if_not_found=False)
         report_name = report.report_name if report else 'purchase.report_purchaseorder'
+        timestamp = int(time.time())
         return {
             'type': 'ir.actions.act_url',
-            'url': f'/report/pdf/{report_name}/{self.id}',
+            'url': f'/report/pdf/{report_name}/{self.id}?t={timestamp}',
             'target': 'new',
         }
 
@@ -40,9 +43,10 @@ class AccountMove(models.Model):
         self.ensure_one()
         report = self.env.ref('account.account_invoices', raise_if_not_found=False)
         report_name = report.report_name if report else 'account.report_invoice'
+        timestamp = int(time.time())
         return {
             'type': 'ir.actions.act_url',
-            'url': f'/report/pdf/{report_name}/{self.id}',
+            'url': f'/report/pdf/{report_name}/{self.id}?t={timestamp}',
             'target': 'new',
         }
 
@@ -59,9 +63,10 @@ class StockPicking(models.Model):
         else:
             report = self.env.ref('l10n_vn_stock_voucher.action_report_stock_delivery_vn', raise_if_not_found=False)
             report_name = report.report_name if report else 'l10n_vn_stock_voucher.report_stock_delivery_document_vn'
+        timestamp = int(time.time())
         return {
             'type': 'ir.actions.act_url',
-            'url': f'/report/pdf/{report_name}/{self.id}',
+            'url': f'/report/pdf/{report_name}/{self.id}?t={timestamp}',
             'target': 'new',
         }
 
@@ -78,8 +83,9 @@ class AccountPayment(models.Model):
         else:
             report = self.env.ref('l10n_vn_cash_voucher.action_report_cash_payment_vn', raise_if_not_found=False)
             report_name = report.report_name if report else 'l10n_vn_cash_voucher.report_cash_payment_document_vn'
+        timestamp = int(time.time())
         return {
             'type': 'ir.actions.act_url',
-            'url': f'/report/pdf/{report_name}/{self.id}',
+            'url': f'/report/pdf/{report_name}/{self.id}?t={timestamp}',
             'target': 'new',
         }
