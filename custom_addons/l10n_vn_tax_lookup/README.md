@@ -4,11 +4,12 @@ Module hỗ trợ doanh nghiệp Việt Nam tự động tra cứu dữ liệu t
 
 ### 🌟 Tính năng chính:
 - Thêm nút **Tra cứu MST** ngay cạnh trường Mã số thuế (`vat`) của Khách hàng / Nhà cung cấp (`res.partner`).
-- Tự động điền:
-  - **Tên công ty**: Tên pháp nhân đầy đủ theo đăng ký kinh doanh.
-  - **Địa chỉ kinh doanh**: Địa chỉ trụ sở chính đã đăng ký với chi cục thuế.
+- Tự động điền & tối ưu dữ liệu:
+  - **Tên công ty**: Tên pháp nhân đầy đủ theo giấy phép đăng ký kinh doanh.
+  - **Địa chỉ kinh doanh**: Bóc tách và tự động điền Tỉnh/Thành phố (`state_id`), Quận/Huyện (`district_id`), Quốc gia (`country_id = Vietnam`) và địa chỉ chi tiết (`street`).
+  - **Trang Web (Website)**: Tự động tìm kiếm trang web chính thức của doanh nghiệp thông qua phân tích tên thương hiệu, tra cứu Wikipedia/Wikidata và trích xuất cổng thông tin doanh nghiệp (vd: `https://misa.vn`, `https://viettel.com.vn`, `https://vinamilk.com.vn`, `https://fpt.vn`).
   - **Tên giao dịch quốc tế**: Tên tiếng Anh.
-  - **Tên viết tắt**: Tên viết tắt của công ty.
+  - **Tên viết tắt**: Thương hiệu / tên viết tắt của công ty.
   - **Trạng thái thuế**: Kiểm tra doanh nghiệp đang "NNT đang hoạt động" hay đã tạm ngừng / giải thể (tránh rủi ro xuất hóa đơn sai).
 - Tự động chuyển đối tác sang dạng **Company** (`is_company = True`).
 
