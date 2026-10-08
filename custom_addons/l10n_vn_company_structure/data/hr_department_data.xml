@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- 1. Ban Giám Đốc -->
+    <record id="dept_bod" model="hr.department">
+        <field name="name">Ban Giám Đốc</field>
+        <field name="color">1</field>
+    </record>
+    <record id="job_ceo" model="hr.job">
+        <field name="name">Tổng Giám Đốc (CEO)</field>
+        <field name="department_id" ref="dept_bod"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_coo" model="hr.job">
+        <field name="name">Phó Tổng Giám Đốc / COO</field>
+        <field name="department_id" ref="dept_bod"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 2. Khối Kinh Doanh & Tiếp Thị -->
+    <record id="dept_commercial" model="hr.department">
+        <field name="name">Khối Kinh Doanh &amp; Tiếp Thị</field>
+        <field name="color">2</field>
+    </record>
+    <record id="job_cco" model="hr.job">
+        <field name="name">Giám Đốc Kinh Doanh (CCO)</field>
+        <field name="department_id" ref="dept_commercial"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 2.1 Phòng Kinh Doanh -->
+    <record id="dept_sales" model="hr.department">
+        <field name="name">Phòng Kinh Doanh (Sales)</field>
+        <field name="parent_id" ref="dept_commercial"/>
+        <field name="color">3</field>
+    </record>
+    <record id="job_sales_manager" model="hr.job">
+        <field name="name">Trưởng Phòng Kinh Doanh</field>
+        <field name="department_id" ref="dept_sales"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_sales_b2b" model="hr.job">
+        <field name="name">Chuyên Viên Kinh Doanh B2B</field>
+        <field name="department_id" ref="dept_sales"/>
+        <field name="expected_employees">4</field>
+    </record>
+    <record id="job_sales_retail" model="hr.job">
+        <field name="name">Nhân Viên Bán Lẻ / Showroom</field>
+        <field name="department_id" ref="dept_sales"/>
+        <field name="expected_employees">3</field>
+    </record>
+
+    <!-- 2.2 Phòng Marketing -->
+    <record id="dept_marketing" model="hr.department">
+        <field name="name">Phòng Marketing</field>
+        <field name="parent_id" ref="dept_commercial"/>
+        <field name="color">4</field>
+    </record>
+    <record id="job_mkt_manager" model="hr.job">
+        <field name="name">Trưởng Phòng Marketing</field>
+        <field name="department_id" ref="dept_marketing"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_mkt_digital" model="hr.job">
+        <field name="name">Chuyên Viên Digital Marketing</field>
+        <field name="department_id" ref="dept_marketing"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_mkt_content" model="hr.job">
+        <field name="name">Nhân Viên Sáng Tạo Nội Dung (Content)</field>
+        <field name="department_id" ref="dept_marketing"/>
+        <field name="expected_employees">2</field>
+    </record>
+
+    <!-- 2.3 Phòng CSKH -->
+    <record id="dept_cs" model="hr.department">
+        <field name="name">Phòng Chăm Sóc Khách Hàng (CS)</field>
+        <field name="parent_id" ref="dept_commercial"/>
+        <field name="color">5</field>
+    </record>
+    <record id="job_cs_lead" model="hr.job">
+        <field name="name">Trưởng Nhóm CSKH</field>
+        <field name="department_id" ref="dept_cs"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_cs_staff" model="hr.job">
+        <field name="name">Chuyên Viên Hỗ Trợ &amp; CSKH</field>
+        <field name="department_id" ref="dept_cs"/>
+        <field name="expected_employees">3</field>
+    </record>
+
+    <!-- 3. Khối Tài Chính - Kế Toán -->
+    <record id="dept_finance" model="hr.department">
+        <field name="name">Khối Tài Chính - Kế Toán</field>
+        <field name="color">6</field>
+    </record>
+    <record id="job_cfo" model="hr.job">
+        <field name="name">Giám Đốc Tài Chính (CFO)</field>
+        <field name="department_id" ref="dept_finance"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 3.1 Phòng Kế Toán -->
+    <record id="dept_accounting" model="hr.department">
+        <field name="name">Phòng Kế Toán</field>
+        <field name="parent_id" ref="dept_finance"/>
+        <field name="color">7</field>
+    </record>
+    <record id="job_chief_accountant" model="hr.job">
+        <field name="name">Kế Toán Trưởng</field>
+        <field name="department_id" ref="dept_accounting"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_ar_accountant" model="hr.job">
+        <field name="name">Kế Toán Bán Hàng &amp; Công Nợ Phải Thu</field>
+        <field name="department_id" ref="dept_accounting"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_ap_accountant" model="hr.job">
+        <field name="name">Kế Toán Mua Hàng &amp; Công Nợ Phải Trả</field>
+        <field name="department_id" ref="dept_accounting"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_tax_accountant" model="hr.job">
+        <field name="name">Kế Toán Thuế &amp; Ngân Hàng</field>
+        <field name="department_id" ref="dept_accounting"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_stock_accountant" model="hr.job">
+        <field name="name">Kế Toán Kho &amp; Giá Thành</field>
+        <field name="department_id" ref="dept_accounting"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 4. Khối Vận Hành & Chuỗi Cung Ứng -->
+    <record id="dept_operations" model="hr.department">
+        <field name="name">Khối Vận Hành &amp; Chuỗi Cung Ứng</field>
+        <field name="color">8</field>
+    </record>
+    <record id="job_ops_manager" model="hr.job">
+        <field name="name">Giám Đốc Vận Hành (Operations Manager)</field>
+        <field name="department_id" ref="dept_operations"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 4.1 Phòng Mua Hàng -->
+    <record id="dept_procurement" model="hr.department">
+        <field name="name">Phòng Mua Hàng (Purchasing)</field>
+        <field name="parent_id" ref="dept_operations"/>
+        <field name="color">9</field>
+    </record>
+    <record id="job_procurement_manager" model="hr.job">
+        <field name="name">Trưởng Phòng Mua Hàng</field>
+        <field name="department_id" ref="dept_procurement"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_purchaser" model="hr.job">
+        <field name="name">Chuyên Viên Mua Hàng (Procurement)</field>
+        <field name="department_id" ref="dept_procurement"/>
+        <field name="expected_employees">2</field>
+    </record>
+
+    <!-- 4.2 Phòng Kho Vận & Logistics -->
+    <record id="dept_warehouse" model="hr.department">
+        <field name="name">Phòng Quản Lý Kho &amp; Giao Vận (Logistics)</field>
+        <field name="parent_id" ref="dept_operations"/>
+        <field name="color">10</field>
+    </record>
+    <record id="job_warehouse_chief" model="hr.job">
+        <field name="name">Thủ Kho Trưởng</field>
+        <field name="department_id" ref="dept_warehouse"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_warehouse_staff" model="hr.job">
+        <field name="name">Nhân Viên Kho Vận</field>
+        <field name="department_id" ref="dept_warehouse"/>
+        <field name="expected_employees">3</field>
+    </record>
+    <record id="job_dispatcher" model="hr.job">
+        <field name="name">Nhân Viên Điều Phối Đơn Hàng (Dispatcher)</field>
+        <field name="department_id" ref="dept_warehouse"/>
+        <field name="expected_employees">2</field>
+    </record>
+
+    <!-- 5. Khối Hành Chính - Nhân Sự -->
+    <record id="dept_hr_admin_block" model="hr.department">
+        <field name="name">Khối Hành Chính - Nhân Sự</field>
+        <field name="color">11</field>
+    </record>
+    <record id="job_hr_director" model="hr.job">
+        <field name="name">Trưởng Khối Hành Chính - Nhân Sự</field>
+        <field name="department_id" ref="dept_hr_admin_block"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 5.1 Phòng Nhân Sự -->
+    <record id="dept_hr" model="hr.department">
+        <field name="name">Phòng Nhân Sự (HR)</field>
+        <field name="parent_id" ref="dept_hr_admin_block"/>
+        <field name="color">12</field>
+    </record>
+    <record id="job_hr_manager" model="hr.job">
+        <field name="name">Trưởng Phòng Nhân Sự</field>
+        <field name="department_id" ref="dept_hr"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_recruiter" model="hr.job">
+        <field name="name">Chuyên Viên Tuyển Dụng &amp; Đào Tạo</field>
+        <field name="department_id" ref="dept_hr"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_cb_specialist" model="hr.job">
+        <field name="name">Chuyên Viên C&amp;B (Tiền Lương &amp; Bảo Hiểm)</field>
+        <field name="department_id" ref="dept_hr"/>
+        <field name="expected_employees">2</field>
+    </record>
+
+    <!-- 5.2 Phòng Hành Chính & Quản Trị -->
+    <record id="dept_admin" model="hr.department">
+        <field name="name">Phòng Hành Chính &amp; Quản Trị</field>
+        <field name="parent_id" ref="dept_hr_admin_block"/>
+        <field name="color">1</field>
+    </record>
+    <record id="job_admin_specialist" model="hr.job">
+        <field name="name">Chuyên Viên Hành Chính - Văn Phòng</field>
+        <field name="department_id" ref="dept_admin"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_receptionist" model="hr.job">
+        <field name="name">Nhân Viên Lễ Tân &amp; Pháp Chế</field>
+        <field name="department_id" ref="dept_admin"/>
+        <field name="expected_employees">1</field>
+    </record>
+
+    <!-- 6. Phòng Công Nghệ Thông Tin (IT) -->
+    <record id="dept_it" model="hr.department">
+        <field name="name">Phòng Công Nghệ Thông Tin (IT)</field>
+        <field name="color">2</field>
+    </record>
+    <record id="job_it_manager" model="hr.job">
+        <field name="name">Trưởng Phòng IT</field>
+        <field name="department_id" ref="dept_it"/>
+        <field name="expected_employees">1</field>
+    </record>
+    <record id="job_odoo_admin" model="hr.job">
+        <field name="name">Chuyên Viên Quản Trị Hệ Thống Odoo</field>
+        <field name="department_id" ref="dept_it"/>
+        <field name="expected_employees">2</field>
+    </record>
+    <record id="job_infra_security" model="hr.job">
+        <field name="name">Kỹ Sư Hạ Tầng &amp; Bảo Mật</field>
+        <field name="department_id" ref="dept_it"/>
+        <field name="expected_employees">2</field>
+    </record>
+</odoo>

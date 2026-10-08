@@ -162,6 +162,7 @@ python odoo-bin --addons-path=addons -d odoo_db --db_user=odoo --db_password=odo
 | **`l10n_vn_edi_misa`** | **MISA meInvoice 电子发票对接**：支持一键将 Odoo 客户发票同步并开具至 MISA meInvoice 平台，获取正式发票号、查询码与电子原件直达链接。 | ✅ 已就绪 |
 | **`payment_vnpay`** | **VNPAY 在线支付网关 (v2.1.0)**：集成 VNPAY-QR 扫码、越南国内 ATM 卡与国际信用卡在线支付，支持 HMAC-SHA512 加密验签与服务端 IPN 异步回调。 | ✅ 已就绪 |
 | **`delivery_ghtk`** | **GHTK 物流配送对接 (Giao Hàng Tiết Kiệm)**：自动测算运费、发货单 1 键推单、获取正式物流运单号及 A6 格式热敏面单在线打印。 | ✅ 已就绪 |
+| **`l10n_vn_company_structure`** | **标准企业组织架构与全流程**：内置 15 个层级部门、32 个岗位职责，规范 O2C 销售、P2P 采购、仓储物流、财税发票及薪酬人事全闭环流程。 | ✅ 已就绪 |
 
 ### 如何在 Odoo 中启用扩展模块：
 1. 进入 **Apps (应用中心)**。

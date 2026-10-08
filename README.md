@@ -163,6 +163,7 @@ This repository includes custom modules tailored for Vietnamese business operati
 | **`l10n_vn_edi_misa`** | **Hóa đơn điện tử MISA meInvoice**: Tự động phát hành, ký số và đồng bộ hóa đơn điện tử MISA meInvoice trực tiếp từ Hóa đơn khách hàng Odoo chỉ bằng 1 click. | ✅ Sẵn sàng |
 | **`payment_vnpay`** | **Cổng thanh toán VNPAY (v2.1.0)**: Tích hợp thanh toán VNPAY-QR, thẻ ATM nội địa & thẻ quốc tế cho Website/eCommerce với chữ ký HMAC-SHA512 và Webhook IPN. | ✅ Sẵn sàng |
 | **`delivery_ghtk`** | **Giao Vận GHTK (Giao Hàng Tiết Kiệm)**: Tự động tính cước vận chuyển, đẩy đơn 1-click từ phiếu kho, lấy mã vận đơn và in tem nhãn A6 chuẩn GHTK. | ✅ Sẵn sàng |
+| **`l10n_vn_company_structure`** | **Cơ cấu phòng ban & Quy trình chuẩn**: Thiết lập sẵn cây sơ đồ 15 phòng ban, 32 chức danh vị trí và quy trình vận hành khép kín (O2C, P2P, Kho, Kế toán, Nhân sự) chuẩn doanh nghiệp. | ✅ Sẵn sàng |
 
 ### How to Activate Custom Modules in Odoo:
 1. Go to **Apps** (Ứng dụng).
