@@ -202,7 +202,7 @@ class ResPartner(models.Model):
     )
 
     def _parse_and_match_address_vn(self, full_address):
-        """Tự động phân tích chuỗi địa chỉ để xác định Country, State, District, Ward"""
+        """Tự động phân tích chuỗi địa chỉ để xác định Country, State, District, Ward theo cả chuẩn 2 cấp mới và 3 cấp cũ"""
         if not full_address:
             return {}
 
@@ -213,7 +213,7 @@ class ResPartner(models.Model):
 
         norm_addr = _remove_accents(full_address)
 
-        # 1. Khớp Tỉnh / Thành phố (res.country.state) theo Đề án 34 tỉnh/thành mới
+        # 1. Khớp Tỉnh / Thành phố (res.country.state) theo Đề án 34 tỉnh/thành mới (NQ 202/2025/QH15)
         matched_state = None
         if vn_country:
             states = self.env['res.country.state'].search([('country_id', '=', vn_country.id)])
@@ -242,7 +242,35 @@ class ResPartner(models.Model):
         if matched_state:
             vals['state_id'] = matched_state.id
 
-            # 2. Khớp Quận / Huyện (res.district nếu có)
+            # 2. Khớp Phường / Xã trực tiếp theo Mô hình 2 cấp mới (dvhcvn)
+            if 'res.ward' in self.env:
+                # Tìm trong danh sách phường/xã thuộc tỉnh này
+                wards_in_state = self.env['res.ward'].search([('state_id', '=', matched_state.id)])
+                matched_ward = None
+                
+                # A. Khớp trực tiếp theo tên mới hoặc mã phường/xã
+                for w in wards_in_state:
+                    clean_w = re.sub(r'^(phuong|xa|thi tran|dac khu)\s+', '', _remove_accents(w.name)).strip()
+                    if clean_w and clean_w in norm_addr:
+                        matched_ward = w
+                        break
+                
+                # B. Nếu chưa tìm thấy, quét qua từ điển đơn vị cũ trước sáp nhập (old_units)
+                if not matched_ward:
+                    for w in wards_in_state:
+                        if w.old_units:
+                            for old_u in w.old_units.split(','):
+                                clean_old = re.sub(r'^(phuong|xa|thi tran)\s+', '', _remove_accents(old_u)).strip()
+                                if clean_old and clean_old in norm_addr:
+                                    matched_ward = w
+                                    break
+                        if matched_ward:
+                            break
+
+                if matched_ward:
+                    vals['ward_id'] = matched_ward.id
+
+            # 3. Khớp Quận / Huyện (res.district nếu hệ thống có dùng để tương thích ngược)
             if 'district_id' in self._fields and 'res.district' in self.env:
                 districts = self.env['res.district'].search([('state_id', '=', matched_state.id)])
                 matched_district = None
@@ -254,11 +282,10 @@ class ResPartner(models.Model):
 
                 if matched_district:
                     vals['district_id'] = matched_district.id
-
-                    # 3. Khớp Phường / Xã (res.ward nếu có)
-                    if 'ward_id' in self._fields and 'res.ward' in self.env:
-                        wards = self.env['res.ward'].search([('district_id', '=', matched_district.id)])
-                        for w in wards:
+                    # Nếu chưa khớp ward_id ở bước 2 thì tìm theo district_id
+                    if 'ward_id' in self._fields and not vals.get('ward_id'):
+                        w_under_d = self.env['res.ward'].search([('district_id', '=', matched_district.id)])
+                        for w in w_under_d:
                             clean_w = re.sub(r'^(phuong|xa|thi tran)\s+', '', _remove_accents(w.name)).strip()
                             if clean_w and clean_w in norm_addr:
                                 vals['ward_id'] = w.id
