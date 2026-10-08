@@ -75,7 +75,7 @@
                             <t t-set="grand_total" t-value="0.0"/>
                             <t t-foreach="o.move_ids_without_package" t-as="move">
                                 <t t-set="qty_done" t-value="move.quantity if move.quantity else move.product_uom_qty"/>
-                                <t t-set="price" t-value="getattr(move, 'price_unit', 0.0) or (move.product_id.standard_price if move.product_id else 0.0)"/>
+                                <t t-set="price" t-value="move.price_unit or (move.product_id.standard_price if move.product_id else 0.0)"/>
                                 <t t-set="subtotal" t-value="qty_done * price"/>
                                 <t t-set="grand_total" t-value="grand_total + subtotal"/>
                                 <tr>

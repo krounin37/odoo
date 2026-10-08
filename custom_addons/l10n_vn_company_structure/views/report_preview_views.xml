@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 1. Báo Giá & Đơn Bán Hàng -->
+    <record id="view_order_form_inherit_preview" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.preview</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_preview_sale_order"
+                        type="object"
+                        string="Xem Trước Mẫu In"
+                        class="btn btn-secondary"
+                        icon="fa-eye"
+                        invisible="not id"
+                        help="Mở xem trước bản in Báo giá / Đơn hàng trên tab mới của trình duyệt trước khi in"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 2. Đơn Mua Hàng -->
+    <record id="purchase_order_form_inherit_preview" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.preview</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_preview_purchase_order"
+                        type="object"
+                        string="Xem Trước Mẫu In"
+                        class="btn btn-secondary"
+                        icon="fa-eye"
+                        invisible="not id"
+                        help="Mở xem trước bản in Đơn mua hàng trên tab mới của trình duyệt trước khi in"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 3. Hóa Đơn Khách Hàng / Hóa Đơn NCC -->
+    <record id="view_move_form_inherit_preview" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.preview</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_preview_invoice"
+                        type="object"
+                        string="Xem Trước Hóa Đơn"
+                        class="btn btn-secondary"
+                        icon="fa-eye"
+                        invisible="not id"
+                        help="Mở xem trước bản in Hóa đơn trên tab mới của trình duyệt trước khi in"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 4. Phiếu Nhập Kho & Phiếu Xuất Kho TT200 -->
+    <record id="view_picking_form_inherit_preview" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.preview</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_preview_stock_voucher"
+                        type="object"
+                        string="Xem Trước Phiếu Kho"
+                        class="btn btn-secondary"
+                        icon="fa-eye"
+                        invisible="not id"
+                        help="Mở xem trước Phiếu nhập / xuất kho TT200 trên tab mới của trình duyệt trước khi in"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 5. Phiếu Thu & Phiếu Chi TT200 -->
+    <record id="view_account_payment_form_inherit_preview" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit.preview</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_preview_cash_voucher"
+                        type="object"
+                        string="Xem Trước Phiếu Thu/Chi"
+                        class="btn btn-secondary"
+                        icon="fa-eye"
+                        invisible="not id"
+                        help="Mở xem trước Phiếu Thu / Chi TT200 trên tab mới của trình duyệt trước khi in"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

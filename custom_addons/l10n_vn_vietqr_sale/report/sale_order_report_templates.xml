@@ -12,11 +12,11 @@
                         </tr>
                         <tr>
                             <td style="color: #6c757d;">Số tài khoản:</td>
-                            <td><strong class="text-danger fs-5" t-esc="getattr(doc.company_partner_bank_id, 'account_number', '') or getattr(doc.company_partner_bank_id, 'acc_number', '')"/></td>
+                            <td><strong class="text-danger fs-5" t-esc="doc.company_partner_bank_id.acc_number or ''"/></td>
                         </tr>
                         <tr>
                             <td style="color: #6c757d;">Chủ tài khoản:</td>
-                            <td><strong t-esc="getattr(doc.company_partner_bank_id, 'holder_name', '') or getattr(doc.company_partner_bank_id, 'acc_holder_name', '') or doc.company_id.name"/></td>
+                            <td><strong t-esc="doc.company_partner_bank_id.acc_holder_name or doc.company_id.name"/></td>
                         </tr>
                         <tr>
                             <td style="color: #6c757d;">Số tiền cần thanh toán:</td>
