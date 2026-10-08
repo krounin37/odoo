@@ -22,27 +22,32 @@
 - 已安装并启动 [Docker](https://docs.docker.com/get-docker/)（或 Docker Desktop）
 - [Docker Compose](https://docs.docker.com/compose/install/)（Docker Desktop 默认自带）
 
-### 1. 启动容器服务
-在项目根目录下执行以下命令：
+### 1. 1键启动（自动恢复预置越南本土化数据库）
+将项目克隆到新机器后，只需运行初始化脚本：
 
-```bash
-docker compose up -d
-```
+* **Windows 平台**：
+  双击根目录下的 **`setup.bat`**（或在终端运行 `.\setup.bat`）
+* **Linux / macOS 平台**：
+  ```bash
+  bash setup.sh
+  ```
 
-该命令将启动两个服务：
-- **web**: Odoo Web 应用服务，映射在端口 `8069`
-- **db**: PostgreSQL 16 数据库服务
+该脚本将自动执行：
+1. 启动两个 Docker 容器（`odoo-web-1` 与 `odoo-db-1`）。
+2. 从 `backups/seed_techzone.dump` 自动还原预装了 12 个本土化模块及严格安全权限的 **`techzone`** 标准数据库。
+3. 自动应用企业级安全规则（关闭自由注册、隐藏数据库管理器、普通员工隐藏 Apps/仪表盘/人事菜单）。
 
 ### 2. 访问 Odoo
 打开浏览器并访问：
 ```
-http://localhost:8069
+http://localhost:8069/web/login
 ```
 
-首次访问时需填写数据库初始化表单：
-- **Master Password**: 主管理密码（用于备份、恢复、删除数据库，请妥善保管）
-- **Database Name**: 数据库名称（例如：`odoo_db`）
-- **Email / Password**: 管理员登录邮箱与密码
+* **系统超级管理员 (Admin)**: `admin@techzone.vn`
+* **采购专员**: `an.nguyen@techzone.vn`（密码: `Nam@2026`）
+* **销售经理**: `sales@techzone.vn`（密码: `Techzone@2026`）
+* **总会计师**: `accountant@techzone.vn`（密码: `Techzone@2026`）
+* **仓库主管**: `warehouse@techzone.vn`（密码: `Techzone@2026`）
 - **Language / Country**: 选择语言（如：简体中文 / Chinese (Simplified)）与国家
 - **Demo data**: 如需加载演示测试数据，请勾选此项
 

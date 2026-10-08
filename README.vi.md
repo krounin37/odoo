@@ -22,27 +22,34 @@ Cách đơn giản và ổn định nhất để khởi chạy Odoo kèm cơ s�
 - Đã cài đặt và bật [Docker](https://docs.docker.com/get-docker/) (hoặc Docker Desktop).
 - [Docker Compose](https://docs.docker.com/compose/install/) (đã tích hợp sẵn trên Docker Desktop).
 
-### 1. Khởi động dịch vụ
-Chạy lệnh sau tại thư mục gốc của dự án:
+### 1. Khởi động 1-Click (Tự động nạp sẵn toàn bộ 12 module & phân quyền)
 
-```bash
-docker compose up -d
-```
+Khi bạn clone dự án về máy mới, chỉ cần chạy 1 lệnh duy nhất:
 
-Lệnh trên sẽ khởi chạy 2 container:
-- **web**: Dịch vụ web Odoo lắng nghe ở cổng `8069`.
-- **db**: Máy chủ cơ sở dữ liệu PostgreSQL 16.
+* **Trên Windows**:
+  Nhấp đúp chuột vào file **`setup.bat`** (hoặc gõ trong terminal: `.\setup.bat`)
+* **Trên Linux / macOS**:
+  ```bash
+  bash setup.sh
+  ```
+
+Script sẽ tự động:
+1. Khởi động 2 container Docker (`odoo-web-1` và `odoo-db-1`).
+2. Tự động kiểm tra và phục hồi cơ sở dữ liệu chuẩn **`techzone`** từ file seed (`backups/seed_techzone.dump`).
+3. Khóa an ninh đăng ký B2B, ẩn trang quản lý CSDL, ẩn menu Apps/Dashboards/HR cho nhân viên thường.
+4. Sẵn sàng sử dụng ngay lập tức mà không cần tạo hay cấu hình database từ đầu!
 
 ### 2. Truy cập hệ thống
 Mở trình duyệt web và truy cập địa chỉ:
 ```
-http://localhost:8069
+http://localhost:8069/web/login
 ```
 
-Ở lần truy cập đầu tiên, điền biểu mẫu tạo cơ sở dữ liệu:
-- **Master Password**: Mật khẩu quản trị DB (lưu giữ cẩn thận để backup/restore/xóa database).
-- **Database Name**: Tên database (ví dụ: `odoo_db`).
-- **Email / Password**: Tài khoản và mật khẩu quản trị viên đăng nhập Odoo.
+* **Tài khoản Tổng Quản Trị (Admin)**: `admin@techzone.vn`
+* **Chuyên viên mua hàng**: `an.nguyen@techzone.vn` (Mật khẩu: `Nam@2026`)
+* **Trưởng phòng kinh doanh**: `sales@techzone.vn` (Mật khẩu: `Techzone@2026`)
+* **Kế toán trưởng**: `accountant@techzone.vn` (Mật khẩu: `Techzone@2026`)
+* **Thủ kho trưởng**: `warehouse@techzone.vn` (Mật khẩu: `Techzone@2026`)
 - **Language / Country**: Chọn ngôn ngữ (Tiếng Việt) và quốc gia (Việt Nam).
 - **Demo data**: Tích chọn nếu muốn nạp sẵn dữ liệu mẫu để thử nghiệm.
 

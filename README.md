@@ -22,27 +22,32 @@ The easiest and fastest way to run Odoo and its PostgreSQL database is using **D
 - [Docker](https://docs.docker.com/get-docker/) installed and running
 - [Docker Compose](https://docs.docker.com/compose/install/) (included with Docker Desktop)
 
-### 1. Start Services
-Run the following command in the project root directory:
+### 1. 1-Click Startup (Auto-seeds Preconfigured Vietnam Database)
+When cloning to a new machine, run the setup script:
 
-```bash
-docker compose up -d
-```
+* **On Windows**:
+  Double-click **`setup.bat`** (or run `.\setup.bat` in terminal)
+* **On Linux / macOS**:
+  ```bash
+  bash setup.sh
+  ```
 
-This starts:
-- **web**: Odoo web service exposed on port `8069`
-- **db**: PostgreSQL 16 database server
+This automatically:
+1. Starts both Docker containers (`web` and `db`).
+2. Restores the baseline **`techzone`** database from `backups/seed_techzone.dump` with all 12 localization modules and permissions pre-installed.
+3. Applies strict security (B2B invitation-only signup, disabled database manager, restricted Apps/Dashboards/HR menus).
 
 ### 2. Access Odoo
 Open your browser and navigate to:
 ```
-http://localhost:8069
+http://localhost:8069/web/login
 ```
 
-On first access, fill in the database creation form:
-- **Master Password**: Keep safe (used to manage/drop databases)
-- **Database Name**: e.g., `odoo_db`
-- **Email / Password**: Your administrator login credentials
+* **System Administrator**: `admin@techzone.vn`
+* **Purchasing Specialist**: `an.nguyen@techzone.vn` (Password: `Nam@2026`)
+* **Sales Manager**: `sales@techzone.vn` (Password: `Techzone@2026`)
+* **Chief Accountant**: `accountant@techzone.vn` (Password: `Techzone@2026`)
+* **Chief Warehouse**: `warehouse@techzone.vn` (Password: `Techzone@2026`)
 - **Language / Country**: Select according to your needs
 - **Demo data**: Check if you want sample data
 
