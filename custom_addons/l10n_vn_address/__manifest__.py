@@ -32,4 +32,5 @@ Quản lý địa giới hành chính Việt Nam 3 cấp:
     'installable': True,
     'application': False,
     'auto_install': False,
+    'post_init_hook': '_load_vietnam_wards_data',
 }

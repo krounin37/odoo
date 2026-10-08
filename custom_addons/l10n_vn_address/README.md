@@ -4,9 +4,9 @@ Module bổ sung phân cấp địa giới hành chính chuẩn Việt Nam (Tỉ
 
 ### 🌟 Tính năng chính:
 - **Bộ dữ liệu địa giới hành chính mới đầy đủ toàn quốc (Tổng cục Thống kê GSO & Bộ Nội vụ)**:
-  - **63 Tỉnh / Thành phố trực thuộc Trung ương** (`res.country.state`).
-  - **700+ Quận / Huyện / Thị xã / Thành phố trực thuộc tỉnh** (`res.district`) trên toàn bộ 63 tỉnh thành (bao gồm cả TP. Thủ Đức, các thành phố và thị xã mới được nâng cấp).
-  - Phân cấp liên kết chặt chẽ: `res.ward` (Phường / Xã) thuộc `res.district` (Quận / Huyện) thuộc `res.country.state` (Tỉnh / Thành).
+  - **34 Đơn vị hành chính cấp tỉnh mới**: 6 Thành phố trực thuộc Trung ương (Hà Nội, TP. Hồ Chí Minh, Hải Phòng, Đà Nẵng, Huế, Cần Thơ) và 28 Tỉnh mới sau đề án sắp xếp.
+  - **696 Quận / Huyện / Thị xã / Thành phố trực thuộc tỉnh** (`res.district`) trên toàn quốc đã được tái phân bổ trực thuộc chuẩn xác vào 34 tỉnh/thành mới.
+  - **10.035 Phường / Xã / Thị trấn** (`res.ward`) phủ khắp toàn bộ các quận/huyện của Việt Nam.
 - **Mẫu hiển thị & Nhập liệu địa chỉ chuẩn Việt Nam**:
   - Giao diện nhập thông tin liên hệ được tối ưu riêng cho Việt Nam:
     + `street`: Số nhà, ngõ/ngách, tên đường, tòa nhà.
