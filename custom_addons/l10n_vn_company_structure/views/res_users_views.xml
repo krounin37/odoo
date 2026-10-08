@@ -35,4 +35,14 @@ action = records.action_open_change_password_wizard()
     <record id="base.menu_management" model="ir.ui.menu">
         <field name="groups_id" eval="[(4, ref('base.group_system'))]"/>
     </record>
+
+    <!-- 4. Khóa menu Dashboards (Bảng thông tin / Báo cáo phân tích): Chỉ dành cho Quản trị viên & Ban Giám Đốc -->
+    <record id="spreadsheet_dashboard.spreadsheet_dashboard_menu_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('base.group_erp_manager')), (4, ref('base.group_system'))]"/>
+    </record>
+
+    <!-- 5. Khóa menu Employees (Nhân sự): Chỉ dành cho Phòng Nhân Sự (HR) và Quản trị viên -->
+    <record id="hr.menu_hr_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user'), ref('hr.group_hr_manager'), ref('base.group_system')])]"/>
+    </record>
 </odoo>
